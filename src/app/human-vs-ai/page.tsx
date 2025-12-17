@@ -46,6 +46,32 @@ export default function HumanVsAIPage() {
     return map
   }, [])
 
+  // Deduplicate active positions by slug to avoid duplicate keys
+  const uniqueActivePositions = React.useMemo(() => {
+    // If activePositions is not an array, return empty
+    if (!Array.isArray(activePositions)) return []
+    
+    const seen = new Set<string>()
+    return activePositions.filter((pos: any) => {
+      if (!pos.slug || seen.has(pos.slug)) return false
+      seen.add(pos.slug)
+      return true
+    })
+  }, [])
+
+  // Deduplicate active positions by slug to avoid duplicate keys
+  const uniqueActivePositions = React.useMemo(() => {
+    // If activePositions is not an array, return empty
+    if (!Array.isArray(activePositions)) return []
+    
+    const seen = new Set<string>()
+    return activePositions.filter((pos: any) => {
+      if (!pos.slug || seen.has(pos.slug)) return false
+      seen.add(pos.slug)
+      return true
+    })
+  }, [])
+
   const toggleItem = (slug: string) => {
     const newExpanded = new Set(expandedItems)
     if (newExpanded.has(slug)) {
