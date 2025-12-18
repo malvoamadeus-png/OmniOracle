@@ -28,6 +28,9 @@ interface AIPrediction {
   ai_outcome: string
   ai_reasoning: string
   citations: any[]
+  grok_outcome?: string
+  grok_reasoning?: string
+  is_excluded?: boolean
 }
 
 export default function HumanVsAIPage() {

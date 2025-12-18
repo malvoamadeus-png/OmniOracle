@@ -18,28 +18,52 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle2, XCircle, HelpCircle, Bot, User, Trophy } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-// Import data
-// We use the same ai_predictions.json which now contains human snapshots and market status
-let aiPredictions: any[] = []
-try {
-  aiPredictions = require("@/data/ai_predictions.json")
-} catch (e) {
-  aiPredictions = []
-}
+import { supabase } from "@/lib/supabase"
 
 export default function HumanVsAITablePage() {
+  const [aiPredictions, setAiPredictions] = React.useState<any[]>([])
+  const [statusFilter, setStatusFilter] = React.useState<string>("all")
+
+  React.useEffect(() => {
+    async function fetchPredictions() {
+      const { data, error } = await supabase
+        .from("ai_predictions")
+        .select("*")
+      
+      if (data) {
+        setAiPredictions(data)
+      } else {
+        console.error("Failed to fetch predictions:", error)
+      }
+    }
+    fetchPredictions()
+  }, [])
   
   // Helper to determine status color
   const getStatusBadge = (status: string, outcome: string) => {
     if (status === "CLOSED") {
-      if (outcome === "Yes" || outcome === "No") {
-        return <Badge variant="default" className="bg-green-600 hover:bg-green-700">{outcome}</Badge>
+      if (outcome === "Yes") {
+        return <Badge className="bg-green-600 hover:bg-green-700">{outcome}</Badge>
+      }
+      if (outcome === "No") {
+        return <Badge className="bg-red-600 hover:bg-red-700">{outcome}</Badge>
       }
       return <Badge variant="secondary">{outcome}</Badge>
     }
     return <Badge variant="outline" className="text-muted-foreground">Pending</Badge>
   }
+
+  const filteredPredictions = React.useMemo(() => {
+    return aiPredictions.filter((item: any) => {
+      if (item.is_excluded) return false
+      
+      if (statusFilter === "all") return true
+      if (statusFilter === "pending") return item.market_status !== "CLOSED"
+      if (statusFilter === "settled") return item.market_status === "CLOSED"
+      
+      return true
+    })
+  }, [aiPredictions, statusFilter])
 
   // Helper to check if prediction was correct (only if closed)
   const getPredictionStatus = (prediction: string, realOutcome: string, status: string) => {
@@ -63,10 +87,27 @@ export default function HumanVsAITablePage() {
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Trophy className="h-6 w-6 text-yellow-500" />
-            Human VS AI Performance Overview
-          </CardTitle>
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <CardTitle className="flex items-center gap-2">
+              <Trophy className="h-6 w-6 text-yellow-500" />
+              Human VS AI Performance Overview
+            </CardTitle>
+            <div className="flex items-center gap-2">
+              <label htmlFor="table-status-filter" className="text-sm font-medium">
+                Filter:
+              </label>
+              <select
+                id="table-status-filter"
+                value={statusFilter}
+                onChange={(e) => setStatusFilter(e.target.value)}
+                className="h-9 rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
+              >
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="settled">Settled</option>
+              </select>
+            </div>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">
@@ -105,7 +146,7 @@ export default function HumanVsAITablePage() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {aiPredictions.filter((item: any) => !item.is_excluded).map((item: any) => (
+                {filteredPredictions.map((item: any) => (
                   <TableRow key={item.slug}>
                     <TableCell className="font-medium">
                       <div className="flex flex-col gap-1">
@@ -150,9 +191,9 @@ export default function HumanVsAITablePage() {
                     </TableCell>
                   </TableRow>
                 ))}
-                {aiPredictions.length === 0 && (
+                {filteredPredictions.length === 0 && (
                   <TableRow>
-                    <TableCell colSpan={4} className="h-24 text-center">
+                    <TableCell colSpan={5} className="h-24 text-center">
                       No data available.
                     </TableCell>
                   </TableRow>

@@ -225,11 +225,11 @@
     ],
     "human_outcome": "No",
     "title": "Gemini 3.0 Flash released by December 16?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根據最新網路搜尋和官方Google部落格及DeepMind網站的查詢結果，截至2025年12月16日，Google尚未正式宣布或公開發布名為「Gemini 3.0 Flash」的模型。雖然Gemini 3 Pro已在2025年11月18日推出，並有相關更新如Deep Think功能於12月4日開放給特定訂閱者，但明確指定的輕量版「Gemini 3.0 Flash」僅見於洩漏和推測報導，並無證據顯示其已對一般公眾開放，包括開放測試或等待名單。官方文件僅提及Gemini 3 Pro及先前2.5系列的Flash變體，缺乏Gemini 3.0 Flash的公開可用性公告，因此該事件無法在截止日期前滿足「Yes」的解析條件。",
-    "real_outcome": "Unknown"
+    "real_outcome": "No"
   },
   {
     "slug": "will-trumps-approval-rating-be-less-than-42pt0-on-december-19-2025",
@@ -813,11 +813,11 @@
     ],
     "human_outcome": "Yes",
     "title": "Will Trump talk to Volodymyr Zelenskyy in December?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "Yes",
     "grok_reasoning": "根據最新新聞報導，2025年12月15日，美國總統唐納德·特朗普通過電話與烏克蘭總統沃洛迪米爾·澤連斯基及其他歐洲領導人進行了通話，此次通話是柏林和平談判的一部分，旨在討論烏克蘭衝突的解決方案。多家媒體如ABC News和Politico報導確認特朗普在當天晚些時候表示，他已與澤連斯基通話，討論安全保障和和平進展。這符合事件定義中的「口頭溝通」，且發生在12月1日至31日期間內。雖然先前有預期報導，但12月16日當前的報導顯示通話已實際發生，因此最可能結果為「是」。",
-    "real_outcome": "Unknown"
+    "real_outcome": "Yes"
   },
   {
     "slug": "will-google-have-the-second-best-ai-model-at-the-end-of-december-2025",
@@ -2908,6 +2908,243 @@
     "question": "Flyers vs. Canadiens",
     "is_excluded": true,
     "human_outcome": "Canadiens",
+    "market_status": "CLOSED",
+    "real_outcome": "Flyers"
+  },
+  {
+    "slug": "will-eleven-die-in-stranger-things-season-5",
+    "question": "Will Eleven die in \"Stranger Things: Season 5\"?",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "基於故事的敘事弧線和戲劇張力分析，伊萊雯（Eleven）在第五季死亡的可能性很高。作為系列的核心英雄，她的故事始於被當作武器，而後尋找自我與家庭。在最終季，面對毀滅世界的威可那（Vecna）與顛倒世界，一個終極的自我犧牲將為她的角色弧線畫上一個悲壯且完整的句點。她因意外開啟了通往顛倒世界的傳送門，最終由她以生命為代價關閉它，這在敘事上具有強烈的對稱性與宿命感。主創杜夫兄弟（The Duffer Brothers）多次強調，第五季將回歸本源並解答所有謎團，而伊萊雯的犧牲將是解決核心衝突最直接且最具情感衝擊力的方式，符合他們所預告的史詩級且情感飽滿的結局。",
+    "citations": [],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根據目前的公開資訊和官方聲明，截至2025年12月18日，《Stranger Things》第五季第一部分已播出，但Eleven在劇中僅被暫時削弱並未死亡。搜尋結果顯示，多數粉絲理論和專家分析（如Reddit討論和媒體報導）預測Eleven可能在最終戰中犧牲或失去力量，但Duffer兄弟在訪談中強調結局為「苦樂參半且令人滿意」，並無證據支持她永久死亡。劇情弧線顯示Eleven仍是核心角色，過去季中類似「死亡」情節往往被逆轉，且無洩漏或官方確認其在本季死亡，因此最可能結局為「No」。",
+    "human_outcome": "No",
+    "title": "Will Eleven die in \"Stranger Things: Season 5\"?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-netflix-close-warner-brothers-acquisition-by-end-of-2026",
+    "question": "Will Netflix close Warner Bros. acquisition by end of 2026?  ",
+    "ai_outcome": "No",
+    "ai_reasoning": "此项收购将极不可能在2026年底前完成。最主要的障碍是预料中会来自美国及海外监管机构的严格反垄断审查。 像Netflix和华纳兄弟这样两家大型媒体公司的合并，将会在流媒体和内容制作领域产生一个巨头，从而引发关于市场竞争减少、消费者选择变少以及对内容创作者的控制力增强的严重担忧。 监管机构，如美国司法部（DOJ）或联邦贸易委员会（FTC），几乎肯定会对此交易发起深入调查，并且很可能会提起诉讼以阻止该交易。 此外，从2025年12月5日宣布交易到2026年12月31日的截止日期，这仅仅13个月的时间对于完成如此大规模和复杂交易所必需的监管批准流程来说是极其紧迫的。大型跨国并购的监管审批，尤其是在面临法律挑战时，通常需要12到18个月甚至更长时间才能完成。",
+    "citations": [
+      {
+        "title": "latimes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJZEzThE40_1UpYhushHRkuE2_pmmhz41dRuZSa38C9B8sjZdAQ6HSeIpwXw-HkvjnP4KsnEHh-sjxFqN1GcgJny3xGy2fH-aGBWZh-v7bP_65VqWgEjPLJ8K5mhZSnOCw7nECxeropoyA81F06nzHbNgCXtn4jvO7bySpw5ALJ0DwRm3YfNgYLyrZu_8vv3AqnM_wHJ-Qe_3NobdlkDpzSGiH67wNvqz3t56wuBWJuMRC14MBNpOGDwWP"
+      },
+      {
+        "title": "thebull.com.au",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFqWmztcftq1kFqE1o064V0G-sJZu2ljBTx7e2rxE8r2XumXSBfW5ts9kf2sdr8pM3kSF7mcIrBkxXhc2yvCg74cXk_2NTcIdQUpzPjpBKmw8YEgQmExxNieuI4SVE4VgumnRyT3h-QRfvW3OsUsltSNxdJRKkXmRLnSykE9hiEvm4opUMMKNMcoTjIn9JFHU="
+      },
+      {
+        "title": "gurufocus.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3gV6WAZI2TGTFGtQFA2bY2J9sIyq8BBxw5WRrK98OhYKC9TG_PLPn-s0ZfTryVA-ymHHV8C76rUdl7jJ8PARyaendyGfVvQQp_mz2w1NaMdPh7js1aELHgJbA4U9P3Uv9r1i_Uw1MsXbu4XHp2tt9sZKH-wphiKwivLPZnOnyUE1NCzaM3i1nKxq9OKyKFuxi91vgMQC4INblv0pKER9pOuU5GSIeekcyNSo3hcQUOxJTgjv_QVTQ4RpQOw=="
+      },
+      {
+        "title": "findlaw.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNeXBstBUgR3tVTlA_TMEQfSLID1tp3z5cStxfFzJLnP6fLA9_VyUNJxQXoPm5mvRcRO55LAKuG09xhnVKLoT9RvhaUiTXilUXHKjqBCUJJhsYCokhArekWEoF_mfXkHuegUFqSEw7RAbKpwJsvhB76qXBJVhc2b1kNCnmOx7UyUJMZIYDxDuEL-OUCGanA5hFj6Oe2ML0EonUYwvkcFi3BTM_gBHsoy-Z3w=="
+      },
+      {
+        "title": "truthonthemarket.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEM06RgLqJCngGa1qMA1p1-DRfdRc-EDzNrIWwJ3jji-Q2L5wD80GXSmJIGJ4PmbsVmrUFvly2mx7xM8V5KbakVZKo5lAX7PvCBlwaVwV0OE5vEJBQmY1GwN1FvtaRxZX9kQcOg6wMqJvJcVtGhItJx8EqQ7OoyqE1ZovpN3qJxXNwsvJ0jGTLNx5CgiCMe0xBRdm1JDaJyYB42UwEcGESQAPfO7JnecvFglaiVSVVWB31f3ddGzsyq"
+      },
+      {
+        "title": "accenture.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoPl2Nd_HzREp8KECorb2RLAH2GU1Ru1nwqbLqEuqFnvWs3-X-mypI0Tgnx_V0l3Abc3ByrZddgLM99myWLKbphtCJnBzZqcVJJ8V5kDTGnZ6B0vqgqPsvuqk_Uo_xvDakyp8bMyLNA1vSgctDnhCL5JLnFr79XQ76F2CE9yjmMyXUwGyx6Y89"
+      },
+      {
+        "title": "stocktitan.net",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3NMtj5Teqn1KP5TllpgcrSl0AxHTAWCO78bc0i4_VwbH2z3_TXbymaRKktQV6wXMnWPS1zP0X42U0nn1gtw25aEk1tWnEeo1pBRdh8iOtVJmhFq_Mv1xVM1dPHKDuDey6G3-IosHd2B3fFvFkBWXqlyxntmtq7BfzEJE2FvNrPXAV-xDw-vZVVrVruESrkfE74c_sRiniDWwemuShuecTPQAx0I0bOe2cjK9Ib_A="
+      },
+      {
+        "title": "canadianminingjournal.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAWu-hSU6V--i-FtqfCbaP92jyXZuamPq0ii7HPaXiOqfxM6FyQuXlNjyQROjSuUPvdaYltJwAxZMvUPfOzEk9Cp79URej3O5LKHzf6HkaXyPL1WHLmXPJ1B3nI9ha3_48LOCdqXDrbImGavyMtNsoNev-vPs1I1dh4-pk6cSUnIZ9_3FC59cnAHgI_nlG1f0f"
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据Netflix和Warner Bros. Discovery于2025年12月5日宣布的收购协议，该交易涉及Netflix以约720亿美元股权价值收购Warner Bros.的电影和电视工作室以及相关流媒体业务（包括HBO/HBO Max），预计在完成监管审批和WBD的分拆后于12-18个月内关闭，即2026年底至2027年中。官方声明显示公司对监管审批充满信心，美国反垄断调查平均持续约12.7个月，与时间表相符；欧盟专家认为不太可能完全阻挡，但可能附加条件。由于特朗普政府更倾向于支持商业并购，且WBD董事会最近（2025年12月18日前18小时）重申推荐批准Netflix协议并拒绝Paramount竞标，交易推进顺利。尽管存在反垄断担忧（如市场份额超过30%阈值）和潜在诉讼，但无迹象显示将被完全阻挡或重大修改，结合分拆计划于2026年第三季度完成，交易最有可能在2026年底前按实质相似条款关闭，实现Netflix对指定业务的控制。",
+    "human_outcome": "Yes",
+    "title": "Will Netflix close Warner Bros. acquisition by end of 2026?  ",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-elon-and-doge-cut-more-than-200k-employees-in-2025",
+    "title": "Will Elon and DOGE cut more than 200k employees in 2025?",
+    "question": "Will Elon and DOGE cut more than 200k employees in 2025?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-trump-release-the-epstein-files-by-december-19-771",
+    "question": "Will Trump release the Epstein files by December 19?",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "该事件最有可能的结果是“是”。主要原因是，根据问题描述，一项名为《爱普斯坦档案透明法案》的法律强制要求司法部在特定截止日期前公布相关文件。这是一个具有法律约束力的强制性要求，行政部门公然违抗法律的可能性较低。此外，从政治动机来看，发布这些文件非常符合特朗普“反建制”和“排干沼泽”的政治形象。他可以利用这次发布来标榜自己是揭露精英阶层腐败的功臣，从而获得巨大的政治声望。尽管档案中可能包含对特朗普或其盟友不利的信息，但通过主动、有控制地发布，他可以主导事件的舆论叙事，其潜在的政治收益（打击政治对手、迎合选民）很可能超过潜在的风险。因此，在法律强制和政治有利的双重驱动下，特朗普政府将按时发布文件。",
+    "citations": [],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据最新网络搜索结果，《爱泼斯坦档案透明法案》于2025年11月19日由特朗普总统签署成为法律，要求司法部在30天内（即2025年12月19日东部时间晚上11:59前）公开所有未分类的爱泼斯坦相关文件。多家主流媒体如CNN、Forbes和The Hill报道，司法部已表示计划按时发布18类调查材料，包括涉及杰弗里·爱泼斯坦非法活动的实质性文件，且法律明确禁止以尴尬或声誉损害为由延迟或审查。没有可靠报道显示延迟或豁免迹象，司法部发言人确认将通过官方网站或新闻发布室公开文件，符合市场资格要求（执行部门直接公布，非法院或泄露）。鉴于法律强制性和政府声明，最可能的结果是特朗普政府在截止日期前发布符合条件的文件。",
+    "human_outcome": "No",
+    "title": "Will Trump release the Epstein files by December 19?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-the-us-invade-venezuela-in-2025",
+    "question": "Will the U.S. invade Venezuela by December 31, 2025?",
+    "ai_outcome": "No",
+    "ai_reasoning": "尽管到2025年底，美国与委内瑞拉之间的关系已演变为涉及军事部署和敌对行动的积极对抗状态，但美国发动的旨在占领委内瑞拉领土的全面军事入侵仍然不大可能发生。目前的局势显示，美国采取了包括加强军事存在、对海上目标进行打击、实施严厉制裁以及授权秘密行动等极限施压策略。 然而，多方专家分析认为，当前的军事部署规模不足以支持全面的地面入侵，并且这种行动有引发持久冲突和区域动荡的巨大风险，这与美国国家安全战略中避免长期军事介入的目标相悖。 此外，战争推演预测，推翻马杜罗政权可能会导致委内瑞拉陷入内战，进一步恶化地区稳定，并可能疏远拉丁美洲的合作伙伴，这些后果都不符合美国的战略利益。 因此，尽管双方已处于冲突边缘，但美国的行动更侧重于施压而非直接领土控制。",
+    "citations": [
+      {
+        "title": "behorizon.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd0GvH0Ap1rGA13-9st4ufPUi0mn0hN2CQRXk2EYtt_TnP73exFJ_kbAlUGwJr8vUBDCBAGCwsXKpw6IsJ_v6fBXUKwELR_kPxutykEawj-H_i4KW6KjYnDj22shVBx2-8jxTSH_Z3360_g9EcJLnDKDKovWvjYsJvK_TI4aMWp5i5"
+      },
+      {
+        "title": "britannica.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnuPXf2ErgEqbHY37EKtNgQQKOHph20dEuIs_DUNVd4lBW1l9_opA1hDyCg-rieEnXsnjp8A2Hh_AKJ4pX7aFDP2BTwR8edJEN1uU8C85xDXEVvqep0Y7i6VO1JM9s36VK98hwjdvVsRotTkK9ZpvIwuNYk5Ouzy7a3P9Oo7jD6c5B5-ijiL7XapXsRtqq9ElPsijaDg=="
+      },
+      {
+        "title": "americansecurityproject.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQECrYSs1eLhdai3zDhPneMmn4Ke8ncpmQ_xbwjvhTzWEu85K_OFlWJAQGy6xGm6Rj-hICt04B1_STSxnMReH6Xdo3xJreNMxbX_ALPEYZdvP3Jrk44Ts61fj_d_qNsHB4-MKOwiqX_p9nBXFWvFS7NC_XP-r-EAEC40lLhb7Wpu9rgHGRXe_pp0fSK1pFKBPnAAJUQ="
+      },
+      {
+        "title": "time.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyhLzgDJHMslwHgmGdFHdKFddo2-7XNanLEgYDDaZxgktyttJYBS0MJwetdbXOxczJV98ZsxLDY5aXdCMHPftF73CQyoGVQH8kcFI4FE0B23ETLYGACRI3Fjby7eG2W-tjVZ9Zwk88dASo5AfS_w5VJcLazcl26EKW-y7V68L9"
+      },
+      {
+        "title": "wikipedia.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGh4OpGlGpAEA8arj4VzlNzmRSbZXW0bO2z72XRXuK5nvpEg5gWUVsKWxCpLSSJ6PLWURw790moD8KNwvaQKTwu6VJNEeJ_wp1jL1r7IYRrGb7D7Fw29k8iuAVjPstsfKhuaSvzVmx97IXrTEIUMWVp3d9DhFi_PrySbn2_8NfM8NsYgGOg"
+      },
+      {
+        "title": "bhfs.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOojmze2tFTbiY3NcWJ93sLPX8HEgRT_npM761AsCMMKfgsW5h7TTNHwjALfwsHBIAex7yZE5d6vr7d1gf_uNMIzyDwCwa1NpGh6KnVDoR7avYPFXdKe5aRe8v3yQOvBlIEPsrKtkGy0JMDkgX0s-c3pM0uKHKMmygW5NogfWZcfwW-AB4Ofd5DOzdlgU="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根據最新新聞報導和專家分析，截至2025年12月18日，美國對委內瑞拉的行動僅限於海上封鎖、油輪攔截、軍事部署和外交威脅，並未發動任何旨在控制委內瑞拉領土的軍事進攻。特朗普政府雖拒絕排除地面入侵的可能性，並有高級助手建議使用船隻打擊來推翻馬杜羅政權，但美國國內民調顯示公眾對此持懷疑態度，國際社會如墨西哥和巴西呼籲聯合國介入緩和緊張局勢，專家警告此舉可能導致長期戰爭且缺乏明確益處。考慮到市場解決期僅剩兩週，而目前無任何可信來源證實入侵即將展開，邏輯推斷顯示美國更可能維持經濟和海上壓力，而非在年底前發動全面軍事行動，因此最可能結果為「No」。",
+    "human_outcome": "No",
+    "title": "Will the U.S. invade Venezuela by December 31, 2025?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-the-us-invade-venezuela-by-march-31-2026-255",
+    "question": "Will the U.S. invade Venezuela by March 31, 2026?",
+    "ai_outcome": "No",
+    "ai_reasoning": "美国军事入侵委内瑞拉的可能性极低。尽管美国政府，特别是特朗普政府，曾多次暗示军事选项的可能性并以禁毒为名在加勒比地区进行了大规模的军事集结，但全面的军事入侵面临着巨大的障碍。 首先，这种行动缺乏国际支持，可能会遭到拉丁美洲国家以及联合国等国际组织的普遍谴责。 其次，美国国内对此也存在重大分歧，缺乏足够的政治意愿来发动一场可能陷入长期化和高昂代价的战争。 分析人士指出，当前的军事部署和压力更多是一种威慑和迫使委内瑞拉政权更迭的极限施压策略，而非实际入侵的前奏。 此外，入侵委内瑞拉可能导致人道主义危机和难民潮，进一步破坏地区稳定，其负面后果远超过任何潜在的战略利益。 因此，美国更可能继续采用经济制裁、外交孤立和支持反对派等非军事手段。",
+    "citations": [
+      {
+        "title": "wikipedia.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1VoIRSckfjvM23SVzDOCcRskuJcAQwl3n2P6NIQcM9RknlDz6xl68BS-xD0VXOHAKWhyRr1lPr0FlgDRcQB-B2q4jCrjg7hwtHDHNjQkFuoQF7S96319WGQjG0Su1DsInYl_2EOLf2G5jVnsSBqHrURdfq1m83_LwUXcsNzbvIBbcPsU6"
+      },
+      {
+        "title": "theguardian.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNbC_JvkeDbjH-lwrIVTmHpzLUAzh-qCPi7XvmGSxwcevHxovvVHT653mgzzzqD6v1vV7BIm9K5DXdH_QgP_tRTnhs6Gt6VmbSEXNZIqHr1sJytSSJacKFRAkDK0S5cYyLu6TSRt5nEAUepVlMclcE0WY3ZHI2NLBdnDUTwDwZmPWOiYKE134bqExst-nyJFGnDdIE9fY="
+      },
+      {
+        "title": "china.com.cn",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF66tAtxwsGduS_CY_RYDoD0ohQJJkOHBQbDBw_pA_9yzwJBFHTHZSplXGeRQhCHAPVXeLtCPqv2ro5_hINlOgqIHoeCugV-Ss1lx_QrPTPqJToFjTWE4hXsxNJEavMNZXd6ya35nL037r4DszU4j_WUSynY1hXeTY"
+      },
+      {
+        "title": "catholicworldreport.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKaJc2p5-_SBQiiOilS5nKGighekOLhr69yi6_PBG1TGU728dZa1owSfyYFy2xc2zfLwX-P8XoBHFVu31E8Xs6PKiifvPa8YVUYv3U2cfs1ds50k5b_SM1GfgFMoe9isLJpjJXGWE8MaU21y9fuovzht0ADDnPeEFJUfUs-0nBTo8_6srV0eNvJlS5lXmuPeozFm5U"
+      },
+      {
+        "title": "cbc.ca",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFW61Vu5LYeDmP9--ejM8nToaECRzTvG8945LYZn7H1GJrgbt0iGxPcpUR378Q_eKIvDp-tu_kO9I6tSGSJcV8J8zOExMU87n7F1cJrFSFcXgPAmcbkZBYnnlcyp60qiORwopKhadF2l84TfZJyNgYkYOpVTqVepVotZEWw1YU59EnEYZQ-"
+      },
+      {
+        "title": "chinanews.com.cn",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHM7c-voO9_gmlPJiwsRi7JVYKeQhBQNV2EZKUsSiq6bcowtOCuq-ipfYxeKSzzuXRhMDdGFvdFqa4XPu3tAOqulz97piApVo-1aGqL3XDCsbbHkzRPwCRfXlIGAkeZ5WURiQ10Qk3O0EznI1PS_xopgMOxvg=="
+      },
+      {
+        "title": "setav.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoKwmALxvPJVR8yx7jssqv7C0O4RsMXpAETEUIzp-NTLHsARn8hi8k5vkRexSfyTBYfm_tQs9Ye51wAn2wFkVDkuJbp4lENAEmIrdO_UeNjy2K2Jf2t9HF3dNNdefPf1cR0ncVvTUTo4Iu--r-vi_m1CyRkdNoYkXHOakVWqF40oABV1hp2A=="
+      },
+      {
+        "title": "crisisgroup.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVVAYPPpp4JQBBAsPwNNQC7axGbnwU8GamEhMvTSFxBM5zNbhSaYYs9rWCUgsDsm6ggpLZ1khvamOPtnkaUUmbagECYYUWDQYFnw0wKbqqn9tLrKVfEY9AzR0py0YiXcsFR4SBhxp5lhjIgv9O6sPI_LhEl7Lyw16dTAFLknM5uW9qJHU47c12857IFLwMbPZ7f1X_rCzU623Bv-0zXkam2frd0Q=="
+      },
+      {
+        "title": "americansecurityproject.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbfcEM86Vivkauutt5hWKjhmedaPwDwkXS1foSUEwFmPsxx6ICaqDrYKOXRU9PB_vwM6-yOKQlIF45lDgiIerdkqpvlCNynHFWxjdD7b8scvjrFin9douSa8z3BfSYsomVq2GF9Zub_PdwXu4NItzDnYbmh_adE_6firjX1qrAxU_l7zD6V44EXcVZICjTsmH0uEA="
+      },
+      {
+        "title": "thedialogue.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCYjZE7fP1bc3higz0mVDUtxpyMzd-rldtxfSJch6_i_C0BufNiB-Oy28p25ejYli33t900hZ5uJ22CSIN0I2F-p1C5-yiY-eQSOCLNPv9LVlffXCdPXhe3pntYIuuvt6zLCovyiPp-N3XMbZPobXh005xxe69SF-UPwrNcnbzS4yqEDp6A0_RDpSaBKZr"
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "儘管2025年12月美國與委內瑞拉關係緊張，特朗普政府部署海軍力量於加勒比海、實施石油封鎖威脅並發動針對涉嫌販毒船隻的打擊行動，但根據可靠來源如Politico、CSIS和Real Instituto Elcano的專家分析，美國缺乏地面入侵的後勤支持、政治共識及國際盟友（如墨西哥和巴西呼籲聯合國調停），預計將繼續透過經濟制裁和海上壓力迫使馬杜羅政權讓步，而非發動全面軍事進攻以控制委內瑞拉領土；截至2025年12月18日無入侵跡象，餘下至2026年3月31日的時間內，談判解決方案更為可能，避免高成本的戰爭混亂。",
+    "human_outcome": "No",
+    "title": "Will the U.S. invade Venezuela by March 31, 2026?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "ukraine-agrees-not-to-join-nato-before-july",
+    "question": "Ukraine agrees not to join NATO in 2025? ",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "乌克兰在2025年公开同意不加入北约的可能性很高。目前的事件和政治动态表明，乌克兰总统泽连斯基为了换取美国和欧洲盟友提供类似北约第五条款的坚实、具有法律约束力的安全保障，已准备好放弃加入北约的目标。这一立场转变是在与美国特使于柏林举行的和平谈判背景下提出的，旨在结束与俄罗斯的持续冲突。俄罗斯方面一直将乌克兰不加入北约视为任何和平协议的“基石”。考虑到正在进行的谈判以及乌克兰方面为达成和平与安全协议而做出的战略让步，其在2025年底前正式宣布这一决定的可能性极大。",
+    "citations": [
+      {
+        "title": "cgtn.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2bhC8-_6f-6HF3-vSP11UhNa9IoaqVd_qAsVAXG-XLrYBYIccHdZSbh_zhZ0RyIJMGYkcL8mT_VCJPWfwMS10rokYgSlu0wD242POaaZ_i4q1UdvDAajbTJvrvZhAa12YtOGSYt-bGOmUnWmEXcSWJPbYc5P8e78sF89a8oow9E2BPJOiOILjfii_wCtW0uF-GgmI_X9wXDR6WUAosId1iilTRjQugiqxBbBbIhjrRchzWKe6uBxC2ls="
+      },
+      {
+        "title": "hawaiipublicradio.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsI55TTaEW5TTMbAUwlgbx1HCd1hPI47CjuQsiKK0ExdwOCpT4tFNKo83OBpUcuvZyHQuiRWV79_tOahS1W-VVtDS3JkaahCrs1x0eOnzpIVL4M3KsrNIHDnIvG8AKZVp0wn5zdzTAibDbcn9YLk1dWTRs88TcImiaS6RSjBMapsoSW6eOoJIg4ITM0n0pdNEAkOuafv4bApmmmKYcQSCXY_fTmLW9w0O-DBzfZGPJr2bEdDG5"
+      },
+      {
+        "title": "1lurer.am",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgRRhCyatUhl7CGQBuqLsHCNGyOWBIQ5tooeMzJ8eLv12C5YZhTbzbC0R2WvgF8WzwJj0DFVeUEgikpyQt9dcw-AREfduD3fK_GE3U8OTrVlW93z3i8LBRKdW6Gl6EYq9IN3yuTQQn1ViFUFY4Y5PUQjF1j9f-aFDmyWKyVbFaXf66GzUFW4BVoLBjfNak8_TOch2JkjYb9OSd9f0ETTitn3-myyX0szXxpO99kyLJT3Z2oWpUbvPXKF7YrHujREblyCx8ItHwm_vZWA=="
+      },
+      {
+        "title": "dailymaverick.co.za",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHpF-NxEZybhfWXrqkriX1wZkckBWkkpypNpKOJLKYTjlmJqAsIel3njyJ0Y2Kx425iEup2y7Ctm_oTSnSDktexZtLykeZCrlMRVdBZYlsFJyVKBHXLn5i0Mtn747yVBihsZX0qY9UyN8i07ddv6SefwgdJFxopIS2RHCWEJFyoP24skcDwJq2nonFooy8qGTvH9bJwgU1flWLtjev1Ee5yCQBRBde6KI5ZC5hyC35GLOI="
+      },
+      {
+        "title": "japantoday.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQElxpswpny7WR7qTWs4ByTanMqKqaGDbROxld-hnW-hbrsgQDipni19CPMRzKdAzYCnj1WLbNOSY0Z01ilERoBHh23pHWCCQtwSG3DknQqZaU85Cd8b5jHQCCvB6szJ3ph-cGqP8nrB7u9MCa4V2j6gWQgjRkXpqIsGsCX5SFGamzAcjroasujXQ9z1ecVd1BiV46Bhdp4GfxhUjBSB0_jUNs3pHQWHTyo="
+      },
+      {
+        "title": "pbs.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4Nm2XcA1VuY_8cZ_VaVfswnX8uwuhkDMcH9V8hxKsl7AMI7Wg0463vGE973jeQWZqoM_ImmmpUYs7Equdca6e_W6WqDZ15T1iuJ1mkYT8-e-cznIsKq_5NczI9XLx7U36IGU2Rs8o7NR4q1iuUKGz7YcRmTVk1EwBGQ_YsnxZXHVRPCOPIZx98YyO-fVTgb2s93DpjZsER7B7pXHe4v4wt7dFI2lilALTZSu0IpJZpYfux5NgYEly"
+      },
+      {
+        "title": "japantimes.co.jp",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuk16cQfZR7WnR28VJ13B5bfRES3EAVA7dhu1zsnFTvE1z9wPIB_883rkJbLMYINDakZeF_1IsWpsnDhCJKJ-XyiJWwX7yaE0HWg-5E0Jnc9R9lY4i8o246RGinRc3ik9sgmInKn-hZloSCqAvtonfk-BG4c1vTf_zPBF0atFmf8lg5Nn2p1Uyca3IC2NuPq59ZdxtkHat"
+      },
+      {
+        "title": "kyivpost.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKS-42Y-Pxk_Gz92tJarDr3rTSvmFOFSWWWRiulRTsEQ9CbyPeqo0ailX8NRAKYmxd4nMgbQqWD36L5fwEwYVnOu9PuNjYI91UhOQpXMsPTr-TLDwSXVfYOKLY4Qjw"
+      },
+      {
+        "title": "wikipedia.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHL0bfYyn2LuxD4QUHTZ2AC28gxu9oJkAql3FWB2r-NncZJYb93QKyT0_k_YCjUIN8nVBZGY-uN8GxMGoEtg861T4efJbSZQ9ByufISQk67tieKa86Bz0Vp7uyRQcsfC21BIJcoOLxjmH0F67Psp2aDvLYl_1e3j9lhGqu_3rFFI-qWJirHyKlGnFQnzDxLc7R4KyN75kwn5owzeVl_"
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据最新网络搜索结果，乌克兰总统泽连斯基在2025年12月14日至16日期间多次公开表示，乌克兰愿意放弃加入北约的雄心，以换取西方国家提供的类似北约第五条的安全保障。这一表态出现在与美国特使和欧洲领导人的谈判中，并被多家国际媒体（如NBC、卫报和半岛电视台）报道为乌克兰正式放弃北约加入计划的单方面宣布或和平协议前提条件。即使该协议尚未完全敲定，但根据市场决议规则，此类公开承诺已足以触发“Yes”结局，且截止2025年12月18日，此事件已发生，无需进一步等待12月31日截止日期。",
+    "human_outcome": "No",
+    "title": "Ukraine agrees not to join NATO in 2025? ",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "nhl-nj-las-2025-12-17-total-5pt5",
+    "title": "Devils vs. Golden Knights: O/U 5.5",
+    "question": "Devils vs. Golden Knights: O/U 5.5",
+    "is_excluded": true,
+    "human_outcome": "Under",
     "market_status": "OPEN"
   }
 ]

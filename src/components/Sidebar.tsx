@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet } from "lucide-react"
+import { BarChart3, Database, BrainCircuit, Wallet, History } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -30,7 +30,14 @@ export function Sidebar() {
             href="/human-vs-ai"
           >
             <BrainCircuit className="h-4 w-4" />
-            Human Vs AI
+            Human Vs AI 详情
+          </Link>
+          <Link
+            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+            href="/human-vs-ai-settled"
+          >
+            <History className="h-4 w-4" />
+            Human Vs AI 详情（已结算）
           </Link>
           <Link
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
