@@ -272,11 +272,11 @@
     ],
     "human_outcome": "Yes",
     "title": "Will Trump's approval rating be less than 42.0 on December 19, 2025?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根据银弹公报（Silver Bulletin）的最新数据，截至2025年12月16日，唐纳德·特朗普的批准率约为42.8%，高于42.0%的阈值。最近趋势显示，其净批准率从11月23日的-15.0有所回升，例如经济学家/YouGov民调从-19改善至-14，路透社/Ipsos从-22改善至-16，表明短期内呈轻微恢复迹象。尽管政府关机事件曾导致批准率下滑，但12月5日后的最新报道显示恢复信号，且仅剩3天时间，绿色趋势线不太可能急剧下降至低于42.0%。如果数据不可用，将参考RealClearPolitics，但当前事实支持批准率维持在42.0%以上。",
-    "real_outcome": "Unknown"
+    "real_outcome": "No"
   },
   {
     "slug": "will-trump-issue-a-gold-card-by-march-31",
@@ -374,11 +374,11 @@
     ],
     "human_outcome": "Yes",
     "title": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be less than 90m?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根据最新网络搜索结果，《阿凡达：火与灰》的开画周末票房预测显示，其北美开画预计在9500万美元至1.15亿美元之间，主要来源包括Deadline报道的1.1亿美元、Slashfilm的9500万-1.15亿美元区间，以及Box Office Theory于2025年12月12日的跟踪预测超过9000万美元。尽管有少数非官方传闻提到可能低于1亿美元，但主流专家分析和预售数据显示强劲势头，受前两部电影的品牌影响以及圣诞档期加持，该片开画低于9000万美元的可能性极低，因此最可能结果为“No”。",
-    "real_outcome": "Unknown"
+    "real_outcome": "Yes"
   },
   {
     "slug": "will-putin-meet-with-zelenskyy-in-2025",
@@ -731,11 +731,11 @@
     ],
     "human_outcome": "Yes",
     "title": "Will DraftKings launch a prediction market in 2025? ",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "Yes",
     "grok_reasoning": "DraftKings 已獲得 NFA 和 CFTC 的聯邦批准，並於 2025 年 12 月初完成 Railbird 收購，此舉旨在推進預測市場業務。該公司多次確認 DraftKings Predictions 應用程式將於 2025 年內推出，特別是 12 月底前，監管障礙已清除，且官方聲明顯示產品即將上線並向美國用戶開放，無延遲跡象。雖然目前尚未正式直播，但基於近期新聞報導和公司指導，預計在 12 月 31 日前實現至少一個預測市場運營，符合 CFTC 監管指定合約市場的要求，而非僅限公告。",
-    "real_outcome": "Unknown"
+    "real_outcome": "Yes"
   },
   {
     "slug": "which-company-has-best-ai-model-end-of-2025",
@@ -871,8 +871,9 @@
     ],
     "human_outcome": "No",
     "title": "Will Jake Paul win his boxing match against Anthony Joshua?",
-    "market_status": "OPEN",
-    "is_excluded": true
+    "market_status": "CLOSED",
+    "is_excluded": true,
+    "real_outcome": "No"
   },
   {
     "slug": "trump-approval-up-or-down-this-week-427",
@@ -882,11 +883,11 @@
     "citations": [],
     "human_outcome": "Down",
     "title": "Trump approval Up or Down this week?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "Down",
     "grok_reasoning": "根据最近的民调数据和新闻报道，唐纳德·特朗普的Silver Bulletin支持率在2025年12月中旬出现下滑趋势，主要受政府关门、经济担忧、移民政策争议以及对罗伯·莱纳去世评论引发的负面反弹影响。从Silver Bulletin的最新数据显示，截至12月16日的支持率为42.8%，而12月12日左右的数值预计略高（约43%或以上，基于早期小幅回升后转折）。专家分析和多份民调（如Economist/YouGov和Reuters/Ipsos）显示支持率在过去一周持续下降，预计到12月19日将进一步降低，因此整体结果更可能为“Down”。",
-    "real_outcome": "Unknown"
+    "real_outcome": "Down"
   },
   {
     "slug": "will-a-minecraft-movie-be-the-top-grossing-movie-of-2025",
@@ -1469,8 +1470,9 @@
     ],
     "human_outcome": "Joshua",
     "title": "Boxing: Jake Paul vs Anthony Joshua",
-    "market_status": "OPEN",
-    "is_excluded": true
+    "market_status": "CLOSED",
+    "is_excluded": true,
+    "real_outcome": "Joshua"
   },
   {
     "slug": "will-trumps-approval-rating-hit-35-in-2025",
@@ -1858,11 +1860,11 @@
     ],
     "human_outcome": "Yes",
     "title": "Will Trump's approval rating be between 42.0 and 42.4 on December 19, 2025?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根据Silver Bulletin的最新数据，截至2025年12月16日，唐纳德·特朗普的总统支持率平均值为42.8%，显示出从11月23日第二任期低点（净支持率-15.0）以来略有回升的趋势。具体而言，最近的Economist/YouGov民调净支持率从-19改善至-14，Reuters/Ipsos从-22升至-16，表明支持率在短期内呈小幅上升或稳定状态，而非下降。在仅剩三天的情况下，支持率不太可能精确降至42.0-42.4的狭窄区间，尤其考虑到聚合趋势线的平滑性质和近期恢复迹象，因此该事件最可能的结果为“No”。",
-    "real_outcome": "Unknown"
+    "real_outcome": "Yes"
   },
   {
     "slug": "will-base-launch-a-token-in-2025-341",
@@ -2070,11 +2072,11 @@
     ],
     "human_outcome": "No",
     "title": "Will 'Avatar: Fire and Ash' have the best domestic opening weekend in 2025?",
-    "market_status": "OPEN",
+    "market_status": "CLOSED",
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根据最新网络搜索结果，《阿凡达：火与灰》（Avatar: Fire and Ash）将于2025年12月19日上映，其国内开画周末（3天）票房预测在9500万至1.3亿美元之间，主要基于专家分析如Slashfilm（9500万-1.15亿美元）、Koimoi（1.1亿-1.3亿美元）和Todd Thatcher（1.08亿美元），部分追踪显示可能低于1亿美元，受续集疲劳和营销影响。但2025年已有更高开画纪录：例如《我的世界电影》（A Minecraft Movie）于4月开画1.627亿美元，《魔法坏女巫：为善》（Wicked: For Good）11月开画1.47亿美元，其他如《星际宝贝》（Lilo & Stitch）1.46亿美元和《超人》（Superman）1.25亿美元，均高于阿凡达预测上限；全年无后续大片竞争，阿凡达难以超越现有最高纪录，故最可能结果为“No”。",
-    "real_outcome": "Unknown"
+    "real_outcome": "No"
   },
   {
     "slug": "zelenskyy-wears-a-suit-and-tie-during-next-trump-meeting",
@@ -2762,8 +2764,9 @@
     ],
     "human_outcome": "No",
     "title": "Will Josh Kerr be named the 2025 BBC Sports Personality of the Year?",
-    "market_status": "OPEN",
-    "is_excluded": true
+    "market_status": "CLOSED",
+    "is_excluded": true,
+    "real_outcome": "No"
   },
   {
     "slug": "will-trump-meet-with-netanyahu-again-before-2026",
@@ -2920,7 +2923,7 @@
     "is_excluded": false,
     "grok_outcome": "No",
     "grok_reasoning": "根據目前的公開資訊和官方聲明，截至2025年12月18日，《Stranger Things》第五季第一部分已播出，但Eleven在劇中僅被暫時削弱並未死亡。搜尋結果顯示，多數粉絲理論和專家分析（如Reddit討論和媒體報導）預測Eleven可能在最終戰中犧牲或失去力量，但Duffer兄弟在訪談中強調結局為「苦樂參半且令人滿意」，並無證據支持她永久死亡。劇情弧線顯示Eleven仍是核心角色，過去季中類似「死亡」情節往往被逆轉，且無洩漏或官方確認其在本季死亡，因此最可能結局為「No」。",
-    "human_outcome": "No",
+    "human_outcome": "Yes",
     "title": "Will Eleven die in \"Stranger Things: Season 5\"?",
     "real_outcome": "Unknown",
     "market_status": "OPEN"
@@ -3145,6 +3148,644 @@
     "question": "Devils vs. Golden Knights: O/U 5.5",
     "is_excluded": true,
     "human_outcome": "Under",
+    "market_status": "CLOSED",
+    "real_outcome": "Under"
+  },
+  {
+    "slug": "fanduel-launches-prediction-markets-with-cme-by-end-of-2025",
+    "title": "Fanduel launches prediction markets with CME by end of 2025?",
+    "question": "Fanduel launches prediction markets with CME by end of 2025?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-solana-dip-to-120-before-2026-332-738-564-617-913-254-474",
+    "title": "Will Solana dip to $120 before 2026?",
+    "question": "Will Solana dip to $120 before 2026?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
+    "market_status": "CLOSED",
+    "real_outcome": "Yes"
+  },
+  {
+    "slug": "will-anthony-joshua-win-by-points-or-technical-decision-459",
+    "title": "Will Anthony Joshua win by decision or technical decision?",
+    "question": "Will Anthony Joshua win by decision or technical decision?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
+    "market_status": "CLOSED",
+    "real_outcome": "No"
+  },
+  {
+    "slug": "will-anthony-joshau-win-by-kotkodq-113",
+    "title": "Will Anthony Joshua win by KO/TKO/DQ?",
+    "question": "Will Anthony Joshua win by KO/TKO/DQ?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
+    "market_status": "CLOSED",
+    "real_outcome": "Yes"
+  },
+  {
+    "slug": "tiktok-sale-announced-in-2025-386-821-248",
+    "question": "TikTok sale announced in 2025?",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "根据现有信息，字节跳动不仅已宣布出售TikTok的意向，而且已经签署了具有约束力的协议，将其美国业务出售给由美国投资者控制的一家合资企业。 2025年12月的报道显示，TikTok首席执行官周受资在一份内部备忘录中确认，字节跳动已与甲骨文、银湖和阿布扎比的MGX签署协议，成立名为“TikTok USDS Joint Venture LLC”的新实体。 在新公司的股权结构中，字节跳动将保留低于20%的少数股权，而美国投资者将持有多数股权，董事会也将由美国人占多数。 此举是为了遵守美国2024年通过的一项法律，该法律要求字节跳动在2025年1月19日之前剥离TikTok的美国业务，否则将面临禁令。 尽管交易的最终完成日期预计在2026年1月，但出售意向的公开宣布和协议的签署已经满足了“Yes”的条件。",
+    "citations": [
+      {
+        "title": "cbsnews.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAZ1eED8-io-5QxCh_Q4McF4swFpbbcHXNfpl-H9kGIjhIfXBnwsbmtCR9TGLvJ7WT5A-elcKuWDnkba2KjZfJ9zmvRHx9yAa9K1utxrexae2I73SNzXPa7UsE3lbR4PGjvLAk_-TkOAVVcQT8qaLZiQnvWdiAmjI1x5Ua3PjzcQ=="
+      },
+      {
+        "title": "mashable.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHhRWHkwHMFP_wSbmJZH8MnA3vH1fgQ2DxWFgm-mW7Aap39uH3DRVc8hepQumo0gDwOp3S421RNiuHux61KL43knd0BL5wrY_tTRsacF0zZhixh79VDpuLo2LyO8X4I4PDbJN7VBU3juD1EPgW8RaDXrQ=="
+      },
+      {
+        "title": "theguardian.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5KziYsbG4HEtPoZXD_7ZTut0XWc0xAIHNifHnP5xZRJft2yO2Y0lPQBgvnzwBrC06h13us8efIttbsQdv2V_iIunw2aMgfszZb5rN0QW_5YzbKxRu9VswhyFvmHZfAWn6utr6y7BlDr92iJ4N7E5bDqcO08vsl_UcLIsObn34_wA6sz9cBcPQ3MALMjDG"
+      },
+      {
+        "title": "bnnbloomberg.ca",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOWuDskfFFP0btvwdGl5XBZB5wVtX129dGArKOrzINdFC_ZeWdt2A8RVyRRg7scl1eOWOmMHCuGjVeHATrSsTlkZL0gEsHPmPpV9noHjpqQWeJ1VEJqCdiimo7CRIng6nMDq9i4skTBwpo2EavS5OsN6doSS7lOkWefQzSjL1bnOMKFetztUTbcYPVLpc-oRMXgzblTaFyoYb_vnWw-IYa-n86J-IR-qAnSWrUQa3qlLvmVMujLMQTKStQhJQ7HeUb3tOQHTuH4mwosNkOZw=="
+      },
+      {
+        "title": "techinformed.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8Ct7eGTvHOMKisb38X2MqOE4uMRRieYHOiEJ35SlrmfoQocfkUa17kq7J84FcR3We_XEdF1kQHXdnOxO9wKGVwBD7H60smOKAdqq4GLCi_WcWEr-vFCiR8jWtPI9XomgKep1Q8dKyw272KFeXvC8-FOH6u8EeRbINBlDWMx0="
+      },
+      {
+        "title": "cbc.ca",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuyLXBXpIYY15oiLmv2vuoksb0nZMuei1o9ekPh-_0TnJIOquHTXx2AVZAYyeQh9mjdCQ-c3t1VwCG4dpVyP1iGhac30dk8pGNYw2YvvEXicSagh31NB1A1Rry79kf_VDGKSmZcU89I3lfAR8-NLgy2EdtBRLMmMxQ"
+      },
+      {
+        "title": "independent.co.uk",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKRad0d_AE9Qd72bkpswtbNl9cu7HR_pSopvdm8JPWEHwl1-J6Glr4KxurB44O_f0eJR9ao3rzF1GZLBDoueuEAoDFn8WCLoZNczGxmWTfBtXqcGVpF3OxSERS_02og38sWzYgy5_XLtwleFiRq5SV428YcLmvSs8wq8fFe9l_gCLBsYQHoBV3_ENFJvYE5ReMwsXSe4A5jNeAD7RUvus9GRXuUqE7TM_pwUgeY36sl1AiLrY="
+      },
+      {
+        "title": "sadanews.ps",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0oPKYYg7VZVHEoL92LOQIMsELveKdoHdU3NHPgMmygAvVNavpCXL-yzevUwKg6Q0PHPc_SCC-eszAX3JOX_lBDdKxpCpfys70xOWnAdCHXyhtehsvW-Wi9gpW4fj06Ir0GkP8HH8="
+      },
+      {
+        "title": "aa.com.tr",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIEXA4sCSDZI5sm-bcqZurnEIaYxfwAq221o68j1J7jyBDqu-h1FP0CiqsqOZHiLKMsMq93v91gfpOPa9FvE-fhVTMJ8cawvvh3Dyft5v2Lat2IZfhtm010rqxQKdZEc4bNV1XBaGNCCDDNgnd4re3w_rrqT454u0JCfRxTFFjOj2CcM30vpLdEaZ-EVf2lnvpvM30l1oFL_ewbQG8-Kl_q20wEOS02mWHg532mI9SwQ=="
+      },
+      {
+        "title": "graphic.com.gh",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPfXXXdYZ3S_YHcWI7x31RFPuMbOr_TNayZ3O2xOqkdGU1JsmlyT0JjLudhx3wH9wIoResZbfVGMTlYe3O8tKriVgppqyaz0zbQJJWAkPWR8iPEsSeq94wsZ2p4LtKvIC-KURxoDTsvBdRyN5vXl_Y5OJ3L719JQ3BYMZ1929Tg2jDluitAuAVRJQ9ZUEZzJVqU6gIWvby147jvZpbIgvbln3z-gGGu55XOjjF13P6vnY8U9J6"
+      },
+      {
+        "title": "malaysiakini.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaCRmUa7NsTvGgShhKEM9VEaMAjS9YbPA8V13Uyb7rAXn7-nETs3hCKhan6OBRmFYj95n_kWwNPxTt7oR1fVVCybCQSrIXGwNNPgRV-NeIV-10lXr_6ANM4JVnaZD5cUWY"
+      },
+      {
+        "title": "dominotheory.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXFTOpc-_Ket-0pxfnMEMA_xBfxH0wmooXli0lq4j_8GFgLLl04_8jIDRrYyi5azN4vPJ5TV4OIyDwU7My-FhrBWIULNeF9GB3m5PPisnc8pgV6kB47PrWpDtsq2Rf96mWov6jj0gm3iLfGodbefwP15IcLuQM396I"
+      },
+      {
+        "title": "pbs.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGSpyq7rcIlfFBbk_6-Nhs3R7UxlC0AHkc46Gajh3J09_ZmqYMedVB63jXVB7ceL5KGDHOJFDHY7hkm-okJuJHyUQd2rPVg3hNmogAYVmDnn1vgt90kfPnlwgm0puA14SEJohllTIKcL2AB6Fy0FDQUPd0gADO_YJU0ediUKQ8uqJ5cBW6sJITY0J5UUg-9UDXAlnFmcPssx9D2A8QHo61dtvBP9y4zUsy5rA=="
+      },
+      {
+        "title": "rutgers.edu",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVc-WDitdbu_hPND4zZSNPp_CRt4kbowdVAhemVPhwFkJUOIRr9suSKgLZTQ5JkYmTs1JdBRDdw27PNpZwYJ29qOJArAiaBfynLxy7HAn0RWsMUbyB9CVN0CIIGqg9bEmZUSQxMKctkvcKm1pWZvEFcyWvB7Idwg=="
+      },
+      {
+        "title": "cbc.ca",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6BBNC-a5Q8XSMc16eovjKtnshMH6-ZmUei6br9ce0E8cEiqgyUYjvAPSqWdt5_tfIkJRw-aSTVSkecnUxNP0KhyL5zyhyNi4v3btnrU4242ErLDJXvZcgVQMe6NHSX4Y38_LjG1cesNq_iBbySlV9vJbvx3y5A9gVk0g="
+      },
+      {
+        "title": "channelnewsasia.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfPoAukKIqtPEcppcGn1wLqn42Y1endEi2RMt9PBcckL6S9-4d2wrHJcciixh8CnNsCTTQBWpGcX0Z2uahRIGwHjdQOxl8BAQhr_hjkw94Jfp76q2qs0wtHLzODI9yQxQt-AspHqLXBnovvCbPLtGuq-EUwYgVvHxMZSBFDAo6XBvXRYZyek0a7jSUNkpW6EQZillMAN_3QnKPVg_kZVA="
+      },
+      {
+        "title": "nasdaq.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF-qe4qeNV_vt6BHw39Udn5vc5lIdRMYMHIoNQy0sFtHPTyBrj_SBFJTKDd_Dja_oZvmgF4cYEoDhO8Qu6BQStVnhQWvi7TR4vmcw5QzttlTFypYjsacQwkczjSu1JfGZSogUDkHylJN74skYBX-GhSFqPJ4qQs0eB4PXfSw6gnL5a0RSXckMYbrFn5KwNc89XOJyWVmk4="
+      },
+      {
+        "title": "timesunion.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEhSPxU2ccINcRlvdv4W1NNFJVQxIfjo2zH5Q5fDlqhOuofxMttgYZnbsYrluGhxf1qTEwk5EMooYVJQnur0uS2LN7fLfnPqTfKT3mFe3zPqiGMCQp6pI3Hp12ghjilFzyW6cPyWyHPa2lQMDJ2MyOWnOGe5GE1MbhzKE0WqzCma7OvamVlLDCz6E4BUGMFwDfM5UsX_XFLO0="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据2025年12月18日的最新报道，字节跳动（ByteDance）已签署协议，将TikTok的美国业务剥离并组建新的美国合资公司，主要由美国投资者（如Oracle、Silver Lake和MGX）控制80.1%的股份，字节跳动仅保留19.9%的少数股权。这一交易通过TikTok CEO周受资的内部备忘录和多家权威媒体（如CNN、Reuters、Ars Technica）确认，旨在遵守美国 divest-or-ban 法律，避免2026年禁令。该公告明确表示字节跳动将转让TikTok美国实体的控制权，包括用户数据、算法安全和内容审核，尽管全球产品互操作性和部分商业活动仍由字节跳动管理。这符合市场决议标准，即字节跳动正式宣布出售或转让TikTok所有权的意图，且公告发生在2025年12月31日前，因此市场应解析为“是”。",
+    "human_outcome": "No",
+    "title": "TikTok sale announced in 2025?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-trump-release-the-epstein-files-by-december-20",
+    "question": "Will Trump release the Epstein files by December 20?",
+    "ai_outcome": "No",
+    "ai_reasoning": "根据现有信息，特朗普政府极不可能在12月20日的最后期限前公布所有与杰弗里·爱泼斯坦有关的档案。主要原因是，尽管国会通过了《爱泼斯坦档案透明法》并由特朗普签署成为法律，要求在30天内（即12月19日前）公布档案，但司法部已经表明无法完全遵守该期限。司法部副部长托德·布兰奇已公开表示，由于需要对大量文件进行审查，以保护受害者隐私并处理敏感信息，因此只能在周五（12月19日）公布“数十万页”文件，其余部分将在未来几周内陆续公布。这种延迟公布的行为实质上已经违背了法律规定的最后期限，因此可以判定，在12月20日之前完成“所有”文件的公布是不可能的。此外，解密和公开发布此类敏感文件本身就是一个极其复杂和耗时的官僚程序，涉及多个机构的协调与审查，一夜之间完成的可能性微乎其微。",
+    "citations": [
+      {
+        "title": "theguardian.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4nUoewEOAtV-It0oYCNxoEbx1LGhKbwofVHiCwbrZMuL3cT-m9Tt2hhU7gE43NhFHL7jj-raVSoMWrI5EEU1peDTDrfdCiw4gPj7hLePy4UM52Bf3OImhc8QVbEZZeifN8ooE3Clk2QrNlqpUgKpnW_SmBR4PaJTM7wxGLLir_JoS157dw-pEETTTQt9tl9r-NRnwpA=="
+      },
+      {
+        "title": "notus.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErdhrMdBDqu2QNSnkCI4-DpsFmPDBpo_3_J5OOMpOnrmJlXL44kHnXq3z5eCoS5d87Ny97kIIMYHZrf_BKD_by3MZ6CCrT6gEg9rjWEXeM2pBZ3s8ANVWc4TBl03hAitXSApF5AVDywDxXufnzNd9y_SawDiXE9OhMHqtuFfbjhcv2VKafdhS01BKf2mzd6Srke5JwYfbvS2_snUBRBn-1"
+      },
+      {
+        "title": "forbes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgz3zXhkxJOprA_XGHX1QlieA8OjvgF7LPDuNXpBlL7C9iBNbdT3np2Lk8ypyaf1tX6ctALMksaYTl65dFYJb1Rf4xKf3jOWBEbZggBGESpWJsEvHZYHbs3b7L5la5-lQ8UgJaBfr-_LUZWEDNRAUqztVQrbpIeEt-ikKZ3oUTcpxZ_LpJcxsqlM-8u8UK_A9mFSz4MGN5kSJIKrjKEznkuUDrek3Vb7igM4Q-fSSW-hRf7bTohhkYguUvVR2iPKLGcIEfk-T3xJKqLfAzrUrks-RKn4OP8MuQCkfrXA=="
+      },
+      {
+        "title": "washingtonpost.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNWqiakDcmdy8vLk21W_FI6wyaDNDFD8oU-SKbmlsSRyo7ySFbmY0kB4LMVWHgLwaNWs_zFPL5t0yNoU3ZPfVYZT4ZTaPp_VIVJkQy5UXWAfgOm9xfCjvTJBJLUywNCJ0jbQ0sK0DtYm5ZBmpTYyuNaFEN4903c2m9I1HAZqFtkUV-DCewOwyKAn_adCvxNwP6JA=="
+      },
+      {
+        "title": "americanbar.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkKVor0ip3Yo942mxzZv-Utpcg4twhsydo-gAgvBl7wxi2HyH5APC35BZGJiY_DANowA6X1W9qzF1-TlQTXuWkX1uJJ9LUQRZ91tqshJ4cMK17ze2-UKQ4TaQTG9Kba67k3EKgPd5tmSMfmO-94X75WLImqy9r0ttD6fzoWKGW78PvHNVZHhcfi1plvJdSuOQ2da4_-QhPngSgICeQCs8="
+      },
+      {
+        "title": "youtube.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgamfCper0v4PXkJ40V9ERQ-KEfzpv6k3xknWnCoIF6qivTb61sdeeKj4CGyO56f47Zzvp0cNoKraRaoq7UjvvHcVMPhgGspnNT_ChI1g_sl5_Nk_k89q-bLtuX6SxgKpX5tHbFQ=="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据最新新闻报道，美国司法部计划于2025年12月19日下午3时（东部时间）发布首批埃普斯坦档案，包括数以十万计的记录，如银行记录、证人访谈和电子设备文件，这些文件与埃普斯坦的非法活动直接相关，且此前未公开。司法部将通过官方渠道公开这些实质性文件，符合行政部门发布的标准，尽管民主党批评这不是全部文件，但首批发布已满足市场对任何合格文件的“yes”决议条件，且时间在12月20日前。官方声明和多方报道确认了这一预期，表明特朗普政府将实现部分释放。",
+    "human_outcome": "No",
+    "title": "Will Trump release the Epstein files by December 20?",
+    "real_outcome": "Yes",
+    "market_status": "CLOSED"
+  },
+  {
+    "slug": "maduro-out-by-march-31-2026-187-483",
+    "question": "Maduro out by March 31, 2026?",
+    "ai_outcome": "No",
+    "ai_reasoning": "尽管面临着巨大的内部合法性危机和以美国为首的不断升级的外部压力，包括军事集结和经济封锁，但尼古拉斯·马杜罗的权力基础在短期内仍然稳固，他下台的可能性不大。其核心支撑是军队和安全部队的绝对忠诚，这些力量通过深度参与经济和广泛的庇护网络与政权利益高度绑定。尽管2024年的选举结果备受争议，反对派在国内拥有广泛支持，但其领导层受到压制且处于流亡状态，缺乏在短期内发动有效挑战的机制。马杜罗政权已证明其在面对严厉制裁和孤立时的韧性，并表现出使用武力镇压任何民众起义的意愿。因此，在2025年11月至2026年3月这个特定的时间窗口内，无论是通过内部政变、民众起义还是外部干预迫使其下台的可能性都较低。",
+    "citations": [
+      {
+        "title": "youtube.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQERi-rg0RmOfLDs-fN5Gftn3ScFAhayIf0xv7t4k598oVcm9VcHd5ND8vv9S3oTfKFtiVEwFJimY0U5aIkoSKFm0N0WoaCvrDq6W6bHct0cwJ6fuhovHlC1ldXBU0sdBhGYCvTiY9o="
+      },
+      {
+        "title": "kawsachun.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsSku2eQ-BMVp7I9rW79pvPrd4BDyU02REW7oh5XeMUrbSxU2zDy8JL3m_Tvb_O8ZjkOix6yesuw-Ghw_XMS_u_ccObnnA_K_1TVhLOYhikvYMNiejPV6tsGVuif28p-4e2xWvPyHFCfbp963hwRd1i8nKJQakA_aGSdFvwqAJPpXeir020hheRCvFCHP_uEMuCuHAzEs6lkd65V6S3_np"
+      },
+      {
+        "title": "unav.edu",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDVtcc1ZVwKRT5nbYt2B5xUNI-xGiiN03fhkiKB6fiQQwGQhuG6EetoF05wrnYvYd1kiDv3Gmt9BHkRUSlFuxRtPBtkvZOs_YE0ZrC4hWblkX0_IRFhfDY_W_Lt7LZ4cc-PSmfBR0Mbp61aZKqjRVSqHdyIQaSQcvjeLc_b7D1PK1POxxElTuIpCvMs7Mujh-HwwLzLXq8bJ_9sZ0sKXtmROt5TFrpWn00H4pMoJluHsklsxVKpuMPLDM="
+      },
+      {
+        "title": "latimes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjdZMjB4BcboQT82gYGEtRlpgZAyUkUbBfVzsrK1q_oFsTyUmkl5wNnHnDzueCHNXQGbIopQ8NP7EgWOF4paoBL9Zh9asT-ly6euI5qQQw0nNq_xo7oXwuh1A9gAL6MsQZNIAn5edHuIvRS_KFuwzxTgr45ocDvJsVznSlN7o1TQleWqfyUNnqrgZOivEYyT3O8iGp4OmBFsVEY2gflCurtsmLyTluSrKfwWCuOBqVAxuwEW8="
+      },
+      {
+        "title": "congress.gov",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkdQo-8JnICfErALerj3hfsmdeWrvfm1-_oPr3V5hKR-VO7Yc1_Z3d-viGnddFk0VwivpbGe6t95hxOqn0hKzrsr98KbBAEXWH_7cCsbQWZqQnA2NaYsjfsZFE29W5vwseAWQg1CuG"
+      },
+      {
+        "title": "freedomhouse.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFf066Ybg97cxUVNVLw8TZAhPlIAu20Q9YnG_klnoNM9fcZnY8c5KyOEgWaCvi0jeLmB13RAqhnlQgidiuX2J4cAziQOttYTDgWK4kCPZpkoYJMINnfZy3su8WthXZ4puPBPiAkOZzW6rKjIyKds2RQoeX-ScH95_w="
+      },
+      {
+        "title": "theguardian.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3wHugR4kwf7zPVw0a38Gn_uLpgAsAE7gYq5FL71zOj94Gtxw-FffNRhCshAFkvmaXinwQv3gxd3jVEjdHUjSapn7S44lsGksV2pIx1ITNFLlxZrHcs-UcDQ6dOiu8KwepVfPGY5Z5qkU7bHnpMZkMjLAfLjSEBIUbWodXym_S_krtxmrTfc-Y9jgU_ZibrewDflsAyQ=="
+      },
+      {
+        "title": "thesoufancenter.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRWZ8pPrk3sgjnp70RxjGQvcd3168rb_2BaihXxMTbCwDxjvFZrL6b5v3P8vlliV64BNtQHPaPMf9M6AXN3n6_6f_gjBH3w4DS2BFAlLVAjJrOoXdiyEUA7owvUPd2QkWZUXOpON3UoZf-BNrmwa08mvY="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根据最新网络搜索结果，截至2025年12月19日，尼古拉斯·马杜罗仍牢牢掌控委内瑞拉总统职位，他最近在公开活动中发表讲话、回应特朗普政府的石油封锁和制裁，并下令海军护航油轮；联合国秘书长于12月17日与他通话，美国国务院和财政部虽加强了对马杜罗家族及亲信的制裁，并视其政权为“非法”，但无任何可靠报道显示马杜罗已被罢免、拘留或丧失职权。专家分析（如Stratfor和EIU的2026年预测）指出，尽管美国压力加大、经济挑战持续，马杜罗政权通过军事和党内控制有望维持至2027年，短期内（至2026年3月31日）发生政变或下台的可能性较低，因为内部反对派缺乏足够支持，且外部干预（如军事行动）在2026年被视为不太可能；外国事务杂志等来源警告，强行推翻马杜罗可能导致更大不稳定，而非改善局面。",
+    "human_outcome": "No",
+    "title": "Maduro out by March 31, 2026?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-avatar-fire-and-ash-opening-weekend-box-office-be-between-112m-and-123m",
+    "question": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 112m and 123m?",
+    "ai_outcome": "No",
+    "ai_reasoning": "鉴于前作《阿凡达：水之道》在2022年首映周末获得了1.341亿美元的国内票房，并且作为詹姆斯·卡梅隆执导的备受期待的系列电影的第三部，《阿凡达：火山与灰烬》的开画票房预计将非常强劲。 许多分析师预测其首周末票房将在9000万美元至1.05亿美元之间，甚至有预测认为可能达到1.15亿美元。 尽管这些预测低于其前作的开画成绩，主要是因为与第二部之间仅相隔三年，相比之下前两部电影之间相隔了13年之久，从而减少了部分累积的期待感。 然而，即使是这些较为保守的预测，其范围的最高值也低于问题中所提出的1.12亿至1.23亿美元区间的下限。因此，影片的首周末票房更有可能落在该区间之外，即低于1.12亿美元。",
+    "citations": [
+      {
+        "title": "vulture.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_I5orHD2WHuOn-cToCwdYkns7hTRNqLUS7G3SfHP4zVAO3ESze2-wVzrrY0Wb6nW0aKa3yZ8hTCZeZ1zc-gtukWv9X_Zwmgbuv8Br2fiDuLGkDFofd7f07n5GstIasdE5TfRwZ1TxKsjI3jF8q8Oti8En1jrjKCPf3dq5V4av3TEjBsNW6WQR30GYnb5T7ymZFbB9p721ULI="
+      },
+      {
+        "title": "reddit.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbDiIQRHdDtVB0S94nWhAhzWjioJlqcP6NbxXTSzyE5E11yC_M6y0haLlfR25_CxdpdDK_iJf9AxwEiVGx64rP8_D3C_mEO99gjtVHXRtb-ISaf2biaXD4xHFc8gMZINsjPoX5DfFSDQnWzQ4pbDoDMFzJl4gpyX5RNO9tXr9mIZdyZStxQMtMlC8XFVP8StPFAyYsg2qT8t7BKHQn"
+      },
+      {
+        "title": "the-numbers.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiiFxSru2XnpjZBhSI2vU0dqdnYT1LcfbEQOyjseh6AdUbPIFf2fldiY8XCCpmC0JSexdSMJkkgxv1HCUFo8bEZSA6LY9hPIgpSlXa3B5k-pnv9DRJdXQHCd635SUYvOiK96iCGnEU-HWGKKVhQgiYM2aDzMFsDZknOb8="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEiBAZp0tWCIrjErGITnc5ACj4AIMxYBb5lR64YKmWrEKCm6qPdVO1bwd9UlaSh8-4vHk-3QIqH3dhldMhUChD6KQN2uEFjB3Wrl0HrzMwu5s8GySy91AcuLjz2p7NIoIDsbXEsLDStfWjgdQVpEQHFeDEWgaJQHBxBDzACxWuq"
+      },
+      {
+        "title": "screenrant.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH83dq1J2irVjD-9J_D1Nol7odlYwd2-gu6xdj6mXiWVtpBxQuJ_vIjfqpjAyZJEF1n8yPFgw8kUdVsK1AOY6I8Xy-jGGsIjdHb83EGANp53D9utthflhdVCp2gys_Zd-kFEcds9WpzgfqknHitiBl6d8a9wJfJndEbSx197yYtFPliWxz59iqoNA=="
+      },
+      {
+        "title": "screenrant.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHxRYw5Spkhm7ezJu4QELjlH7ZZ6oZqe7kWcl5uDn1JuxApxMkDHw03DRVedNzldKuZDaPflLIy6arMYiSnxNYxW8oDb8p-iulrjF0T8L75f9Zanm4-yiszh8LMvcyJRO3k6OwgtQS1SB-fJadkg8RZ4xaTwKVEJ82qlWFKrHhnNRcJthRPgcCcFIs9JrZCxHieh9-nfRZGOYF7jdnYLnwEL5Z9HoAM0wDnXZk="
+      },
+      {
+        "title": "fastcompany.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFETZdohzK4pVMovkegZBzXCAqrRu0ornAmnF7jZJ6qcPYKvrt9g6pqir4dkTxQhvnqCq23f90-xcN8uTdwZ12PJfkEZum-1SKvgQDINH16MZWacpUS2VP1wuGrXCt34mVVO-lv18BsRtvXJCbByyAbX5potVk3fAFpJ7vEXdo7tUhK5uXIqRzm3-Xr-rbQZ3bacaUMr1sCBpjwWOVO"
+      },
+      {
+        "title": "boxofficereport.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHro1xc-5GWa8KHRbQspWq02KQSUwo7_rQwB6asgY1wLLtNZNeCklo-9GDuYtwrdXGzSyHm-vcemjJJNmjrsuwqhjoDu4y4jvbIaRMu4jBJ_dA4DnsPyjD4fDLrZMhnUmry7hem5wcmLvT5GtFkalP1hqPzZEfcwpfoqpcPZkc="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根据最新网络搜索结果，《阿凡达：火与灰》的开画周末票房预测主要集中在9000万至1.2亿美元之间，其中多家权威来源如Variety和好莱坞报道者估计为9500万至1.05亿美元，BoxOfficePro的近期预测区间为1亿至1.2亿美元，而ScreenRant部分文章虽提到1.15亿美元，但整体共识偏低；预售票房仅1200万美元，低于《水之道》的1700万美元，表明开画表现可能疲软，加上正面但故事熟悉的评论反馈，预计实际票房将低于1.12亿美元，因此不会落入1.12亿至1.23亿美元区间。",
+    "human_outcome": "No",
+    "title": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 112m and 123m?",
+    "real_outcome": "No",
+    "market_status": "CLOSED"
+  },
+  {
+    "slug": "will-the-fight-end-in-another-outcome",
+    "title": "Will Jake Paul vs. Anthony Joshua have no official winner?",
+    "question": "Will Jake Paul vs. Anthony Joshua have no official winner?",
+    "is_excluded": true,
+    "human_outcome": "No",
+    "market_status": "CLOSED",
+    "real_outcome": "No"
+  },
+  {
+    "slug": "will-jake-paul-walk-out-to-runaway-by-kanye-west",
+    "title": "Will Jake Paul walk out to Runaway by Kanye West?",
+    "question": "Will Jake Paul walk out to Runaway by Kanye West?",
+    "is_excluded": true,
+    "human_outcome": "No",
+    "market_status": "CLOSED",
+    "real_outcome": "No"
+  },
+  {
+    "slug": "will-avatar-fire-and-ash-opening-weekend-box-office-be-between-101m-and-112m",
+    "question": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 101m and 112m?",
+    "ai_outcome": "No",
+    "ai_reasoning": "根据目前的票房预测和初步数据分析，《阿凡达：火焰与灰烬》在美国国内的首周末票房很可能不会落在1.01亿至1.12亿美元的区间内。多方行业预测，包括《综艺》和Deadline，普遍预计其开画票房在9000万至1.05亿美元之间。影片在周四的预映中获得了1200万美元，首日票房约为3650万至3700万美元，这些早期数据同样指向了约9000万美元的周末总票房。尽管该系列的前作《阿凡达：水之道》曾在2022年取得了1.34亿美元的首周末票房，但目前的预测和早期市场反应显示，《火焰与灰烬》的开画表现将低于其前作，也低于1.01亿至1.12亿美元的目标范围。",
+    "citations": [
+      {
+        "title": "screenrant.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnX6s-4rO25JjuGmgApMA4_l1ewRYRrEZvAN6wqYDsj8OX4NbMxPomGhC8ziHezQke9C4vwzOe_ECX1i8pSWZMjWarwxwMPubz32Pyxf5qus6n6oCu87h5bzt9EExrIzmhwI3m-41spEUjllDcjqv4cQwceovYc2_EJq151gq7Ga5-Vp4Y6Sy5"
+      },
+      {
+        "title": "superherohype.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5tz6Jw1vL0G1d7a4Zi9xEEVEqqurR9yXtEqxvz-JEErqCjtztjWHCFCxMmNO5ni3Zm0u14UqashNxc9FfULGIk0eI1libYXPu_NhUqI-shvXp9uS0EIslnoLSgJ43NBXxmTWxFnbcOAp26MAKzsV6O3IO3JE5hKfWgEDfgzy4KwIfsfo6G8WhlhpvCQj7QU4D2bJdgOD-vA-OUqY5jFkIJfadmQNT7w=="
+      },
+      {
+        "title": "thewrap.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4b15mgnEXh1xpEDIG26mLVDT58RquILNSsWfbzdFb5gdk7eVHNJM2CYGy_x2WJiu1vOopiWF_iNG0j96hGRpVycK6a-q2n0hPXf3BELBscojVoZAMUtHGwe5X_SHzNS-7GKZ-eS6GcLYERCU7is6KHNjXnQcYRBpQ7KFG_9cswAIB4qx0VA2wM1npEgc="
+      },
+      {
+        "title": "collider.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9LSau8zzoZF_0O_M7En3QpL4l89-Uhibyh8BWdVXXNi8l30zd6Enyk56TZVay4V3hvCC3nYP8WYF5MhOU60kUVFI_LsTryRdnCrjjc-HIlKD7Ef8t1ncCTucsSd4ByLO89pXWWCehh9db87cjln5Bp-xsBhouGsM5mInlNY6pUl8-52cAaPt3PM9U3x57CvclNHSuubZWyMMA8pgbxaa1eJTxDHqZ"
+      },
+      {
+        "title": "yahoo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdA3ykTSPVJPdtLDvNhJXMQFO5j_6g9ipzw_G0avGu6aX096KGQ2Fgl3ZcY3f6RCapFPYERgHLQ7Uf-Z9stZbb5-P4m4ihL0tN_Oo4oP2PyIbflaJY2YTHuvyqkg_VeVtugIbXp2sVk9iSTIhkwIhwrPkCoMSVXB537y8RD2RweUaI"
+      },
+      {
+        "title": "forbes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHg_4qjJPjJ_KlHNqOPcQgYVnIK5JgFC2DTvqa41hqXbI1H_vqxs0hWB5ILNLnUCwax8t92zd6WADsoer-pOt93EYkh7yGQ1iIsM86F3A5eUykWWrvRzV7LuJ53-4fdLMkr4PtNquA3UyxHnK1C55jCNyvH3-hsPnaQKwSBxJQGCugTa_f5N7kE5gCjcNer7NY9rBpEPN-s8UMGDmNNuJFUcfl6ADvRH-XheM5iBw=="
+      },
+      {
+        "title": "the-numbers.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlMAcJdG37A1o7_wHa7Wd9U70pPOzT6l77XZdoFP1Vf9w6n3Pf57taDt8CBA5ymU2FUtWtu2Trr_RxdbGZYSIc6hg4894RnPyPN5QCSFxyz1uwDgRpEUuBVZ8nDfDAherjuyZFuJQi_AeTTvfQtKoIWkWDOJYQIxzmaQ=="
+      },
+      {
+        "title": "reddit.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7rKK6Ir33K-NoVrgkGSpzkmkmpB_KX0rKkMEzwTNxbj06bQacoTqU2O3de9KA3PVLZnDG0hsgGHIJkrbKGmRyTssXgyLT3twrO5ivjMyGY0RqsVgBmUOcBuJc3CSXuCxZ_hJGajqW4D_38dfSIb-2nrwmnBIwuVXt_xmc9_UErsGdOT4r4e_0zfrPXQEswoJKJmzackXS0fsnN-8="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHayauKjOUMtCWjXzZqjU_cTDelanWTXMFim4LZajZzP1ShPl_A3iU7Pyy8INl-84vgbTmg283e_nPfv43jwqI7gt4P3sZnBlvBxwcJ5_IrYDtWFkf-PDRdtBwDEl6OMvTmJL6CFlGF-A=="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMVgvDQJSeyVMXUubaxfUmRqEqbamOJaBEEUFfvbQLDqKLEbtylVFIy0A2mEw2FFUV76rWU510QK1ahGxX0xBm98vT4unVTzTUJKZ4IuE8iLb2Tj4KPuPL7piA_55vq-vIG6WAGw5NsKVGv6diuFzQlx9hvELys2naQpMfxiw="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根據最新票房數據和專家分析，《阿凡達：火與灰燼》（Avatar: Fire and Ash）於2025年12月19日至21日的國內開畫週末總票房預計約在8500萬至9000萬美元之間，略低於最初的預測範圍（例如Variety的9000萬至1.05億美元和Hollywood Reporter的9500萬至1.05億美元）。片方周四（12月18日）預映票房為1200萬美元，周五（含預映）總計約3650萬美元，Deadline於12月20日早間更新指出，整體開畫週末將落在8500萬至9000萬美元，遠低於10100萬至11200萬美元的區間，主要因預售表現落後前作《水之道》約30%、聖誕假期競爭激烈（如《大衛》、《女傭》和《海綿寶寶》電影），以及觀眾反饋雖正面（PostTrak 72%推薦）但未達爆發水準，The Numbers網站目前僅顯示預映數據，無最終數字，但基於多源報導邏輯推斷，最可能落於該區間以下。",
+    "human_outcome": "No",
+    "title": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 101m and 112m?",
+    "real_outcome": "No",
+    "market_status": "CLOSED"
+  },
+  {
+    "slug": "will-iran-close-the-strait-of-hormuz-in-2025",
+    "question": "Will Iran close the Strait of Hormuz in 2025?",
+    "ai_outcome": "No",
+    "ai_reasoning": "关闭霍尔木兹海峡对伊朗自身经济将构成毁灭性打击，因为伊朗的石油出口也依赖于该航道，此举无异于“经济自杀”。 此外，封锁海峡几乎肯定会引发美国及其盟友迅速而强烈的军事回应，以重新开放这条对全球五分之一石油供应至关重要的水道。 从历史上看，伊朗曾多次发出关闭海峡的威胁，尤其是在地缘政治紧张时期，但这更多地被用作一种威慑和谈判的筹码，而非实际意图执行的政策。 即使在与伊拉克的“油轮战争”期间，海峡也未曾完全关闭。 考虑到封锁将严重损害其与包括中国在内的主要石油客户和沙特阿拉伯等邻国的关系，并面临压倒性的国际军事干预风险，德黑兰采取如此极端措施的可能性极低。 因此，尽管可能会发生小规模的骚扰或破坏活动，但在2025年底前完全停止或严重限制国际海上交通的可能性不大。",
+    "citations": [
+      {
+        "title": "theguardian.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGoO5kYmZeHpcZXdB3a3Rn1IE13s0CxylzTmbm89JoxPHipanQR7oN5RZG0OfHgsrNK1BGnpP_FjVl2MfVKJlPaBb4YdhiEflFzHwG807Hkf501at8f2xtPbKR2g8Md3xJTwlpatPtMtsTHXV13k2ItiZL9x8R5j3097X_OPJl0kbrMvF9VDnrn6__gfmTmnRiMQ4ozhEQaX2qjy0crd7x0zegXzyHIZbWUK6pPdK7znbo="
+      },
+      {
+        "title": "wikipedia.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIPAKTYFK0DBdfKAlmSpDa5qz03FlShN8idDWjLVfYTuQhXrBRZaXM9TPPcrFEh7OlNhw6-D-9IwzL28yrq0fFtd4Ouix8vh9ovqprGPwypGXMIN_kiRF1DR6qLzs_FxRA69D1K50I4RM="
+      },
+      {
+        "title": "investing.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFn4KwqvuG3Mf8WiwcWoizYJX9CRJBc9gKcUQzrlXyE8yjXxiq3kRl9nJN_MHvrMUhIVLA6Om1OKvG5vDKzz04DF61axquv_DpE66-_6KpqN1alcpfpjxiXi8OxVW5QkS1lZQEvcjbzQQJieFcyGEDuHdezvo_Q4VvUSinfvJD3nuDPlkv3Wt5OqZmFE7If-IISoxM="
+      },
+      {
+        "title": "cbsnews.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkmAHlCygDF4ng15z1Rgk8VxiU0VtXPKZ2jcPx1a3Qv0ZyNZizqYZlD_Yya8zcrw6RoXNS1SOqF6rtvxscUKEmU3_h8q8Wq0WsFietXAVUT7dxPO1TCHdrZXbs9HiN4pHxI91AVvHSmDDK3_E81xUMD_EXi-rmDMcLxJNsjjwKItKGmii_AhYUaFFxSZBHReY="
+      },
+      {
+        "title": "atlanticcouncil.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEB-IEmurNpOtwNl42B6TC-XphPS-EIQc_W1pComYDUIS1hKBs0TKvlvu7L93_OZ_IyblXgNG6PctehK0eF2gV5BxyFnMJYs_18HYB_QZq6AjfdB_UIymc8ZLO3mOsZ5inhgrnl2AAr7ymgDdx-HCyU14YvW8R3Rxr3_ynVzzH-K_87lzK_c53YxH4UM9jJIp-aHLtiva8s_69JBNvTNNrJ0sYwdxGCbVlxPQWZQgvU3iy4jYWp0RMKA2xA6riBqKzRdkyFw8U="
+      },
+      {
+        "title": "forbes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH5mHOb_4G9DFas4TOvNEf9aXZ8N5L6iSQjyMdksaE5FC8sR614mQzrI6QAw6-G5RtGRl7A-xD5SrstFT6s49fkzmUaOYFqlthsf1cvuTmO3hkbUpJ_b6FBmHelRCXRordLWAhIhiSCaGlOVuL5M67roAxU1PLVT7myaTa271KOS4IyqBftQYoxK6NE2e031pRfyXdIuRWImCn1Eb7qYQjEuv_v6HhjrhnLDzsFeqTvTJ1T-OduFA=="
+      },
+      {
+        "title": "tehrantimes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFvtTlSgKV4ZMA5NAzFMW3HoalW4TOas5XH4wdbcJVbXw5T_1ImXCXiGoDZGdGW1KFuNSeM9XPJpxYDUa-x_KUWPrJ4f2OIMHK23dcU39gs33HOq2Uy21yTcqPrd0hXgyMBTx1eZILFrxd0DUScwvozqzA71keegqy9oDBJmBp4IsP73eCJKEMWvEKP300FrU-Cx04M1iKwLn5jtgV2k5yLQMbt"
+      },
+      {
+        "title": "opindia.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9D5RLFXXJqSRYpZLPI_uYLOKrbkcAku1EwOJ_cKnGDSfsYUTlGSlvp8tnBSNk-XibZr3EK2RRMacFltT6WjOdE9_awGJ_RX0KQypX7N2a79b_1WgN6YfqlDJTyibTS6blVZtDYLO90jCxOi49gcQdqGYqdfpLJd_mPiGyuI7cxVPOaLjgyOMUa2R8H5wiAo6iadsTWuu3zXO08VIgQAF2blF9Xe5wsJ259NtcQiXgzefnB2N3US8oAiHWtb4-4chjPSqwEtlXkfywAVEVMXAYeSpIWIlZ9wKx5WM="
+      },
+      {
+        "title": "historytoday.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHedddJqWWHaKG734iqqCO1SSKEe8VtzdT_7VIADTybjMICxXhdcOSzfwN1_EEljSPwad41aepChp3CL8DZKTgAN5QMJ8Oi6W273GdYVzpzaLhQ_GEGcwSmpcyjHouSgnGH-6CLRAoRQ_KpPntIOECctLU9SFrBGpY="
+      },
+      {
+        "title": "indianexpress.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFCkehZmma8zP98OhNoy7RmhhUsk_JuXhiexOl4smSYR4WheMRxdYxcASghK0SLAK-QA10dLsRZ1ajeq2eOj-4gyu23LoWABJkDghwUTwnq--b6M7qx0-Rq2P2bDe1bnEWmBzVsBopOT7h75LAMkZrh8QSw6xdJozZm7ajDzn2cSSY0l_57ve3Omxd1WdZqaKJzXMLzHvH257Q98AckpxZaMh4lXzVfw597au2SSDxBg=="
+      },
+      {
+        "title": "time.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpDEVv9Jio8wgM9O8jn0PkL_TUbTgbxYXPOevYyT4eta2CGiHZAnEDqlEiV0uT4C3NUNiZmqaU_0rVbs1KsMPtMMuFKHBIFH3BA9_0EdWaHTuoUrwAswIEYpiEhsuYVxMtPRxoBliwgazBJ4uAcl0M8joVppqFZ1XXCv_LPeQU0U9kH7vUGdRoNqhiOvlWiQ=="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "伊朗在2025年多次发出关闭霍尔木兹海峡的威胁，尤其是在6月美国轰炸伊朗核设施后，议会通过了相关措施，并进行了海军演习和布雷准备，但根据最新报道和官方声明，包括维基百科、国际危机组织及情报研究机构如ISW的更新，截至2025年12月20日，海峡仍未关闭或严重限制国际航运流量。伊朗尽管进行威胁以威慑制裁，但从未实际执行关闭，因为这将严重损害其自身石油出口经济，且历史冲突中也未发生类似事件；12月下旬的官方声明多聚焦于领土主权和演习，而非实际行动，随着年底临近，缺乏进一步升级迹象，因此最可能结果为“No”。",
+    "human_outcome": "No",
+    "title": "Will Iran close the Strait of Hormuz in 2025?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "us-forces-in-yemen-in-2025",
+    "question": "US forces in Yemen in 2025?",
+    "ai_outcome": "No",
+    "ai_reasoning": "鉴于当前的政治气候和军事战略，美国在2025年向也门派遣常规地面部队的可能性极低。美国目前的策略是避免在中东地区进行大规模的地面军事介入，尤其是在经历了伊拉克和阿富汗的长期战争之后。美国政府和公众普遍不愿再次陷入一场可能旷日持久且难以取胜的地面冲突。针对胡塞武装在红海对船只的袭击，美国的应对措施主要集中在海上防御和空袭，例如领导“繁荣卫士行动”及后续的精确打击，旨在削弱胡塞武装的军事能力，同时将美军的风险降至最低。该问题的解决条款明确排除了特种作战部队、军事顾问和承包商，而这些恰恰是美国过去在也门进行有限军事行动时所依赖的力量。派遣常规部队将是一个重大的政策转变，需要有极不寻常的事件作为催化剂，例如对美国关键盟友的直接大规模攻击或重要航运通道面临被完全关闭的直接威胁。然而，即使在这种情况下，美国也更倾向于利用其海空优势，而非冒着巨大风险部署地面部队进入也门复杂的战场环境。因此，综合来看，美国在规定时间内派遣常规部队进入也门的可能性非常小。",
+    "citations": [],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根据2025年全年可靠报道，美国针对也门胡塞武装的军事行动主要限于空中打击、海上拦截和导弹袭击，未见活跃常规美军人员进入也门陆地领土的记录。例如，美国中央司令部在3月至12月期间多次开展空袭，但这些行动均未涉及地面部队部署；9月可靠来源确认无美军驻扎也门；近期12月新闻焦点为地区紧张局势和盟国调解，而非美军陆上介入。鉴于事件严格限定活跃常规部队陆地进入，且排除外交、顾问或特种部队，剩余11天内发生可能性极低，最可能结局为“No”。",
+    "human_outcome": "No",
+    "title": "US forces in Yemen in 2025?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "israel-strikes-iran-before-2026",
+    "question": "Israel strikes Iran before 2026?",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "根据现有信息，以色列极有可能在2026年之前对伊朗发动袭击。事实上，多方报道指出，在2025年6月，以色列已经对伊朗的核设施发动了空中打击，这引发了伊朗的导弹报复，双方爆发了持续约12天的直接军事冲突。这一系列事件本身已经满足了问题所定义的“是”的条件。此外，双方的紧张关系并未缓和，地区军事升级的风险依然很高。伊朗持续推进其核计划，已成为“核门槛”国家，这被以色列视为生存威胁。以色列领导人，包括总理内塔尼亚胡，多次声明将采取一切必要手段阻止伊朗获得核武器，并已为此采取了直接军事行动。目前的局势表明，鉴于2025年已经发生了直接的军事打击，并且根本性的冲突和战略动机依然存在，年底前再次发生类似事件的可能性非常高。",
+    "citations": [
+      {
+        "title": "europa.eu",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7J3OYPA3Ol7eOwLl5y894iTUUY99T4n8lJEcDcuT7CgdMdTo3F04qbgziJTaTwWdBNJdbZJRzY_bIqZhWVakOGvq9Ece_vSZP-7PnWCWU_FrIetMIqGJQ3eDtk5zZFRsArwQGY9zIpD5AwhFgIYlMIqpLFiglURkYtOwJFhd0N7z-J5VFIlT2zOI7jIG4Ja9kXg=="
+      },
+      {
+        "title": "scmp.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkrqsPi5sWapZzlXlsW3eAQlmBUfSMT9YC0wPK98c-kmqZdELvwAlhf5DPTlOppRz_Obn8e5DtHFrPcMB8GR0BHyxYS9Qi-9fqY-KQmnbS22_jbjHqmy8mNzvEveFVbVfheTGH_CgWsHWbug=="
+      },
+      {
+        "title": "usip.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEG6Qg4qWYpm0bsqZXWtGSxNsvCUcTz3RCnwCg6D2Z-RBl9TJNGrPTa0uZQTZjpiIX6jiOPdU5McmzMtsUTcEEQkqd0Pfo3R23-423sCSWRY6TJlGFuor5oM5qDYIyWWhnA4LAvFF9WkkhRFYasmxayqICPMzm_b2EG7kXsSZU6VpJod1Hc5erq9oH18kQ="
+      },
+      {
+        "title": "newsnow.co.uk",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHok723Td9epsoWgo8lcNc8vVgy4qE7H8vx_vDQftiyA0eOnsjR2jnd-dAT9F9OAKajuTrrRGx24neQuBGchYQBRlZrynWgiAvFCPaZeB-yoro2BzxAK_c7Ea6YHZI49oEmLDSW-vKv3kufHk4x2Vk37cUbHKjonS56is5oVSFgCA=="
+      },
+      {
+        "title": "turkiyetoday.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENVlQAk2mhhRjXr1DEoo8KjX305YxywddGC6Y5KhkqfB_t6PgJRuk0zIKMHwmESOq6Pq6NPHawbCZdhBiTeO7-JmzpqkM3gAM2eY9SnIlidJkB9I91GjZts16Dhcuj9hNkCDo3SJ2Pw6m0P8hy2VXcNvTT1rYfb9eQdWkHE8nSPldXGd6ojv0AZ6Xb1MysQ9zG4SYbFoRvI54zjtm1jhKirRJTu3n1vwhfDjVaAH5GhXBF5O5W"
+      },
+      {
+        "title": "timesofisrael.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFi1UqI42wcQaICirNLE0tQSAoZbCsmr2wvgu9ZY6WXH6dDhG5jyRrQkPzoog64f1veFQRT1onk7bzFlAZsfl0vvF4usVniC-TWeue1nTSKwFQfeMos0DA6B4EkAAUrPAp1TsePsBmh3ucHRGmLUrI_Tpa0qciCM-XGiXPr777VLVhyzsjsH7t60Sz1R5v24PovGpS38y_R4Q4amlooWIOpZZsEjiP5kbhftOUliQ=="
+      },
+      {
+        "title": "www.gov.il",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHwJiGEnvaUpOKpyVCc-2GcN0ntXrl9TEyV2ahNsoTcWckxs74jsUBx-UNWm_FFz_R91rJIMJktY6cghy8vNOW8zwpZ_dF7_dmEvpkQv2kwVmDgg7qPqyO1pGUU-sKK20nw-PnO-nwd0TWj6c="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "根据可靠报道，2025年6月13日，以色列发动了对伊朗核设施和军事目标的空中打击行动，引发了持续12天的以色列-伊朗冲突，此次行动包括导弹和空袭直接打击伊朗本土地领土，符合市场定义的“打击”标准，因此事件已发生，市场将以“是”决议。",
+    "human_outcome": "No",
+    "title": "Israel strikes Iran before 2026?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "microstrategy-sell-any-bitcoin-in-2025",
+    "title": "MicroStrategy sells any Bitcoin in 2025?",
+    "question": "MicroStrategy sells any Bitcoin in 2025?",
+    "is_excluded": true,
+    "human_outcome": "No",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "lal-osa-ala-2025-12-20-total-1pt5",
+    "title": "CA Osasuna vs. Deportivo Alavés: O/U 1.5",
+    "question": "CA Osasuna vs. Deportivo Alavés: O/U 1.5",
+    "is_excluded": true,
+    "human_outcome": "Over",
+    "market_status": "CLOSED",
+    "real_outcome": "Over"
+  },
+  {
+    "slug": "nfl-phi-was-2025-12-20-spread-away-6pt5",
+    "title": "Spread: Eagles (-6.5)",
+    "question": "Spread: Eagles (-6.5)",
+    "is_excluded": true,
+    "human_outcome": "Commanders",
+    "market_status": "CLOSED",
+    "real_outcome": "Eagles"
+  },
+  {
+    "slug": "will-trumps-approval-rating-hit-30-in-2025",
+    "question": "Will Trump's approval rating hit 30% in 2025?",
+    "ai_outcome": "No",
+    "ai_reasoning": "历史上，美国总统的支持率跌至30%或以下是非常罕见的情况，通常只发生在国家面临重大危机时，例如严重的经济衰退（杜鲁门、卡特）、旷日持久且不受欢迎的战争（杜鲁门、尼克松、小布什），或重大的政治丑闻（尼克松的水门事件）。 唐纳德·特朗普在第一个任期内，尽管争议不断，其支持率的“地板”非常稳固，根据盖洛普的数据，其平均支持率为41%，从未接近30%的水平。 2025年作为其可能第二个任期的第一年，通常是总统支持率较高的“蜜月期”。要在这一时期内支持率暴跌至30%，需要发生一场能同时疏远其核心支持者、共和党以及独立选民的特大级别负面事件。考虑到其基本盘的忠诚度以及美国政治的高度极化，这种情况在短期内发生的可能性极低。",
+    "citations": [
+      {
+        "title": "wikipedia.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKB4bvTQcez9Xq9SMzY03lLOwKNGnp8Bad5TAYho92XfKVSkbCDKSYuV-PgY9sE5-wr8rPt-RClDEp7UIkqboqRwPAd_mXgxFC-KC5cmPk0009_oa6FIi0G4madv5KMxrsOxBZ7ia_XXbT_ZtkfyGqCfcVIsEWMUo6ACTZvme1nWP7"
+      },
+      {
+        "title": "gallup.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTqEcMmGpkbBDMV6HXAjypbfDWQkS1AjrW5c8kYrvo931jhpnK2brvD5IwLNwHRMr2KQYSSm8MlZO_gs4w5qssa_uTLyoY7_YSecbwynSdrn83kZsjQg_OczviZQj1d3Wgb_dD_rnyknFzO3tep8HMNgR8en98yfrzc8gh1RlMKJRMHuIbWaL_agxwBg8DHo3b"
+      },
+      {
+        "title": "youtube.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6wbfbArNewuset28UljYh0tjj_8aDfFdripmbXoHvzlMZ884HgPpiEtFkLDuO0UDKZDO2m0W_Z36YoxZV_55Ss7HPS3N1WEV0kGuoF_RF2k1TVIGiioCVP3WmLwfq9E4Meso0"
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根据Silver Bulletin的最新数据和2025年4月14日至12月20日的民调聚合，特朗普的认可度最低曾达到39%（如4月AP/NORC民调），但从未降至30%或以下。目前（12月20日）认可度约为42%，近期趋势显示虽有波动和轻微下降（如11月底低点约41%，12月初约36%-42%），但整体稳定在40%以上，没有重大事件或危机迹象表明剩余11天内会急剧暴跌至30%。历史模式和专家分析（如Nate Silver的评论）显示，其认可度虽低迷，但未触及该阈值，因此最可能结果为“No”。",
+    "human_outcome": "No",
+    "title": "Will Trump's approval rating hit 30% in 2025?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "will-bruce-blakeman-win-the-2026-new-york-governor-republican-primary-election",
+    "question": "Will Bruce Blakeman win the 2026 New York Governor Republican primary election?",
+    "ai_outcome": "Yes",
+    "ai_reasoning": "布鲁斯·布莱克曼 (Bruce Blakeman) 赢得 2026 年纽约州长共和党初选的可能性极大。 此前，他面临着来自国会女议员埃莉斯·斯蒂芬尼克 (Elise Stefanik) 的激烈竞争，斯蒂芬尼克曾被认为是共和党提名的有力争夺者。 然而，根据多方新闻报道，斯蒂芬尼克于 2025 年 12 月 19 日出人意料地宣布暂停竞选活动，并且不会寻求国会连任，理由是希望将更多时间投入到家庭中。 这一决定彻底改变了初选格局，使作为拿骚县县长的布莱克曼成为目前唯一的知名候选人，为他赢得共和党提名扫清了主要障碍。 共和党内曾有声音担忧，布莱克曼和斯蒂芬尼克之间的初选将耗费大量资源并可能导致党内分裂，而斯蒂芬尼克的退出则化解了这一顾虑。 尽管前总统唐纳德·特朗普最初在两位候选人之间保持中立，但现在竞选格局明朗化，为布莱克曼获得党内更广泛的统一支持创造了条件。 除非有其他强有力的竞争者意外加入，否则布莱克曼赢得初选的道路已基本畅通。",
+    "citations": [
+      {
+        "title": "cbsnews.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNeXQrIEXJsu-atsTUykABCFm2PBZTpkNVUCXiNwb4EmZITSLiNysodUKfadw8pUFc8y33CFfpW6qR862eojI-mNXXkJnUmFhZC2TahREE2_FHOIB7PxBK99iz-6PHoRY6pZQu2c140Ae7hH3CSkr9B3-K4c41DIsAWQKCKPsD9xQlEAQIgVtsL42LvsGp7BXG"
+      },
+      {
+        "title": "pbs.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFznaTN8f-z54KR29xNMTorvRPUX-lx4AZ7PNjqQEYz_ZK9ylWbaXL9DGpZunB1hytnq15MmxbS4erCneX8KQn76jBW6jvOkkoKuUleYuhs2gBB-KTI2v6ViNPsDwzNa0NWy7PRzJGOE4Ts0refr1Lm09DL0hQwyaeSFKIJsBMN76i6zhRYDcGufcWRvoCaY1FYH3nlrUXeQExRc475SBN63DNUYgePMi2kQ0XUVS1mH5TdpzMjGtstIH6Fxzs0iEWlB2ojDMpKLg=="
+      },
+      {
+        "title": "youtube.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOypGc8WRUrE0NJB6raZeq7GjAxIcdIvS8kTMuxum5S1SkfBrl4KlGUhN8MZ2SNuxupf0oQK-ALHjk8648jz8VQJ2lNgQGgYA0rO0E-rYs3nza18V0n_xA4b-_v7QPSed1TaJ_ZQ=="
+      },
+      {
+        "title": "timesunion.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSGNHTXhWGmDXnjMLGqZu88H7KTbboisIREwYGHkJwzIYrU18GQ3pyX2NB6GU3XkgdTXd0zjJowjgWDteP_6bmNIx-dXE8N82-NZPp2hPtodsqdmbZkYmABJhQrObmxGCGZJWneAuFQ1PbU8c5wEnq1YvrllwTU92PXFqP8IYJdds6SXnUqlDBecFCvfh74z0OgpwAvlPQXg4="
+      },
+      {
+        "title": "cityandstateny.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHj6EyeAaKH3ZkeqbQZFNfgb4fyEpK26xk08LTnxzdi3lynGB74Y9wtEeva6jpU4hmIOhJGsCb0qOyAH3OLz3sjjUWy0rUL0k1jy-uLxwpnCSXK3mlz_-oBIGAIdwztjoNTcdMf5BkOMmLO3sBCq9kdfs-be8S_j9FpFj8kDzgVf8r6lAsJbojA7cFx4S1XHY4ctR4YFSqSnbcSxKTcVdIr2BTGIIA1"
+      },
+      {
+        "title": "pbs.org",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEr6_4l467C5Ohp9Bc81ERu8ppAXXEzLwvIZd-Ry299O3K9NHwM0ZPDXHBkvH3r9mfwaTe0Me0FDhvafw33iw9aP1NUISNB4_YsMR1GHX_g15nvDbBzldap_SpDSU6Dscc1yfXhWD2lirIbbcvgDxoSTagkIardKoFwqzsw4WBxNQyL8Y4jAnb282oVILEALCXCk5O4ZXJNd2QZPypvjUNHJq-OhRGsqAFaFVPZ_O0TWDon"
+      },
+      {
+        "title": "nymag.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBrGlA6a1NrR4XYP11R3sbVaxU3N-REsVDYq3q-bCm87kPqA81ARfIi2V9doL4cFB85z4gnpUbUjKKRv8pLYza-L8P59J7XPqq2JY3CII6R5FX4SJ9N1bVvD95rkCHgkB-umIGaSw0PFv8Z1QEAeGzgWG6C0RFVGOQhaxLGF9r8jaObdbopsL01BiliupP-yaD"
+      },
+      {
+        "title": "cbsnews.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQESXyTutDDFUw-qwIxkdWGtv1pH1eGrNpZazmQAYZtYuJVJMTU6lj7A1hXDPIY_NRhLmHcCqUGyFA2zb00hGqohqohzHY8DXBO5pTki4sJk8MlxaseZe7_XWfiGRPXxaJbf5jlYtMnfdLNpEWAkiWnz8DcW4RSM_Fqs3cHJeHUDy91Yb2sIiwCCQverBLW-JtUCibapsl4U1sLC"
+      },
+      {
+        "title": "timesunion.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGuZX7hnXEF5H_4VNffwcrrgvwQG0oFTsJdWNrryl6OOEvqxUAF2z1fpDzXX0Nl5qGNS75H2H1MNecg1q4d3rN_1zRYbNoO_rWZ5-GzLwqz44vTKDxioyerZB5QdIehorv1CSrqymnlQm7BWSDqL6_XkD7gziFqiRqifSGYwifZdfO2B93UWUdOq1PGu2S5By3Ls7NXI6ehxhBpiet4G3b-M3w="
+      },
+      {
+        "title": "timesofisrael.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQFuS7qWD5btefVdavoOODsHkuvpfnAbcGwj0WHXvYW8A-a59kj1IoYoRgYeyp9mgBjhrt8Obz0tX_XpI2el3KV9VhkBAAVzKy2gSzwPHBmwLkg9eXjJqiqXH4TrFkNWqgYPX9PP5G92zVs1-fLIrgypIaGhpBNJC1ztPMfCuRwIc-gTL1vBpw__Te_IuePdDRt-3igr8TfQBd2gb-QwSS"
+      },
+      {
+        "title": "foxnews.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2NmwjUxtOV6WNxRFMdWiHhX8LmzeW5byDOmvivuHEfnF-rBQPmJsjEGs3fW5RE9qgSHSTlDHAdLL-LhJMp0xViLDvzLDsOGG32RPhtJGKwUvt2eotzhioU5Iv5pxHMBkB2MpTXnXv8AIeD8ojx6kfpN0JquLe_io9HTEj16NcDaz9h_qSkq4k8Exo2BCsPScezV4tEzk="
+      },
+      {
+        "title": "investing.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhR6nqNEpxEm3jgaljw9-WoRulr85z-flDdfqJfr74-yZhOlF1YXmFrVPUsDlfcDk7LDN0ITs6a9vSDqxdUX9kOhNPeD0hqbpN16TFsD_QhUzb8QCdP-TbUjKe7FeC2-I_pGo_Fj7YAdbk4gejmwVoZfY-0b00bJ3n"
+      },
+      {
+        "title": "epochtimes.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGETX4BFyY8vXg0pnAeWDR31UvoSVvbLsr9AV-YrTeOjt2mcZ9loa74-FFz0C3uV4AphYmKTRqpS9IFSHGD-gLE88AMTOhcK1VMp_zoVkAXzmSMX-R5MjFxib8rk62hnv3UMoyzFq_FSj-1o0bWLQ=="
+      },
+      {
+        "title": "sina.com.cn",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHr1Nh8omva7IHntPd4RyDawWMW1I1N5dasJtJvVoZVDtEUja7tWXOnfMN5nVon7QanZFP5w8u8qO6QcQ_oORpoGDqYd_KfJ5yWgoD8f61ighovYXfX74cXPEWhI5FWqpB05NELphkJRbngfAg8h_aLx2Fgk6T-LZg9UylvUrdPNQ=="
+      },
+      {
+        "title": "worldjournal.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETKwFcIec2uvVHO7RB6d8Fq84n5Wj7GxFGfIo3evg1o0d373EqU_LGs3bnRJbAOSe1T09B_xBLqaKonFlWtnkbvxpG0tyIL4vMnKO19M5dDSWEuEK-AfThiTdbaDYt9eq1ExpAArpSsM3D0XcoRui7qnhYQA=="
+      },
+      {
+        "title": "worldjournal.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpBEy8J0adO8asnViiR5dHYgmrSVDmkQ7JZRil1VOuMq5VS-6QmURdc3c0k4_sSiOCsSQU2LfU0nI913qeMWeWXV6vDZ8ptbc2QHZJcLwJh0x9Y3CqI_TZRtPHcwt7IpRYGRzphXpdEI1UgV721A=="
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "Yes",
+    "grok_reasoning": "布鲁斯·布莱克曼（Bruce Blakeman）作为纽约纳苏县行政长官，已于2025年12月正式宣布参加2026年纽约州长共和党初选竞选。他定位自己为对抗纽约城市民主党自由政策的堡垒，并批评现任州长凯西·霍赫尔（Kathy Hochul）为“失败者”。主要竞争对手、国会议员埃莉斯·斯特凡尼克（Elise Stefanik）于2025年12月19日突然宣布暂停竞选，并不寻求连任众议员，这使得布莱克曼成为共和党提名的明确领跑者。目前尚未有其他主要共和党候选人宣布参选，根据最新报道和民调，布莱克曼在初选中的优势明显，预计将在2026年6月23日的初选中获胜。[[1]](https://www.pbs.org/newshour/politics/long-islands-bruce-blakeman-is-running-for-governor-will-challenge-elise-stefanik-in-republican-primary)[[2]](https://www.nytimes.com/2025/12/08/nyregion/bruce-blakeman-new-york-governor.html)[[3]](https://www.pbs.org/newshour/politics/rep-stefanik-ends-her-campaign-for-new-york-governor-wont-seek-reelection-to-house)[[4]](https://www.facebook.com/petekingforcongress/posts/bruce-blakeman-is-the-clear-front-runner-to-be-the-republican-nominee-for-govern/1393535032139863/)",
+    "human_outcome": "Yes",
+    "title": "Will Bruce Blakeman win the 2026 New York Governor Republican primary election?",
+    "real_outcome": "Unknown",
+    "market_status": "OPEN"
+  },
+  {
+    "slug": "cfb-jmad-ore-2025-12-20",
+    "title": "James Madison vs. Oregon",
+    "question": "James Madison vs. Oregon",
+    "is_excluded": true,
+    "human_outcome": "James Madison",
+    "market_status": "CLOSED",
+    "real_outcome": "Oregon"
+  },
+  {
+    "slug": "lal-gir-mad-2025-12-21-gir",
+    "title": "Will Girona FC win on 2025-12-21?",
+    "question": "Will Girona FC win on 2025-12-21?",
+    "is_excluded": true,
+    "human_outcome": "No",
+    "market_status": "CLOSED",
+    "real_outcome": "No"
+  },
+  {
+    "slug": "will-avatar-fire-and-ash-opening-weekend-box-office-be-between-90m-and-101m",
+    "question": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 90m and 101m?",
+    "ai_outcome": "No",
+    "ai_reasoning": "分析显示，《阿凡达：火与灰》的首映周末票房极不可能落在9000万至1.01亿美元的区间内。最关键的参考数据是其前作《阿凡达：水之道》（2022年），该片在美国国内的首映周末票房高达1.341亿美元。作为一部备受期待且前作大获成功的系列电影的直接续集，市场预期通常会更高或至少持平，而非大幅下跌超过25%。尽管第一部《阿凡达》（2009年）的首映票房为7700万美元，低于此区间，但考虑到过去十几年间电影市场（特别是大制作影片）首映票房日益前置化的趋势，《水之道》的成绩是更具现实意义的基准。因此，逻辑上推断《火与灰》的首映票房将远超1.01亿美元的上限。",
+    "citations": [
+      {
+        "title": "the-numbers.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXojG-Cn4Kx3faBijQhlTqEFwjuiGrgoFRQg2yF1dLydUX59OiG3BcRl7uA6qxAgTCU2SwbTOlByr-Hfr94KLT9czLUMoRjY6KUR5TH7C_7z0iWSvgVzydhMKWzx0xMQHR5wELovdQXcQHPW2t2DHjyxzEBvsX-HxLAhw="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFLyjSReWUjw4PtVTKoGGpwhFFzj_2xgJhNq3RUWJCpuUwgieXQcdQ5gsQM5SOrAAfGhyXT62IFsuaabPYFEOOyXQ8SBTTAFJIMuePb-b7Hf-hD4exD5G5ItCaT9xDt6EF6V1opXjoFFnWdBig8u9MlsVCaq7yk-R2SXBO5FbwE"
+      },
+      {
+        "title": "the-numbers.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcRqMGemo7h0Rg3ElWyKBrcdGLDxiSwLiN7GSZQbfV_2mAI94BPkimzjWxWqiUanPd1lB6evTedVw08SsteVdc7f_uIIQCDI5RXPnbboX4N6Uv2UPMmO6E8XfgmsVxlbQLAEQ="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG1PwNmJ58ycfmpYIef4gzQRNBShSJxEbARBKa5tKqUrQPxdv8EfnGbsSWHurrDy7R9dr0pttYgs-CcwVznkhGH6lXBuS3arSNAlKsVcuF8o2BtMKh4kbdWP-nkR5llM1Bp9hvhkoZaLMM="
+      },
+      {
+        "title": "boxofficemojo.com",
+        "uri": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGagacRxXXoycjdVJsFzCbsbiDbWqCrvaYB_wecN7hvJsfDUSB6G06uN14IAwceJHkxAiBy70QEDdkew1GCc-jFznhbc70CH6-dsi96KUA8qK_NFGDMcs3SRxl3vnq0go0zd83zKl-IAkhInKJ_"
+      }
+    ],
+    "is_excluded": false,
+    "grok_outcome": "No",
+    "grok_reasoning": "根据The Numbers和Box Office Mojo的最新数据，“Avatar: Fire and Ash”于2025年12月19日至21日的国内开画周末票房为8800万美元[[1]](https://www.the-numbers.com/movie/Avatar-Fire-and-Ash-%282025%29)[[2]](https://www.boxofficemojo.com/date/2025-12-21/?sort=perTheaterAverageGross&ref_=bo_da__resort)，这一数字低于90百万美元的阈值，因此无法落入90百万至101百万美元的区间；多家媒体如CNN、Variety和USA Today也报道了相同的8800万美元国内开画成绩[[3]](https://www.cnn.com/2025/12/21/business/avatar-box-office-weekend-december)[[4]](https://variety.com/2025/film/box-office/box-office-avatar-fire-and-ash-global-start-1236613854/)[[5]](https://www.usatoday.com/story/entertainment/movies/2025/12/21/avatar-3-fire-ash-box-office-opening-weekend/87872363007/)，确认这是周末最终数据，而非初步估算，市场将据此解析为“No”。",
+    "human_outcome": "No",
+    "title": "Will \"Avatar: Fire and Ash\" Opening Weekend Box Office be between 90m and 101m?",
+    "real_outcome": "No",
+    "market_status": "CLOSED"
+  },
+  {
+    "slug": "lighter-market-cap-fdv-1b-one-day-after-launch",
+    "title": "Lighter market cap (FDV) >$1B one day after launch?",
+    "question": "Lighter market cap (FDV) >$1B one day after launch?",
+    "is_excluded": true,
+    "human_outcome": "Yes",
     "market_status": "OPEN"
   }
 ]
