@@ -44,7 +44,13 @@ export default function HumanVsAISettledPage() {
         if (error) throw error
         
         if (data) {
-          setPredictions(data)
+          // Filter out items where no AI made a prediction
+          const validPredictions = data.filter(item => {
+            const hasGemini = item.ai_outcome && item.ai_outcome.trim() !== "" && item.ai_outcome !== "Unknown";
+            const hasGrok = item.grok_outcome && item.grok_outcome.trim() !== "" && item.grok_outcome !== "Unknown";
+            return hasGemini || hasGrok;
+          });
+          setPredictions(validPredictions)
         }
       } catch (err) {
         console.error("Failed to fetch settled predictions:", err)

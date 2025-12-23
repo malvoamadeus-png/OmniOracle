@@ -55,8 +55,15 @@ export default function HumanVsAITablePage() {
 
   const filteredPredictions = React.useMemo(() => {
     return aiPredictions.filter((item: any) => {
+      // Basic exclusions
       if (item.is_excluded) return false
       
+      // NEW: Exclude items where NO AI made a prediction
+      const hasGemini = item.ai_outcome && item.ai_outcome.trim() !== "" && item.ai_outcome !== "Unknown";
+      const hasGrok = item.grok_outcome && item.grok_outcome.trim() !== "" && item.grok_outcome !== "Unknown";
+      if (!hasGemini && !hasGrok) return false;
+
+      // Status filter
       if (statusFilter === "all") return true
       if (statusFilter === "pending") return item.market_status !== "CLOSED"
       if (statusFilter === "settled") return item.market_status === "CLOSED"
@@ -66,18 +73,64 @@ export default function HumanVsAITablePage() {
   }, [aiPredictions, statusFilter])
 
   // Helper to check if prediction was correct (only if closed)
+  const isPredictionCorrect = (prediction: string, realOutcome: string) => {
+    if (!prediction || !realOutcome) return false
+    const normalizedPred = prediction.toLowerCase().trim()
+    const normalizedReal = realOutcome.toLowerCase().trim()
+    
+    // Special handling for "Yes" / "No"
+    if (normalizedReal === "yes" || normalizedReal === "no") {
+        return normalizedPred === normalizedReal
+    }
+
+    // For other cases, try inclusion
+    return normalizedPred.includes(normalizedReal) || normalizedReal.includes(normalizedPred)
+  }
+
+  const winRates = React.useMemo(() => {
+    // Only consider rows visible in the current filtered view
+    // (though 'filteredPredictions' already respects statusFilter, 
+    // we need to further filter for 'CLOSED' to calculate win rates meaningfully)
+    const closedItems = filteredPredictions.filter((item: any) => 
+      item.market_status === "CLOSED" && 
+      item.real_outcome && 
+      item.real_outcome !== "Unknown" && 
+      item.real_outcome !== "Parse Error"
+    )
+    
+    // For denominator: we can either use total closed events (common denominator)
+    // or per-agent denominator (only count if they made a prediction).
+    // Let's use per-agent denominator to be fair (don't penalize for missing predictions).
+    
+    const calcRate = (field: string) => {
+      // Valid attempts: closed events where this agent actually made a non-empty prediction
+      const validAttempts = closedItems.filter((item: any) => 
+        item[field] && item[field].trim() !== ""
+      )
+      
+      if (validAttempts.length === 0) return "0.0"
+
+      const correctCount = validAttempts.filter((item: any) => 
+        isPredictionCorrect(item[field], item.real_outcome)
+      ).length
+      
+      return ((correctCount / validAttempts.length) * 100).toFixed(1)
+    }
+
+    return {
+      human: calcRate('human_outcome'),
+      gemini: calcRate('ai_outcome'),
+      grok: calcRate('grok_outcome'),
+      total: closedItems.length
+    }
+  }, [filteredPredictions])
+
   const getPredictionStatus = (prediction: string, realOutcome: string, status: string) => {
     if (status !== "CLOSED" || realOutcome === "Unknown" || realOutcome === "Parse Error") {
       return null // No judgment yet
     }
     
-    // Simple string matching
-    const normalizedPred = prediction?.toLowerCase()
-    const normalizedReal = realOutcome?.toLowerCase()
-    
-    if (!normalizedPred) return <span className="text-gray-300">-</span>
-    
-    if (normalizedPred.includes(normalizedReal)) {
+    if (isPredictionCorrect(prediction, realOutcome)) {
         return <CheckCircle2 className="h-5 w-5 text-green-500" />
     }
     return <XCircle className="h-5 w-5 text-red-500" />
@@ -142,6 +195,20 @@ export default function HumanVsAITablePage() {
                       </div>
                       <span className="text-xs font-normal text-muted-foreground">AI Agent</span>
                     </div>
+                  </TableHead>
+                </TableRow>
+                {/* Win Rate Summary Row */}
+                <TableRow className="bg-muted/50 hover:bg-muted/50">
+                  <TableHead className="font-bold text-gray-700">Win Rate Summary (Total: {winRates.total})</TableHead>
+                  <TableHead></TableHead>
+                  <TableHead className="text-center font-bold text-lg text-primary">
+                    {winRates.human}%
+                  </TableHead>
+                  <TableHead className="text-center font-bold text-lg text-blue-600">
+                    {winRates.gemini}%
+                  </TableHead>
+                  <TableHead className="text-center font-bold text-lg text-purple-600">
+                    {winRates.grok}%
                   </TableHead>
                 </TableRow>
               </TableHeader>
