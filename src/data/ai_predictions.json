@@ -2994,8 +2994,8 @@
     "grok_reasoning": "根据最新网络搜索结果，《爱泼斯坦档案透明法案》于2025年11月19日由特朗普总统签署成为法律，要求司法部在30天内（即2025年12月19日东部时间晚上11:59前）公开所有未分类的爱泼斯坦相关文件。多家主流媒体如CNN、Forbes和The Hill报道，司法部已表示计划按时发布18类调查材料，包括涉及杰弗里·爱泼斯坦非法活动的实质性文件，且法律明确禁止以尴尬或声誉损害为由延迟或审查。没有可靠报道显示延迟或豁免迹象，司法部发言人确认将通过官方网站或新闻发布室公开文件，符合市场资格要求（执行部门直接公布，非法院或泄露）。鉴于法律强制性和政府声明，最可能的结果是特朗普政府在截止日期前发布符合条件的文件。",
     "human_outcome": "No",
     "title": "Will Trump release the Epstein files by December 19?",
-    "real_outcome": "Unknown",
-    "market_status": "OPEN"
+    "real_outcome": "Yes",
+    "market_status": "CLOSED"
   },
   {
     "slug": "will-the-us-invade-venezuela-in-2025",
@@ -3157,7 +3157,8 @@
     "question": "Fanduel launches prediction markets with CME by end of 2025?",
     "is_excluded": true,
     "human_outcome": "Yes",
-    "market_status": "OPEN"
+    "market_status": "CLOSED",
+    "real_outcome": "Yes"
   },
   {
     "slug": "will-solana-dip-to-120-before-2026-332-738-564-617-913-254-474",

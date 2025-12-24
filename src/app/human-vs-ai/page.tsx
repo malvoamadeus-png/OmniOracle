@@ -30,6 +30,7 @@ interface AIPrediction {
   citations: any[]
   grok_outcome?: string
   grok_reasoning?: string
+  market_status?: string
   is_excluded?: boolean
 }
 
@@ -57,10 +58,18 @@ export default function HumanVsAIPage() {
     const seen = new Set<string>()
     return activePositions.filter((pos: any) => {
       if (!pos.slug || seen.has(pos.slug)) return false
+      
+      // NEW: Filter out CLOSED markets (since settled ones are in another page)
+      // Check if aiMap has this slug and if its status is CLOSED
+      const aiInfo = aiMap.get(pos.slug)
+      if (aiInfo && aiInfo.market_status === "CLOSED") {
+          return false;
+      }
+
       seen.add(pos.slug)
       return true
     })
-  }, [])
+  }, [aiMap])
 
   const toggleItem = (slug: string) => {
     const newExpanded = new Set(expandedItems)

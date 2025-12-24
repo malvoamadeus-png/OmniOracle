@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight } from "lucide-react"
+import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -54,6 +54,18 @@ export function Sidebar() {
             Human VS AI 一览表
           </Link>
         </nav>
+      </div>
+      
+      {/* Footer with X/Twitter Link */}
+      <div className="border-t p-4">
+        <Link
+          href="https://x.com/Assassin_Malvo"
+          target="_blank"
+          className="flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition-colors"
+        >
+          <Twitter className="h-4 w-4" />
+          <span className="font-medium">By 南枳</span>
+        </Link>
       </div>
     </div>
   )
