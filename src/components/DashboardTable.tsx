@@ -47,9 +47,9 @@ export function DashboardTable({ data }: DashboardTableProps) {
           <TableHeader>
             <TableRow>
               <TableHead className="w-[50px]"></TableHead>
-              <TableHead>大佬标签</TableHead>
+              <TableHead>跟单对象</TableHead>
               <TableHead>跟单总次数</TableHead>
-              <TableHead className="text-right">总投入金额 (USDC)</TableHead>
+              <TableHead className="text-right">总交易额 (USDC)</TableHead>
               <TableHead className="text-right">总已实现盈亏 (USDC)</TableHead>
             </TableRow>
           </TableHeader>

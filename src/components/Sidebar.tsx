@@ -20,13 +20,6 @@ export function Sidebar() {
           </Link>
           <Link
             className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/smart-wallets"
-          >
-            <Wallet className="h-4 w-4" />
-            聪明钱地址库
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
             href="/opinion-arbitrage"
           >
             <ArrowLeftRight className="h-4 w-4" />

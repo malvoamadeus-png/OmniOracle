@@ -21,6 +21,8 @@ interface AIPrediction {
   human_outcome?: string
   grok_outcome?: string
   grok_reasoning?: string
+  doubao_outcome?: string
+  doubao_reasoning?: string
   market_status?: string
   real_outcome?: string
   is_excluded?: boolean
@@ -48,7 +50,8 @@ export default function HumanVsAISettledPage() {
           const validPredictions = data.filter(item => {
             const hasGemini = item.ai_outcome && item.ai_outcome.trim() !== "" && item.ai_outcome !== "Unknown";
             const hasGrok = item.grok_outcome && item.grok_outcome.trim() !== "" && item.grok_outcome !== "Unknown";
-            return hasGemini || hasGrok;
+            const hasDoubao = item.doubao_outcome && item.doubao_outcome.trim() !== "" && item.doubao_outcome !== "Unknown";
+            return hasGemini || hasGrok || hasDoubao;
           });
           setPredictions(validPredictions)
         }
@@ -118,6 +121,7 @@ export default function HumanVsAISettledPage() {
                 const humanCorrect = isCorrect(prediction.human_outcome, prediction.real_outcome)
                 const aiCorrect = isCorrect(prediction.ai_outcome, prediction.real_outcome)
                 const grokCorrect = isCorrect(prediction.grok_outcome, prediction.real_outcome)
+                const doubaoCorrect = isCorrect(prediction.doubao_outcome, prediction.real_outcome)
 
                 return (
                   <div
@@ -170,7 +174,7 @@ export default function HumanVsAISettledPage() {
                             </span>
                         </div>
 
-                        <div className="grid gap-4 md:grid-cols-3">
+                        <div className="grid gap-4 md:grid-cols-4">
                           {/* Human Prediction */}
                           <Card className={cn("bg-background/50", humanCorrect === true ? "border-green-500/50 bg-green-50/50" : humanCorrect === false ? "border-red-500/50 bg-red-50/50" : "")}>
                             <CardHeader className="pb-2">
@@ -218,12 +222,7 @@ export default function HumanVsAISettledPage() {
                                   onClick={(e) => toggleAIReasoning(prediction.slug, e)}
                                   className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
                                 >
-                                  {isReasoningExpanded ? "Hide Reasoning" : "View Reasoning"}
-                                  {isReasoningExpanded ? (
-                                    <ChevronDown className="h-3 w-3" />
-                                  ) : (
-                                    <ChevronRight className="h-3 w-3" />
-                                  )}
+                                  {isReasoningExpanded ? "Hide" : "View"}
                                 </button>
                               </div>
                             </CardContent>
@@ -253,12 +252,38 @@ export default function HumanVsAISettledPage() {
                                     onClick={(e) => toggleAIReasoning(prediction.slug, e)}
                                     className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
                                   >
-                                    {isReasoningExpanded ? "Hide Reasoning" : "View Reasoning"}
-                                    {isReasoningExpanded ? (
-                                      <ChevronDown className="h-3 w-3" />
-                                    ) : (
-                                      <ChevronRight className="h-3 w-3" />
-                                    )}
+                                    {isReasoningExpanded ? "Hide" : "View"}
+                                  </button>
+                                )}
+                              </div>
+                            </CardContent>
+                          </Card>
+
+                          {/* AI Prediction (Doubao) */}
+                          <Card className={cn("bg-background/50", doubaoCorrect === true ? "border-green-500/50 bg-green-50/50" : doubaoCorrect === false ? "border-red-500/50 bg-red-50/50" : "")}>
+                            <CardHeader className="pb-2">
+                              <CardTitle className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                                <Bot className="h-4 w-4" />
+                                Doubao
+                                {doubaoCorrect === true && <CheckCircle2 className="h-4 w-4 text-green-600 ml-auto" />}
+                                {doubaoCorrect === false && <XCircle className="h-4 w-4 text-red-600 ml-auto" />}
+                              </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="flex items-center justify-between">
+                                <div className={cn(
+                                  "text-2xl font-bold",
+                                  prediction.doubao_outcome === "Yes" ? "text-green-600" :
+                                  prediction.doubao_outcome === "No" ? "text-red-600" : "text-orange-600"
+                                )}>
+                                  {prediction.doubao_outcome || "Analyzing..."}
+                                </div>
+                                {prediction.doubao_reasoning && (
+                                  <button
+                                    onClick={(e) => toggleAIReasoning(prediction.slug, e)}
+                                    className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
+                                  >
+                                    {isReasoningExpanded ? "Hide" : "View"}
                                   </button>
                                 )}
                               </div>
@@ -268,7 +293,7 @@ export default function HumanVsAISettledPage() {
 
                         {/* Level 3: AI Reasoning */}
                         {isReasoningExpanded && (
-                          <div className="mt-4 grid gap-4 md:grid-cols-2 animate-in slide-in-from-top-2 fade-in duration-200">
+                          <div className="mt-4 grid gap-4 md:grid-cols-3 animate-in slide-in-from-top-2 fade-in duration-200">
                             <div className="rounded-md bg-muted p-4">
                               <h4 className="mb-2 font-semibold flex items-center gap-2 text-blue-600">
                                 <Bot className="h-4 w-4" />
@@ -286,6 +311,16 @@ export default function HumanVsAISettledPage() {
                               </h4>
                               <p className="text-sm leading-relaxed whitespace-pre-wrap text-muted-foreground">
                                 {prediction.grok_reasoning || "No reasoning available."}
+                              </p>
+                            </div>
+
+                            <div className="rounded-md bg-muted p-4">
+                              <h4 className="mb-2 font-semibold flex items-center gap-2 text-orange-600">
+                                <Bot className="h-4 w-4" />
+                                Doubao Reasoning
+                              </h4>
+                              <p className="text-sm leading-relaxed whitespace-pre-wrap text-muted-foreground">
+                                {prediction.doubao_reasoning || "No reasoning available."}
                               </p>
                             </div>
                           </div>

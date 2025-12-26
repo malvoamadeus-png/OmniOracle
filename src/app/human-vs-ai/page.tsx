@@ -30,6 +30,8 @@ interface AIPrediction {
   citations: any[]
   grok_outcome?: string
   grok_reasoning?: string
+  doubao_outcome?: string
+  doubao_reasoning?: string
   market_status?: string
   is_excluded?: boolean
 }
@@ -134,7 +136,7 @@ export default function HumanVsAIPage() {
                   {/* Level 2: Expanded Details */}
                   {isExpanded && (
                     <div className="border-t bg-muted/20 p-4">
-                      <div className="grid gap-4 md:grid-cols-3">
+                      <div className="grid gap-4 md:grid-cols-4">
                         {/* Human Prediction */}
                         <Card className="bg-background/50">
                           <CardHeader className="pb-2">
@@ -179,12 +181,7 @@ export default function HumanVsAIPage() {
                                   onClick={(e) => toggleAIReasoning(position.slug, e)}
                                   className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
                                 >
-                                  {isReasoningExpanded ? "Hide Reasoning" : "View Reasoning"}
-                                  {isReasoningExpanded ? (
-                                    <ChevronDown className="h-3 w-3" />
-                                  ) : (
-                                    <ChevronRight className="h-3 w-3" />
-                                  )}
+                                  {isReasoningExpanded ? "Hide" : "View"}
                                 </button>
                               )}
                             </div>
@@ -218,12 +215,7 @@ export default function HumanVsAIPage() {
                                   onClick={(e) => toggleAIReasoning(position.slug, e)}
                                   className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
                                 >
-                                  {isReasoningExpanded ? "Hide Reasoning" : "View Reasoning"}
-                                  {isReasoningExpanded ? (
-                                    <ChevronDown className="h-3 w-3" />
-                                  ) : (
-                                    <ChevronRight className="h-3 w-3" />
-                                  )}
+                                  {isReasoningExpanded ? "Hide" : "View"}
                                 </button>
                               )}
                             </div>
@@ -234,11 +226,45 @@ export default function HumanVsAIPage() {
                             )}
                           </CardContent>
                         </Card>
+
+                        {/* AI Prediction (Doubao) */}
+                        <Card className="bg-background/50">
+                          <CardHeader className="pb-2">
+                            <CardTitle className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
+                              <Bot className="h-4 w-4" />
+                              Doubao
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="flex items-center justify-between">
+                              <div className={cn(
+                                "text-2xl font-bold",
+                                aiData?.doubao_outcome === "Yes" ? "text-green-600" :
+                                aiData?.doubao_outcome === "No" ? "text-red-600" : "text-orange-600"
+                              )}>
+                                {aiData?.doubao_outcome || "Analyzing..."}
+                              </div>
+                              {aiData?.doubao_reasoning && (
+                                <button
+                                  onClick={(e) => toggleAIReasoning(position.slug, e)}
+                                  className="flex items-center gap-1 text-xs text-blue-500 hover:underline"
+                                >
+                                  {isReasoningExpanded ? "Hide" : "View"}
+                                </button>
+                              )}
+                            </div>
+                            {!aiData?.doubao_outcome && (
+                              <p className="text-xs text-muted-foreground mt-1">
+                                AI analysis pending or data missing
+                              </p>
+                            )}
+                          </CardContent>
+                        </Card>
                       </div>
 
                       {/* Level 3: AI Reasoning */}
                       {isReasoningExpanded && aiData && (
-                        <div className="mt-4 grid gap-4 md:grid-cols-2 animate-in slide-in-from-top-2 fade-in duration-200">
+                        <div className="mt-4 grid gap-4 md:grid-cols-3 animate-in slide-in-from-top-2 fade-in duration-200">
                           <div className="rounded-md bg-muted p-4">
                             <h4 className="mb-2 font-semibold flex items-center gap-2 text-blue-600">
                               <Bot className="h-4 w-4" />
@@ -256,6 +282,16 @@ export default function HumanVsAIPage() {
                             </h4>
                             <p className="text-sm leading-relaxed whitespace-pre-wrap text-muted-foreground">
                               {aiData.grok_reasoning || "No reasoning available."}
+                            </p>
+                          </div>
+
+                          <div className="rounded-md bg-muted p-4">
+                            <h4 className="mb-2 font-semibold flex items-center gap-2 text-orange-600">
+                              <Bot className="h-4 w-4" />
+                              Doubao Reasoning
+                            </h4>
+                            <p className="text-sm leading-relaxed whitespace-pre-wrap text-muted-foreground">
+                              {aiData.doubao_reasoning || "No reasoning available."}
                             </p>
                           </div>
                         </div>

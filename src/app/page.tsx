@@ -63,7 +63,7 @@ export default async function Home() {
             </div>
         </div>
         <div className="rounded-xl border bg-card text-card-foreground shadow p-6">
-            <div className="text-sm font-medium text-muted-foreground">总投入金额</div>
+            <div className="text-sm font-medium text-muted-foreground">总交易额</div>
             <div className="text-2xl font-bold mt-2">
                 ${stats.reduce((acc, curr) => acc + curr.total_invested, 0).toFixed(2)}
             </div>

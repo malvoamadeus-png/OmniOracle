@@ -61,7 +61,8 @@ export default function HumanVsAITablePage() {
       // NEW: Exclude items where NO AI made a prediction
       const hasGemini = item.ai_outcome && item.ai_outcome.trim() !== "" && item.ai_outcome !== "Unknown";
       const hasGrok = item.grok_outcome && item.grok_outcome.trim() !== "" && item.grok_outcome !== "Unknown";
-      if (!hasGemini && !hasGrok) return false;
+      const hasDoubao = item.doubao_outcome && item.doubao_outcome.trim() !== "" && item.doubao_outcome !== "Unknown";
+      if (!hasGemini && !hasGrok && !hasDoubao) return false;
 
       // Status filter
       if (statusFilter === "all") return true
@@ -121,6 +122,7 @@ export default function HumanVsAITablePage() {
       human: calcRate('human_outcome'),
       gemini: calcRate('ai_outcome'),
       grok: calcRate('grok_outcome'),
+      doubao: calcRate('doubao_outcome'),
       total: closedItems.length
     }
   }, [filteredPredictions])
@@ -196,6 +198,15 @@ export default function HumanVsAITablePage() {
                       <span className="text-xs font-normal text-muted-foreground">AI Agent</span>
                     </div>
                   </TableHead>
+                  <TableHead className="text-center">
+                    <div className="flex flex-col items-center gap-1">
+                      <div className="flex items-center gap-1 text-orange-600">
+                        <Bot className="h-4 w-4" />
+                        Doubao
+                      </div>
+                      <span className="text-xs font-normal text-muted-foreground">AI Agent</span>
+                    </div>
+                  </TableHead>
                 </TableRow>
                 {/* Win Rate Summary Row */}
                 <TableRow className="bg-muted/50 hover:bg-muted/50">
@@ -209,6 +220,9 @@ export default function HumanVsAITablePage() {
                   </TableHead>
                   <TableHead className="text-center font-bold text-lg text-purple-600">
                     {winRates.grok}%
+                  </TableHead>
+                  <TableHead className="text-center font-bold text-lg text-orange-600">
+                    {winRates.doubao}%
                   </TableHead>
                 </TableRow>
               </TableHeader>
@@ -256,11 +270,21 @@ export default function HumanVsAITablePage() {
                             {getPredictionStatus(item.grok_outcome, item.real_outcome, item.market_status)}
                         </div>
                     </TableCell>
+                    <TableCell className="text-center">
+                        <div className="flex items-center justify-center gap-2">
+                            <span className={cn(
+                              "font-bold",
+                              item.doubao_outcome?.trim().toLowerCase() === "yes" ? "text-green-600" :
+                              item.doubao_outcome?.trim().toLowerCase() === "no" ? "text-red-600" : "text-orange-600"
+                            )}>{item.doubao_outcome || "-"}</span>
+                            {getPredictionStatus(item.doubao_outcome, item.real_outcome, item.market_status)}
+                        </div>
+                    </TableCell>
                   </TableRow>
                 ))}
                 {filteredPredictions.length === 0 && (
                   <TableRow>
-                    <TableCell colSpan={5} className="h-24 text-center">
+                    <TableCell colSpan={6} className="h-24 text-center">
                       No data available.
                     </TableCell>
                   </TableRow>
