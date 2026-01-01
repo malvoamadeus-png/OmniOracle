@@ -68,6 +68,12 @@ export default function HumanVsAITablePage() {
       if (statusFilter === "all") return true
       if (statusFilter === "pending") return item.market_status !== "CLOSED"
       if (statusFilter === "settled") return item.market_status === "CLOSED"
+      if (statusFilter === "settled_exclusive") {
+        if (item.market_status !== "CLOSED") return false
+        // Exclude if human_price >= 0.97
+        if (item.human_price && item.human_price >= 0.97) return false
+        return true
+      }
       
       return true
     })
@@ -128,6 +134,11 @@ export default function HumanVsAITablePage() {
   }, [filteredPredictions])
 
   const getPredictionStatus = (prediction: string, realOutcome: string, status: string) => {
+    // If prediction is missing or empty, do not show any status icon
+    if (!prediction || prediction.trim() === "") {
+        return null
+    }
+
     if (status !== "CLOSED" || realOutcome === "Unknown" || realOutcome === "Parse Error") {
       return null // No judgment yet
     }
@@ -160,6 +171,7 @@ export default function HumanVsAITablePage() {
                 <option value="all">All</option>
                 <option value="pending">Pending</option>
                 <option value="settled">Settled</option>
+                <option value="settled_exclusive">Settled (Exclusive)</option>
               </select>
             </div>
           </div>

@@ -10,17 +10,8 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { ChevronDown, ChevronRight, ExternalLink, Bot, User } from "lucide-react"
 import { cn } from "@/lib/utils"
-
-// Import data directly (assuming it's available at build time/runtime)
-// In a real app, this might come from an API
+import { supabase } from "@/lib/supabase"
 import activePositions from "@/data/active_positions.json"
-// We need to handle the case where ai_predictions.json might not exist yet
-let aiPredictions: any[] = []
-try {
-  aiPredictions = require("@/data/ai_predictions.json")
-} catch (e) {
-  aiPredictions = []
-}
 
 interface AIPrediction {
   slug: string
@@ -34,11 +25,44 @@ interface AIPrediction {
   doubao_reasoning?: string
   market_status?: string
   is_excluded?: boolean
+  human_price?: number
 }
 
 export default function HumanVsAIPage() {
   const [expandedItems, setExpandedItems] = React.useState<Set<string>>(new Set())
   const [expandedAIReasoning, setExpandedAIReasoning] = React.useState<Set<string>>(new Set())
+  const [aiPredictions, setAiPredictions] = React.useState<AIPrediction[]>([])
+  const [loading, setLoading] = React.useState(true)
+
+  React.useEffect(() => {
+    async function fetchPredictions() {
+      try {
+        const { data, error } = await supabase
+          .from("ai_predictions")
+          .select("*")
+          // Fetch all or just OPEN? Usually "Human vs AI" page shows pending/open items
+          // The old logic filtered out CLOSED in the uniqueActivePositions
+          // Let's fetch everything and filter locally or filter by NOT CLOSED if possible
+          // But to match old behavior (load all, filter by status later), we select all.
+          // However, for performance, we can filter status != 'CLOSED' if we only want active.
+          // Let's stick to fetching all and filtering in memory like before to be safe,
+          // or filter active ones. The previous local json had everything.
+          // Given the uniqueActivePositions filter logic below, we likely need OPEN items.
+          .neq("market_status", "CLOSED")
+        
+        if (error) throw error
+        
+        if (data) {
+          setAiPredictions(data)
+        }
+      } catch (err) {
+        console.error("Failed to fetch predictions:", err)
+      } finally {
+        setLoading(false)
+      }
+    }
+    fetchPredictions()
+  }, [])
 
   // Create a map for fast lookup
   const aiMap = React.useMemo(() => {
@@ -50,7 +74,7 @@ export default function HumanVsAIPage() {
         }
     })
     return map
-  }, [])
+  }, [aiPredictions])
 
   // Deduplicate active positions by slug to avoid duplicate keys
   const uniqueActivePositions = React.useMemo(() => {
@@ -156,6 +180,11 @@ export default function HumanVsAIPage() {
                             <p className="text-xs text-muted-foreground mt-1">
                               Based on active position direction
                             </p>
+                            {aiData?.human_price !== undefined && (
+                                <p className="text-xs text-muted-foreground mt-1">
+                                  Prediction Price: ${aiData.human_price.toFixed(2)}
+                                </p>
+                            )}
                           </CardContent>
                         </Card>
 
