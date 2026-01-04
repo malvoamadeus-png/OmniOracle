@@ -112,16 +112,20 @@ export default function HumanVsAITablePage() {
     const calcRate = (field: string) => {
       // Valid attempts: closed events where this agent actually made a non-empty prediction
       const validAttempts = closedItems.filter((item: any) => 
-        item[field] && item[field].trim() !== ""
+        item[field] && item[field].trim() !== "" && item[field] !== "Unknown"
       )
       
-      if (validAttempts.length === 0) return "0.0"
+      if (validAttempts.length === 0) return { rate: "0.0", correct: 0, total: 0 }
 
       const correctCount = validAttempts.filter((item: any) => 
         isPredictionCorrect(item[field], item.real_outcome)
       ).length
       
-      return ((correctCount / validAttempts.length) * 100).toFixed(1)
+      return {
+          rate: ((correctCount / validAttempts.length) * 100).toFixed(1),
+          correct: correctCount,
+          total: validAttempts.length
+      }
     }
 
     return {
@@ -222,19 +226,31 @@ export default function HumanVsAITablePage() {
                 </TableRow>
                 {/* Win Rate Summary Row */}
                 <TableRow className="bg-muted/50 hover:bg-muted/50">
-                  <TableHead className="font-bold text-gray-700">Win Rate Summary (Total: {winRates.total})</TableHead>
+                  <TableHead className="font-bold text-gray-700">Win Rate Summary (Total Closed: {winRates.total})</TableHead>
                   <TableHead></TableHead>
-                  <TableHead className="text-center font-bold text-lg text-primary">
-                    {winRates.human}%
+                  <TableHead className="text-center font-bold text-primary">
+                    <div className="flex flex-col items-center">
+                        <span className="text-lg">{winRates.human.rate}%</span>
+                        <span className="text-xs font-normal text-muted-foreground">({winRates.human.correct}/{winRates.human.total})</span>
+                    </div>
                   </TableHead>
-                  <TableHead className="text-center font-bold text-lg text-blue-600">
-                    {winRates.gemini}%
+                  <TableHead className="text-center font-bold text-blue-600">
+                    <div className="flex flex-col items-center">
+                        <span className="text-lg">{winRates.gemini.rate}%</span>
+                        <span className="text-xs font-normal text-muted-foreground">({winRates.gemini.correct}/{winRates.gemini.total})</span>
+                    </div>
                   </TableHead>
-                  <TableHead className="text-center font-bold text-lg text-purple-600">
-                    {winRates.grok}%
+                  <TableHead className="text-center font-bold text-purple-600">
+                    <div className="flex flex-col items-center">
+                        <span className="text-lg">{winRates.grok.rate}%</span>
+                        <span className="text-xs font-normal text-muted-foreground">({winRates.grok.correct}/{winRates.grok.total})</span>
+                    </div>
                   </TableHead>
-                  <TableHead className="text-center font-bold text-lg text-orange-600">
-                    {winRates.doubao}%
+                  <TableHead className="text-center font-bold text-orange-600">
+                    <div className="flex flex-col items-center">
+                        <span className="text-lg">{winRates.doubao.rate}%</span>
+                        <span className="text-xs font-normal text-muted-foreground">({winRates.doubao.correct}/{winRates.doubao.total})</span>
+                    </div>
                   </TableHead>
                 </TableRow>
               </TableHeader>

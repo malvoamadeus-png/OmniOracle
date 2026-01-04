@@ -1,0 +1,5023 @@
+[
+  {
+    "event_title": "Bank of Japan decision in January?",
+    "polymarket_event_title": "Bank of Japan decision in January?",
+    "match_score": 1.0,
+    "opinion_stats": {
+      "volume24h": "17697727.191000000430000000",
+      "volume7d": "101012681.984999991000000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 71632.82343500001,
+      "volume1wk": 301122.387241
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Decrease rates",
+        "polymarket_outcome": "Decrease rates",
+        "outcome_match_score": 1.000000238418579,
+        "opinion_market_id": 2116,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2116,
+              "marketTitle": "Decrease rates",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "3147854299820576084931824184801355094029778863883120658967895026009448283728",
+              "noTokenId": "110579765497366376964070340949832390764049806040120749597043070507391954636349",
+              "conditionId": "034fb353c7ef29f074eb886be02db2115502dec47dca6c93fbdf1f57849299b9",
+              "resultTokenId": "",
+              "volume": "135105236.904000000000000000",
+              "volume24h": "8066756.305000000000000000",
+              "volume7d": "55182427.746999994000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "1522efd1ddc8423580437f65b1084ada27cc8c2b570cdb79fcacd7816edc24b6",
+              "incentiveFactor": {},
+              "createdAt": 1764730847,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.006",
+        "polymarket_prices": [
+          "0.0035",
+          "0.9965"
+        ],
+        "polymarket_market_id": "669998",
+        "polymarket_volume": "153259.139541"
+      },
+      {
+        "opinion_outcome": "No change",
+        "polymarket_outcome": "No change",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2117,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2117,
+              "marketTitle": "No change",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "103111561199550394059678349995809637095487091173365190714239641384514210613101",
+              "noTokenId": "24574145059098800456967294449873000851810972908121406248454212478798361280033",
+              "conditionId": "ed908db4912d3444cc562a5680b0b683b7beb8757ca122ddb5a3bc5665d48cbb",
+              "resultTokenId": "",
+              "volume": "53876321.614000000000000000",
+              "volume24h": "2771896.065000000400000000",
+              "volume7d": "13339350.118000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "438c065a08135aa0aed5dda5afe3cf513ac453a5a674c8fbed34851903ded97a",
+              "incentiveFactor": {},
+              "createdAt": 1764730847,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.985",
+        "polymarket_prices": [
+          "0.984",
+          "0.016"
+        ],
+        "polymarket_market_id": "669999",
+        "polymarket_volume": "188323.658944"
+      },
+      {
+        "opinion_outcome": "25 bps increase",
+        "polymarket_outcome": "25 bps increase",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 2118,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2118,
+              "marketTitle": "25 bps increase",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "106066915062998057339630646309253520747334203054033889844240433261774516444521",
+              "noTokenId": "92517845273947271849928612595783678815870996589078205938000837678959689512816",
+              "conditionId": "74ca6456fc084c3e4d87fd3ec19598a2a0ba7390b7d15aa11e2be0861ef40c64",
+              "resultTokenId": "",
+              "volume": "22922237.508000000000000000",
+              "volume24h": "354822.519000000030000000",
+              "volume7d": "2277818.241000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "da586c0444c87be0f031e0d6e46beffba8cf14548b2f9c653a3c015bb6cc8696",
+              "incentiveFactor": {},
+              "createdAt": 1764730848,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.011",
+        "polymarket_prices": [
+          "0.01",
+          "0.99"
+        ],
+        "polymarket_market_id": "670000",
+        "polymarket_volume": "120151.421748"
+      },
+      {
+        "opinion_outcome": "50+ bps increase",
+        "polymarket_outcome": "50+ bps increase",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2119,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2119,
+              "marketTitle": "50+ bps increase",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "4486558136580836674626655635149877390690518733932333106646718618149392563017",
+              "noTokenId": "95920491885957277058977027192415689900363358329348336679511776397342694583722",
+              "conditionId": "5593082370ebfc19ad5027fda16b280255930fac051507f9aadc4d6311d8f223",
+              "resultTokenId": "",
+              "volume": "80110082.518000000000000000",
+              "volume24h": "6504252.302000000000000000",
+              "volume7d": "30213085.878999997000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "1742af7fe9b5c9c249ff5c2e74e05f527d556ad70915dd63e87cf8c326e2a619",
+              "incentiveFactor": {},
+              "createdAt": 1764730848,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.006",
+        "polymarket_prices": [
+          "0.005",
+          "0.995"
+        ],
+        "polymarket_market_id": "670001",
+        "polymarket_volume": "140539.147179"
+      }
+    ]
+  },
+  {
+    "event_title": "2026 NBA Champion",
+    "polymarket_event_title": "2026 NBA Champion",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "7044332.962000000098000000",
+      "volume7d": "45992348.076999997700000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 7147810.338293,
+      "volume1wk": 28241757.58106895
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Oklahoma City Thunder",
+        "polymarket_outcome": "Oklahoma City Thunder",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1877,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1877,
+              "marketTitle": "Oklahoma City Thunder",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "43513352219589924316158850082015119640466278772107527430885047707582671339297",
+              "noTokenId": "66843599734533023570182869420903571456565197716574586439687792774052379652088",
+              "conditionId": "7aff300af9c2df57818e1ef43282ff9c8a35501971fa8c7cd0b53990a75d5210",
+              "resultTokenId": "",
+              "volume": "6365771.192000000000000000",
+              "volume24h": "596936.229000000000000000",
+              "volume7d": "1848741.722000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "73a14d019b7f2f827af37e130f840cd79d3640a71193a4b6a28e16f60cbe6597",
+              "createdAt": 1763694100,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.427",
+        "polymarket_prices": [
+          "0.425",
+          "0.575"
+        ],
+        "polymarket_market_id": "553856",
+        "polymarket_volume": "1948447.865909"
+      },
+      {
+        "opinion_outcome": "Denver Nuggets",
+        "polymarket_outcome": "Denver Nuggets",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1878,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1878,
+              "marketTitle": "Denver Nuggets",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "77161412129844740373035363981368567025027419725531169047725529962539678616608",
+              "noTokenId": "23239117947633742064425868703606030907380055601584437366257645232847343084272",
+              "conditionId": "98d43985ce8dd83bd47e9f6e29a6b105c330dbcd50298aeee79ea7d7472ba542",
+              "resultTokenId": "",
+              "volume": "9379411.888000000000000000",
+              "volume24h": "10147.580999999998000000",
+              "volume7d": "5086877.399999999000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "990bd2d62a450443cd1792478e7405136357b64bf9a38a060f3df8d6322de08b",
+              "createdAt": 1763694101,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.093",
+        "polymarket_prices": [
+          "0.075",
+          "0.925"
+        ],
+        "polymarket_market_id": "553865",
+        "polymarket_volume": "1107739.221513"
+      },
+      {
+        "opinion_outcome": "Cleveland Cavaliers",
+        "polymarket_outcome": "Cleveland Cavaliers",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1879,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1879,
+              "marketTitle": "Cleveland Cavaliers",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "92076532980511103468228733694262883935639500568860059190385036486859170778814",
+              "noTokenId": "19596789295520075258538490566561621872131541354506622209320569254596651746600",
+              "conditionId": "a671c11d046c2516c0829cb8414c0b2a5f47474b8a968bc166081434b6745221",
+              "resultTokenId": "",
+              "volume": "11110329.606000000000000000",
+              "volume24h": "607916.292000000000000000",
+              "volume7d": "7354643.589000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "e2292b0ecf00cf39ad2754cc6d032de8b9aaa8c3b1240c44c37da36614f333dc",
+              "createdAt": 1763694101,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.029",
+        "polymarket_prices": [
+          "0.0325",
+          "0.9675"
+        ],
+        "polymarket_market_id": "553857",
+        "polymarket_volume": "1238106.381176"
+      },
+      {
+        "opinion_outcome": "Houston Rockets",
+        "polymarket_outcome": "Houston Rockets",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1880,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1880,
+              "marketTitle": "Houston Rockets",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "33983412928971113842209826081112936134476688635498222333208982537424796788482",
+              "noTokenId": "107186576826736984480273556043906291316041814419525856030267840974713793667173",
+              "conditionId": "67b7f6556bd65db4b6f617b5d6ae568a58a8362017aab124b1e4e94ce6870b4c",
+              "resultTokenId": "",
+              "volume": "13872141.433000000000000000",
+              "volume24h": "829560.004000000000000000",
+              "volume7d": "7504803.597000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8ef5afddd62c5dfcff1bf0cd2acdb4df2caa46cae58604d585889dce09d4ed51",
+              "createdAt": 1763694102,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.07",
+        "polymarket_prices": [
+          "0.065",
+          "0.935"
+        ],
+        "polymarket_market_id": "553860",
+        "polymarket_volume": "944753.916025"
+      },
+      {
+        "opinion_outcome": "Los Angeles Lakers",
+        "polymarket_outcome": "Los Angeles Lakers",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1881,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1881,
+              "marketTitle": "Los Angeles Lakers",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "87047390136406053462745121932008802757469413639390268420934976306184398111953",
+              "noTokenId": "62580130823764537171084735931277056010407839154757366318383129098407880657895",
+              "conditionId": "4319ae9b6dd213c2602d42a0d0eea7785a00e6867919d83878265382eb4063de",
+              "resultTokenId": "",
+              "volume": "11266207.095000000000000000",
+              "volume24h": "675349.458999999900000000",
+              "volume7d": "5014686.395000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "a9b05ce952dc5742345e9c977badd878f6c40dbababcf17bbb25206194a3c878",
+              "createdAt": 1763694102,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.024",
+        "polymarket_prices": [
+          "0.034",
+          "0.966"
+        ],
+        "polymarket_market_id": "553863",
+        "polymarket_volume": "1736946.113971"
+      },
+      {
+        "opinion_outcome": "New York Knicks",
+        "polymarket_outcome": "New York Knicks",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1882,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1882,
+              "marketTitle": "New York Knicks",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "113389241731864438057082301034032828742913527702798203274790424086464944047283",
+              "noTokenId": "25780127697449000089866124675696910402084709925510644896465247822062296568628",
+              "conditionId": "d649806e85136adc59fb205257a5998b110943e25ee4823a55421306c2812460",
+              "resultTokenId": "",
+              "volume": "13995970.612000000000000000",
+              "volume24h": "69421.402000000000000000",
+              "volume7d": "5291866.602999999000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "58a0cbf3dfc4440766328eebc5bcb44a9c47e8374e9348afab160a0cba52df39",
+              "createdAt": 1763694102,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.067",
+        "polymarket_prices": [
+          "0.075",
+          "0.925"
+        ],
+        "polymarket_market_id": "553858",
+        "polymarket_volume": "1051267.440875"
+      },
+      {
+        "opinion_outcome": "Detroit Pistons",
+        "polymarket_outcome": "Detroit Pistons",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1883,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1883,
+              "marketTitle": "Detroit Pistons",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "111618601664120498767488594665294549431597073691178405611325263489066595151717",
+              "noTokenId": "74063081089723540470616203486163356904447922447798883674688450517460964141948",
+              "conditionId": "e9ed63cb6a94748a7a9ee059953d487e3d35134d1b3bdbda7747a2ec72108609",
+              "resultTokenId": "",
+              "volume": "11625181.648000000000000000",
+              "volume24h": "2595673.902000000200000000",
+              "volume7d": "6469241.308000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "d215df73e853e65458a7ea3ab588fba3d920033abc7feb5e72698061be34ec67",
+              "createdAt": 1763694514,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.027",
+        "polymarket_prices": [
+          "0.038",
+          "0.962"
+        ],
+        "polymarket_market_id": "553871",
+        "polymarket_volume": "2002042.091282"
+      },
+      {
+        "opinion_outcome": "Golden State Warriors",
+        "polymarket_outcome": "Golden State Warriors",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1884,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1884,
+              "marketTitle": "Golden State Warriors",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "9493233890009806981204919694192186859568326591674459435843108156595387416764",
+              "noTokenId": "64605739137931450569006571526302678375897248001336581711960363881036856403555",
+              "conditionId": "3ee78d42f4ecd1f10057166876e2c45da728affbde06ff581cd1ef8165698be9",
+              "resultTokenId": "",
+              "volume": "13797940.798000000000000000",
+              "volume24h": "669613.510000000000000000",
+              "volume7d": "2870049.844999999700000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "2bad93203b37f53324e06dee0521402aaac1c2d5a47ac40377d12d7b774df942",
+              "createdAt": 1763694514,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.022",
+        "polymarket_prices": [
+          "0.0285",
+          "0.9715"
+        ],
+        "polymarket_market_id": "553867",
+        "polymarket_volume": "1549670.120159"
+      },
+      {
+        "opinion_outcome": "San Antonio Spurs",
+        "polymarket_outcome": "San Antonio Spurs",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 2285,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2285,
+              "marketTitle": "San Antonio Spurs",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "76281596832602810958274908527832001639945097293030564468918596082678347742938",
+              "noTokenId": "114332009447529548090961852830386822670432524510695574218691124162399065736882",
+              "conditionId": "c0a0c341a9744f336c654b64589f9c41bbf4bf87b6c33c47b94f277ee21b960d",
+              "resultTokenId": "",
+              "volume": "6983536.331000000000000000",
+              "volume24h": "833361.694000000000000000",
+              "volume7d": "1363224.369000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "4558d22de07b37b8edabb2f5a3dacff28d38756fe852c92bbf9b2eef29093ca3",
+              "createdAt": 1764922387,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.087",
+        "polymarket_prices": [
+          "0.0715",
+          "0.9285"
+        ],
+        "polymarket_market_id": "553866",
+        "polymarket_volume": "2100366.611615"
+      },
+      {
+        "opinion_outcome": "Boston Celtics",
+        "polymarket_outcome": "Boston Celtics",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2395,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2395,
+              "marketTitle": "Boston Celtics",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "49665457670271064443759604140463764043183010737336323317253992149342045276842",
+              "noTokenId": "80683134011382708770241385293913773346597699025551227595605545399978427892831",
+              "conditionId": "6ac6e642867c33e02e4be5a48961292a3acbdf1d972c6a9b292cc6fe9c276e48",
+              "resultTokenId": "",
+              "volume": "8456618.925000000000000000",
+              "volume24h": "156352.889000000000000000",
+              "volume7d": "3188213.249000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "80382fe0ff16b3b0b7a7e25339fc0e22a651eb6c410716fe593ab9ae4a4e45e0",
+              "createdAt": 1765273293,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.045",
+        "polymarket_prices": [
+          "0.0405",
+          "0.9595"
+        ],
+        "polymarket_market_id": "553862",
+        "polymarket_volume": "1749129.486961"
+      }
+    ]
+  },
+  {
+    "event_title": "2026 FIFA World Cup Winner",
+    "polymarket_event_title": "2026 FIFA World Cup Winner ",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "5296597.326000000137000000",
+      "volume7d": "32735297.961000002100000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 1485922.25918,
+      "volume1wk": 7144114.537688
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Spain",
+        "polymarket_outcome": "Spain",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1354,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1354,
+              "marketTitle": "Spain",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "109837041531451287161298527022447290894418066118946287563639981764887484653488",
+              "noTokenId": "53890611075397845232795119166448103024225386474242667766205597834982635707811",
+              "conditionId": "76c569a8247dd07d5652abd7460f3c7e4881a2683b9541db5679f3bb6aa21f7e",
+              "resultTokenId": "",
+              "volume": "2817368.490000000000000000",
+              "volume24h": "49039.235000000000000000",
+              "volume7d": "681996.793000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "74e97e14ae8c93100e4acd38018549fa0446e8009d857b493e03fd04b9a61c31",
+              "createdAt": 1762095557,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.159",
+        "polymarket_prices": [
+          "0.155",
+          "0.845"
+        ],
+        "polymarket_market_id": "558934",
+        "polymarket_volume": "594649.980832"
+      },
+      {
+        "opinion_outcome": "France",
+        "polymarket_outcome": "France",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1355,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1355,
+              "marketTitle": "France",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "58781511683741460840279113789011242305724778311984051984446170088352196682803",
+              "noTokenId": "39686998853200107672712866106128952465934053280184538999515234841489052010039",
+              "conditionId": "c827eff7376dbd4574f9bded49996a4166444e30d19541156fb1b2dad2bced6a",
+              "resultTokenId": "",
+              "volume": "2661181.967000000000000000",
+              "volume24h": "26982.352000000000000000",
+              "volume7d": "1451227.113000000100000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c95abebf1e17b3ee37e21cf8b026fa0b5a115e916647f9f53f84e71b40d87225",
+              "createdAt": 1762095558,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.136",
+        "polymarket_prices": [
+          "0.115",
+          "0.885"
+        ],
+        "polymarket_market_id": "558936",
+        "polymarket_volume": "770216.55168"
+      },
+      {
+        "opinion_outcome": "England",
+        "polymarket_outcome": "England",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1356,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1356,
+              "marketTitle": "England",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "87569949602057212313192823940772607523019984506139576806575322774190770115297",
+              "noTokenId": "88892816475389402504366901635471047203268297685219108104280248248864376759607",
+              "conditionId": "587a0bc1dcfb88c28c85466096407f3551632d48c84a56ac76f1283f7963006e",
+              "resultTokenId": "",
+              "volume": "1538921.726000000000000000",
+              "volume24h": "98623.568000000000000000",
+              "volume7d": "256643.552000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "6157b2ec463d63172d0d64d2311224488819cdadbb65ad7da73d182b3995cea2",
+              "createdAt": 1762095558,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.142",
+        "polymarket_prices": [
+          "0.135",
+          "0.865"
+        ],
+        "polymarket_market_id": "558935",
+        "polymarket_volume": "564846.123839"
+      },
+      {
+        "opinion_outcome": "Brazil",
+        "polymarket_outcome": "Brazil",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1357,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1357,
+              "marketTitle": "Brazil",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "8190765351886206947407577443427415459065908410563993440934563622292691129486",
+              "noTokenId": "60665244945662695646969821625540953149661752807780716550203411448381496425227",
+              "conditionId": "a6ff756d42225a69f49398f6b0844ccbdcdf9f17af9e5721dd7b472cc14c29d2",
+              "resultTokenId": "",
+              "volume": "1795309.158000000000000000",
+              "volume24h": "254086.063000000020000000",
+              "volume7d": "1528241.347000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "d5796eb02e01ccab5ffea7a8cc6ccf59685d76c89bc45cb77a06f46528793720",
+              "createdAt": 1762095558,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.095",
+        "polymarket_prices": [
+          "0.095",
+          "0.905"
+        ],
+        "polymarket_market_id": "558937",
+        "polymarket_volume": "521707.518268"
+      },
+      {
+        "opinion_outcome": "Argentina",
+        "polymarket_outcome": "Argentina",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1358,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1358,
+              "marketTitle": "Argentina",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "76797181949753720644089803358469473836635939135749252012471686329193516696967",
+              "noTokenId": "26659404716729581304823258685507342308989872803470783991843835413600002370036",
+              "conditionId": "71eea1fc2b33f1f6249a2cfefbf03822bbbb60fad87ee117eae11f6f5aa83fd3",
+              "resultTokenId": "",
+              "volume": "5353160.600000000000000000",
+              "volume24h": "19579.858999999997000000",
+              "volume7d": "2101366.750000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "9998157e8768a6cdb413d1566421fb014eb953f973529c103b5c717e7b274baf",
+              "createdAt": 1762095559,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.112",
+        "polymarket_prices": [
+          "0.105",
+          "0.895"
+        ],
+        "polymarket_market_id": "558938",
+        "polymarket_volume": "781929.468748"
+      },
+      {
+        "opinion_outcome": "Portugal",
+        "polymarket_outcome": "Portugal",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1359,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1359,
+              "marketTitle": "Portugal",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "102155942478165027496030029269682056525357447147080949345312646221371535419800",
+              "noTokenId": "66182096721084076205251007122003178994751700629598290155509486203620001233152",
+              "conditionId": "e016e0146d83c9a66cb4d5d1383311bbc4f6eeba7557bb1607e69392f4586244",
+              "resultTokenId": "",
+              "volume": "3592632.544000000000000000",
+              "volume24h": "483549.201000000000000000",
+              "volume7d": "500871.186000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "60fc4f4308b695322e0a39f03b9883620df638a39299e3643b3ce92a13d01815",
+              "createdAt": 1762095559,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.095",
+        "polymarket_prices": [
+          "0.0755",
+          "0.9245"
+        ],
+        "polymarket_market_id": "558940",
+        "polymarket_volume": "731567.570365"
+      },
+      {
+        "opinion_outcome": "Germany",
+        "polymarket_outcome": "Germany",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1360,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1360,
+              "marketTitle": "Germany",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "3130914182080581747547684695021247023483555203450871692729596777830675465938",
+              "noTokenId": "52819175245924976285571406839545523393303633789376165270092914079947104244477",
+              "conditionId": "d15f1fc06b80cff6bf00192f437d585018cd32dcf74d5761973dfbf54f9cab87",
+              "resultTokenId": "",
+              "volume": "8011797.354000000000000000",
+              "volume24h": "396710.422000000000000000",
+              "volume7d": "3197848.139000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "837b40c45b46e891db033ac08e34c0640f57bfc3abe2b9cf66d2578d947eaf2c",
+              "createdAt": 1762095559,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.078",
+        "polymarket_prices": [
+          "0.0635",
+          "0.9365"
+        ],
+        "polymarket_market_id": "558939",
+        "polymarket_volume": "953307.555254"
+      },
+      {
+        "opinion_outcome": "Netherlands",
+        "polymarket_outcome": "Netherlands",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1361,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1361,
+              "marketTitle": "Netherlands",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "12183947116145259219391511115660869215418425013633123896412238820708881237687",
+              "noTokenId": "26198907524969520558250396522242808604638812860426626320509444399751338524187",
+              "conditionId": "6598a93f306d3c919af348debca4db603d908a8050b208d3cbc6e339997c6d18",
+              "resultTokenId": "",
+              "volume": "35428782.109000000000000000",
+              "volume24h": "1522866.427000000100000000",
+              "volume7d": "8641841.745000001000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "43ccc72013eff5a83335bedee7b8fcbb21e510b52bcb6e00a28a99b66f82b488",
+              "createdAt": 1762095560,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.048",
+        "polymarket_prices": [
+          "0.034",
+          "0.966"
+        ],
+        "polymarket_market_id": "558941",
+        "polymarket_volume": "1270233.957284"
+      },
+      {
+        "opinion_outcome": "Norway",
+        "polymarket_outcome": "Norway",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 1362,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1362,
+              "marketTitle": "Norway",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "66927770418674676184087744146504344405626752230018728097765855453181337401906",
+              "noTokenId": "58626751301711211048277464777586155387539018448189798214529251849219137131667",
+              "conditionId": "a27bca9d5e3ecd3a66a1506ed11a71606751fe51c4b14a2c9db251eae1832d36",
+              "resultTokenId": "",
+              "volume": "37296625.963000000000000000",
+              "volume24h": "2213133.394000000000000000",
+              "volume7d": "8195910.089000001000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "4c0d19be4ec13150c2fb505526656b523c14f4ed7d85957897862643b4fc90c0",
+              "createdAt": 1762095560,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.04",
+        "polymarket_prices": [
+          "0.036",
+          "0.964"
+        ],
+        "polymarket_market_id": "558951",
+        "polymarket_volume": "721901.319266"
+      },
+      {
+        "opinion_outcome": "Italy",
+        "polymarket_outcome": "Italy",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1363,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1363,
+              "marketTitle": "Italy",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "94776209237310350601704075622457341463176819695003402062280099887697695648762",
+              "noTokenId": "16465818463788735164718163894799714585391012832603496327574464924966980939010",
+              "conditionId": "b0e80252d25057b8cd96825b653d18a3d71af69a1fec17b2fefb4b561082f204",
+              "resultTokenId": "",
+              "volume": "24511704.725000000000000000",
+              "volume24h": "232026.805000000020000000",
+              "volume7d": "6179351.247000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "73f5a585f6a5c180f03aaa2ff5cb49729df0ef0151d6c4725c8f5f4a93e6d87b",
+              "createdAt": 1762095560,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.035",
+        "polymarket_prices": [
+          "0.0205",
+          "0.9795"
+        ],
+        "polymarket_market_id": "558942",
+        "polymarket_volume": "594903.537378"
+      }
+    ]
+  },
+  {
+    "event_title": "What price will Ethena hit in January?",
+    "polymarket_event_title": "What price will Ethena hit in January?",
+    "match_score": 1.000000238418579,
+    "opinion_stats": {
+      "volume24h": "4570511.097000000251000000",
+      "volume7d": "4570511.097000000251000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 355.418109,
+      "volume1wk": 923.123208
+    },
+    "markets": [
+      {
+        "opinion_outcome": "↑ 0.37",
+        "polymarket_outcome": "↑ 0.37",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3611,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3611,
+              "marketTitle": "↑ 0.37",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "114559239401757360129032680729376536347244454383659317096119038757931149445703",
+              "noTokenId": "75686142557483783702016309788756883093195800281753861947255927334692472538930",
+              "conditionId": "3bb9c45daf28ffeefcda598408be128778db02f66427e5a0e3797abfd29fe0e0",
+              "resultTokenId": "",
+              "volume": "213716.373000000000000000",
+              "volume24h": "213484.332999999980000000",
+              "volume7d": "213484.332999999980000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "b6608fbf0087b248e235835aa035e76c6cb904d280a97e5455085aa595d16403",
+              "createdAt": 1767426760,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.168",
+        "polymarket_prices": [
+          "0.14",
+          "0.86"
+        ],
+        "polymarket_market_id": "1081393",
+        "polymarket_volume": null
+      },
+      {
+        "opinion_outcome": "↑ 0.33",
+        "polymarket_outcome": "↑ 0.33",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3612,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3612,
+              "marketTitle": "↑ 0.33",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "93830580080938637892529043283119807928452709557252651290122938378421856301698",
+              "noTokenId": "29186056172165805391206730214270303042530725031650858359113183375363844399233",
+              "conditionId": "af098fa2cda4366d3e4f726834f49a5ef4dd7d9ff830026d0213182b33625952",
+              "resultTokenId": "",
+              "volume": "171745.769000000000000000",
+              "volume24h": "165715.429000000000000000",
+              "volume7d": "165715.429000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "61c4886f49800220439f82e44e0b67b4c1b9ff9f683cc046046b2ac9a4a97079",
+              "createdAt": 1767426761,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.189",
+        "polymarket_prices": [
+          "0.225",
+          "0.775"
+        ],
+        "polymarket_market_id": "1081394",
+        "polymarket_volume": null
+      },
+      {
+        "opinion_outcome": "↑ 0.29",
+        "polymarket_outcome": "↑ 0.29",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3613,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3613,
+              "marketTitle": "↑ 0.29",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "2163858915414098334303509926012554989744572191504123205795956343892683744859",
+              "noTokenId": "1123898453758942623957701957542173231277255293088234363273823339931701870970",
+              "conditionId": "ee5c556232ad9cd1550712b4ff8412ee9382da9d1783ef9a826457da58ebeb9b",
+              "resultTokenId": "",
+              "volume": "5510.400000000000000000",
+              "volume24h": "5470.320000000001000000",
+              "volume7d": "5470.320000000001000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "81cc90e470312c19b59944a3e1d482f88b0b4aed6770034b17cfa6f91ea85367",
+              "createdAt": 1767426762,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.499",
+        "polymarket_prices": [
+          "0.425",
+          "0.575"
+        ],
+        "polymarket_market_id": "1081395",
+        "polymarket_volume": "25"
+      },
+      {
+        "opinion_outcome": "↑ 0.25",
+        "polymarket_outcome": "↑ 0.25",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3614,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3614,
+              "marketTitle": "↑ 0.25",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "52474769525089688804221746723022461935707217277992158633235580912868164375297",
+              "noTokenId": "43919840656323992447647089460348591696335913089677467595104987885702699371207",
+              "conditionId": "33da8cf0d769a50286eecb631384f5b37a69c88e61daad7c67eb0fcea0d89c95",
+              "resultTokenId": "",
+              "volume": "64634.497000000000000000",
+              "volume24h": "63831.157000000000000000",
+              "volume7d": "63831.157000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "10340eedc64d80ac836a05e96f18e72cd708dd32999c17e3fd217a55c8c6a310",
+              "createdAt": 1767426763,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.969",
+        "polymarket_prices": [
+          "0.72",
+          "0.28"
+        ],
+        "polymarket_market_id": "1081396",
+        "polymarket_volume": "638.944027"
+      },
+      {
+        "opinion_outcome": "↓ 0.20",
+        "polymarket_outcome": "↓ 0.20",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3615,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3615,
+              "marketTitle": "↓ 0.20",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "76244475333285868072216282278641405603981707112427856282917509432149225792127",
+              "noTokenId": "16755209459541860366400886297944352874573643006024576500622416681399038776469",
+              "conditionId": "a228b02fb3464433e86bba538021f191fcefaf43b58b9d59377ce722b2d05aca",
+              "resultTokenId": "",
+              "volume": "97428.835000000000000000",
+              "volume24h": "97149.536000000000000000",
+              "volume7d": "97149.536000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "58dd2059f4c0c8f2f48e474070e7dfc1d4f1aeea54be5a6c08d1f4f5f74dd758",
+              "createdAt": 1767426764,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.695",
+        "polymarket_prices": [
+          "0.645",
+          "0.355"
+        ],
+        "polymarket_market_id": "1081398",
+        "polymarket_volume": "131"
+      },
+      {
+        "opinion_outcome": "↓ 0.16",
+        "polymarket_outcome": "↓ 0.16",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3616,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3616,
+              "marketTitle": "↓ 0.16",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "53051010438993634584655184787951613779240956459422498597862282639559086858105",
+              "noTokenId": "114022738585041691180804908707164173715565761668493636077192173459420154645993",
+              "conditionId": "c6a436bc6a728fb3447390e400d82c89e2a596b7226a465bf0324d7f80fb85c6",
+              "resultTokenId": "",
+              "volume": "303507.890000000000000000",
+              "volume24h": "303183.899999999970000000",
+              "volume7d": "303183.899999999970000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "b7f8700b880bc50f6efc2d080996486166bead6485c46f6a0e852011dfc04503",
+              "createdAt": 1767426765,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.123",
+        "polymarket_prices": [
+          "0.285",
+          "0.715"
+        ],
+        "polymarket_market_id": "1081399",
+        "polymarket_volume": null
+      },
+      {
+        "opinion_outcome": "↓ 0.12",
+        "polymarket_outcome": "↓ 0.12",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3617,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3617,
+              "marketTitle": "↓ 0.12",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "100275849255616382685188881710301672876858689280532290931316265903860539671386",
+              "noTokenId": "60903524409646306148423741381646654425935379956272824544011771396884400896534",
+              "conditionId": "1dbf74bf65e6bc194e3aee2659f53ca6be89ad02f395f6205b06c0565b07bdb6",
+              "resultTokenId": "",
+              "volume": "1489938.449000000000000000",
+              "volume24h": "1488604.622000000000000000",
+              "volume7d": "1488604.622000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ef4437f5892511ddb25de6320ad0d44bd3f189bfa5679e275b49dda14e64e07a",
+              "createdAt": 1767426766,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.022",
+        "polymarket_prices": [
+          "0.12",
+          "0.88"
+        ],
+        "polymarket_market_id": "1081400",
+        "polymarket_volume": "14.52"
+      },
+      {
+        "opinion_outcome": "↓ 0.08",
+        "polymarket_outcome": "↓ 0.08",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3618,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3618,
+              "marketTitle": "↓ 0.08",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "113728515873092624004305093036790463142485412581549347471284467185663602545923",
+              "noTokenId": "20874870581712349943130479080710678849663795947069213393356218403242554776728",
+              "conditionId": "ef42f00c26750ffcee4d8bc2c184980a3ff167ee08fb4d0c453aecfb303f20e3",
+              "resultTokenId": "",
+              "volume": "2296752.837000000000000000",
+              "volume24h": "2233071.800000000300000000",
+              "volume7d": "2233071.800000000300000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "e68dc37b92a3685752ece8aa9efa12e032fad8be827d829658bdd27221dab594",
+              "createdAt": 1767426767,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.016",
+        "polymarket_prices": [
+          "0.0145",
+          "0.9855"
+        ],
+        "polymarket_market_id": "1081401",
+        "polymarket_volume": "70.313261"
+      }
+    ]
+  },
+  {
+    "event_title": "What price will Bitcoin hit in January?",
+    "polymarket_event_title": "What price will Bitcoin hit in January?",
+    "match_score": 0.9999998807907104,
+    "opinion_stats": {
+      "volume24h": "3743904.974999999968000000",
+      "volume7d": "3743904.974999999968000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 2040791.7299350004,
+      "volume1wk": 4173739.7569999993
+    },
+    "markets": [
+      {
+        "opinion_outcome": "↑ 110,000",
+        "polymarket_outcome": "↑ 110,000",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3593,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3593,
+              "marketTitle": "↑ 110,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "68674514222657276966758814747548920098317200899832669541294698577798170731999",
+              "noTokenId": "46389077292069062847782985150132267867607989965046314531281235334806144219932",
+              "conditionId": "e65035b3b8ef89fca6e81872eb481212fc79c0c24609f797bcd09e7dacf43565",
+              "resultTokenId": "",
+              "volume": "1415712.262000000000000000",
+              "volume24h": "1415691.772000000000000000",
+              "volume7d": "1415691.772000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8e1e7ca80925699e7e189fb15228f3c8e0a1c3b46b01d9b8703d676b16135b99",
+              "createdAt": 1767417153,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.05",
+        "polymarket_prices": [
+          "0.068",
+          "0.932"
+        ],
+        "polymarket_market_id": "1082772",
+        "polymarket_volume": "350512.344476"
+      },
+      {
+        "opinion_outcome": "↑ 105,000",
+        "polymarket_outcome": "↑ 105,000",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3594,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3594,
+              "marketTitle": "↑ 105,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "58788826154081462195916105597363953863741947838120565926942952376764065397651",
+              "noTokenId": "2465918160510769843247826710531540177475371109273908343944740744951314938378",
+              "conditionId": "a30016d46383b5b4f74c7dc011a31ca691081c7b0f075e79e5bf8cf2649e704b",
+              "resultTokenId": "",
+              "volume": "16313.556000000000000000",
+              "volume24h": "16193.695999999998000000",
+              "volume7d": "16193.695999999998000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "cd6cb09ac04ccc92c9c6bb213bd5a5c449b0bc34686ad83385fc173120b55996",
+              "createdAt": 1767417154,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.185",
+        "polymarket_prices": [
+          "0.185",
+          "0.815"
+        ],
+        "polymarket_market_id": "1082777",
+        "polymarket_volume": "235374.866099"
+      },
+      {
+        "opinion_outcome": "↑ 100,000",
+        "polymarket_outcome": "↑ 100,000",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3595,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3595,
+              "marketTitle": "↑ 100,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "1519072178855142905477356580185103824722117969937458851261884083244074539835",
+              "noTokenId": "25453110749685402256370675442670302537937412834569317657395410522576548764892",
+              "conditionId": "aec96fb7c7f400d4effb80dfc72a285c957a9fb31ad420a378efee8c1003e185",
+              "resultTokenId": "",
+              "volume": "49881.017000000000000000",
+              "volume24h": "49881.017000000000000000",
+              "volume7d": "49881.017000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "a71a0e1a52ac59b6a65927917bcb0f5d4a055ee849c1bc432381d396006edcd0",
+              "createdAt": 1767417155,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.35",
+        "polymarket_prices": [
+          "0.365",
+          "0.635"
+        ],
+        "polymarket_market_id": "1082781",
+        "polymarket_volume": "398491.84911"
+      },
+      {
+        "opinion_outcome": "↑ 95,000",
+        "polymarket_outcome": "↑ 95,000",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3596,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3596,
+              "marketTitle": "↑ 95,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "44482274623352567708411359588293676017799351888341452903655596204140602367951",
+              "noTokenId": "50344207408675904969131856521568376776134854179769775071101867036109350867676",
+              "conditionId": "951aab885436d50c220aaef39bdd8cc6a179a0e13fcb742f00b650066268fc0b",
+              "resultTokenId": "",
+              "volume": "26274.994000000000000000",
+              "volume24h": "26216.264000000000000000",
+              "volume7d": "26216.264000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8d86a29a1fd43ab35fa42fe57d148d76166672b4ab51d5073cb6edc78fa6c4d2",
+              "createdAt": 1767417156,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.724",
+        "polymarket_prices": [
+          "0.715",
+          "0.285"
+        ],
+        "polymarket_market_id": "1082785",
+        "polymarket_volume": "411194.407818"
+      },
+      {
+        "opinion_outcome": "↓ 85,000",
+        "polymarket_outcome": "↓ 85,000",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3597,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3597,
+              "marketTitle": "↓ 85,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "114951772076161849315766882353517879694754905710747353661098547034798846715954",
+              "noTokenId": "49839981908341044432690489392914545083438297287322571787726258562515819953363",
+              "conditionId": "c3b7092df92192741538d37f8edf7fd14bb3e5931dcd290bf66ac88711631db4",
+              "resultTokenId": "",
+              "volume": "88333.045000000000000000",
+              "volume24h": "88317.594000000000000000",
+              "volume7d": "88317.594000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "04c89251aea338119e83222c2094c958c9c1a3eb0a54e7e5eb0cec38afd8d083",
+              "createdAt": 1767417157,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.564",
+        "polymarket_prices": [
+          "0.395",
+          "0.605"
+        ],
+        "polymarket_market_id": "1082793",
+        "polymarket_volume": "393414.736425"
+      },
+      {
+        "opinion_outcome": "↓ 80,000",
+        "polymarket_outcome": "↓ 80,000",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3598,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3598,
+              "marketTitle": "↓ 80,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "95256018143792319024279121747904835689663528609953177665598153395773753469384",
+              "noTokenId": "82877974421232635834235473911236672457678784539455156436537350955067449129274",
+              "conditionId": "f5fa26d6124b391d3c025af43bbb2f2ee6b4a82dd4a19d82965047b3b29063fb",
+              "resultTokenId": "",
+              "volume": "402537.937000000000000000",
+              "volume24h": "398852.426999999970000000",
+              "volume7d": "398852.426999999970000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "9b58cf11b8e6019b55851048ffd75642a48bd6c6b6ae1a5bd1b083c094dd6561",
+              "createdAt": 1767417158,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.24",
+        "polymarket_prices": [
+          "0.2",
+          "0.8"
+        ],
+        "polymarket_market_id": "1082796",
+        "polymarket_volume": "122269.032948"
+      },
+      {
+        "opinion_outcome": "↓ 75,000",
+        "polymarket_outcome": "↓ 75,000",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3599,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3599,
+              "marketTitle": "↓ 75,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "14680360746057914429884359540783754465170226203554273317837904995231952682993",
+              "noTokenId": "50238778577317723461800249647391860058715551319312129610724129988915569845496",
+              "conditionId": "0be1c9e7d9a3c03a4cbe15b3bc5480d545d45c2c036dfc0b58ada30e09e2b8d4",
+              "resultTokenId": "",
+              "volume": "1550370.045000000000000000",
+              "volume24h": "1548556.895000000000000000",
+              "volume7d": "1548556.895000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "7a92ff7fded2c242148f3b076261700da9d71d0c18d97c2b3ae20059aa4143cb",
+              "createdAt": 1767417159,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.061",
+        "polymarket_prices": [
+          "0.075",
+          "0.925"
+        ],
+        "polymarket_market_id": "1082801",
+        "polymarket_volume": "125905.669865"
+      },
+      {
+        "opinion_outcome": "↓ 70,000",
+        "polymarket_outcome": "↓ 70,000",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3600,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3600,
+              "marketTitle": "↓ 70,000",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "63396292190799699427168451098114718237799355289181563379579247696713739311748",
+              "noTokenId": "74402766133809349799583816159532144714133317156835495413605399949140274883243",
+              "conditionId": "5a2877950beeca93a3b49b79248f1f0f19d3865afe4ad8337f9697752c5d20ce",
+              "resultTokenId": "",
+              "volume": "200205.570000000000000000",
+              "volume24h": "200195.310000000000000000",
+              "volume7d": "200195.310000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "0a5411836e9bdc53d379526688e60fe9edbffda6b81b50a2404e2056330f0f84",
+              "createdAt": 1767417160,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.027",
+        "polymarket_prices": [
+          "0.0245",
+          "0.9755"
+        ],
+        "polymarket_market_id": "1082805",
+        "polymarket_volume": "91354.334005"
+      }
+    ]
+  },
+  {
+    "event_title": "What price will Ethereum hit in January?",
+    "polymarket_event_title": "What price will Ethereum hit in January?",
+    "match_score": 0.9999998807907104,
+    "opinion_stats": {
+      "volume24h": "3519058.041000000001000000",
+      "volume7d": "3519058.041000000001000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 415796.373396,
+      "volume1wk": 970392.3957519999
+    },
+    "markets": [
+      {
+        "opinion_outcome": "↑ 3,800",
+        "polymarket_outcome": "↑ 3,800",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3603,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3603,
+              "marketTitle": "↑ 3,800",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "101921656921526254991469876914640577924220888235119226041965800647138067398555",
+              "noTokenId": "96291845633933340195898156773296871030478905828659301847541813494358613689645",
+              "conditionId": "115c16bf3ca05968b48c6b5f6801b02fcc4925515bb74402509ceebe6798dbca",
+              "resultTokenId": "",
+              "volume": "19705.767000000000000000",
+              "volume24h": "19705.767000000000000000",
+              "volume7d": "19705.767000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ad62876bd11f90969062fdcd51996252a40bfb3e2ffffbcdcc7484b1c6d1c235",
+              "createdAt": 1767426052,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.168",
+        "polymarket_prices": [
+          "0.19",
+          "0.81"
+        ],
+        "polymarket_market_id": "1082776",
+        "polymarket_volume": "47020.068076"
+      },
+      {
+        "opinion_outcome": "↑ 3,600",
+        "polymarket_outcome": "↑ 3,600",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3604,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3604,
+              "marketTitle": "↑ 3,600",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "48594202695187216784836898041970547564016589725221976537852337813564759265339",
+              "noTokenId": "54942045557825127337029356635334710422942438460643642081210603989965990230181",
+              "conditionId": "b26f30e977e0adac5c5c90187cea977bdf40a76bc2a08b6e6d16cfae1b309412",
+              "resultTokenId": "",
+              "volume": "7940.050000000000000000",
+              "volume24h": "7940.049999999999000000",
+              "volume7d": "7940.049999999999000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "81d1a60eb7470e250984c847b85a55b6257ad7cba095dd08af6768a5acd1597c",
+              "createdAt": 1767426053,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.31",
+        "polymarket_prices": [
+          "0.375",
+          "0.625"
+        ],
+        "polymarket_market_id": "1082780",
+        "polymarket_volume": "56167.82238"
+      },
+      {
+        "opinion_outcome": "↑ 3,400",
+        "polymarket_outcome": "↑ 3,400",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3605,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3605,
+              "marketTitle": "↑ 3,400",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "33145048583791410738346278340122009079009738015391381118656732988857411248243",
+              "noTokenId": "11707150954338194652504540933649412241558768891030026858164318497049863303865",
+              "conditionId": "edee1dc90bf52ddc3fe5946d4371da8a2eeb1a289ae5374bbc590e1d128ea119",
+              "resultTokenId": "",
+              "volume": "410995.663000000000000000",
+              "volume24h": "404288.778000000000000000",
+              "volume7d": "404288.778000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "0c21bab0892bae94acc47c3f4c9518784364041ff00c7840516b0fde9d359fa3",
+              "createdAt": 1767426054,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.634",
+        "polymarket_prices": [
+          "0.585",
+          "0.415"
+        ],
+        "polymarket_market_id": "1082784",
+        "polymarket_volume": "122569.341172"
+      },
+      {
+        "opinion_outcome": "↑ 3,200",
+        "polymarket_outcome": "↑ 3,200",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3606,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3606,
+              "marketTitle": "↑ 3,200",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "31121665762365366993613587127585020153539819107715778841061251773847733647232",
+              "noTokenId": "106858634751795063888448203577583156988049152398775337151988847559901984101092",
+              "conditionId": "aa1352a35e4445b129411ea6072efc0e630dbcffdda3ac3686f34d550963b571",
+              "resultTokenId": "",
+              "volume": "19940.247000000000000000",
+              "volume24h": "19671.337000000000000000",
+              "volume7d": "19671.337000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "a288515956f1df7e90e8f400ac574aa201f0dff6876deeb425d97337da97a756",
+              "createdAt": 1767426055,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.928",
+        "polymarket_prices": [
+          "0.915",
+          "0.085"
+        ],
+        "polymarket_market_id": "1082788",
+        "polymarket_volume": "112349.529269"
+      },
+      {
+        "opinion_outcome": "↓ 2,800",
+        "polymarket_outcome": "↓ 2,800",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3607,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3607,
+              "marketTitle": "↓ 2,800",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "38802709024162000453783304266393685704456105010781425688286910870434747590733",
+              "noTokenId": "84362790717324195505026584293902031295584558758836661152213100368537006937307",
+              "conditionId": "9c90d9f75f112ab2c7c12e715678261cf6ebcc5d5058e15d0d354c86c1b157ca",
+              "resultTokenId": "",
+              "volume": "16467.204000000000000000",
+              "volume24h": "16457.564000000002000000",
+              "volume7d": "16457.564000000002000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "cdf57fa6a3936b49bbb5a15440b5f25356c87bedb8225724f212a7d5ed8749e7",
+              "createdAt": 1767426056,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.491",
+        "polymarket_prices": [
+          "0.425",
+          "0.575"
+        ],
+        "polymarket_market_id": "1082797",
+        "polymarket_volume": "30365.422308"
+      },
+      {
+        "opinion_outcome": "↓ 2,600",
+        "polymarket_outcome": "↓ 2,600",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3608,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3608,
+              "marketTitle": "↓ 2,600",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "82553741671952675310183193359034802967386851922849410214543012185193170541105",
+              "noTokenId": "77406786573318725738541329383075024111759545888719126519945737749227166524786",
+              "conditionId": "d2514913382113b9c1ef35f829e6d70d96c927f50efb6d8727707ae4e1582103",
+              "resultTokenId": "",
+              "volume": "41696.126000000000000000",
+              "volume24h": "41696.126000000000000000",
+              "volume7d": "41696.126000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c95a4f9cda2c41ebeee8f29404137358445ad6e6f2595bab265d2035730b3e1c",
+              "createdAt": 1767426057,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.245",
+        "polymarket_prices": [
+          "0.205",
+          "0.795"
+        ],
+        "polymarket_market_id": "1082800",
+        "polymarket_volume": "54281.528894"
+      },
+      {
+        "opinion_outcome": "↓ 2,400",
+        "polymarket_outcome": "↓ 2,400",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3609,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3609,
+              "marketTitle": "↓ 2,400",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "83829850219047306007053838812147634775291092185980438112051765126066192609365",
+              "noTokenId": "37417790147837242527211409715901841347503643400426486595847735489077393347335",
+              "conditionId": "a9cdaee12e5e4450d1ac0292aceff018670709f7ec589668014ce4ad4fdb5540",
+              "resultTokenId": "",
+              "volume": "926826.353000000000000000",
+              "volume24h": "926826.353000000000000000",
+              "volume7d": "926826.353000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c56d89ffb2761cc2c9854e981fdebce5182904d986cb3388a2675c3661bd80f7",
+              "createdAt": 1767426058,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.082",
+        "polymarket_prices": [
+          "0.085",
+          "0.915"
+        ],
+        "polymarket_market_id": "1082804",
+        "polymarket_volume": "41109.659972"
+      },
+      {
+        "opinion_outcome": "↓ 2,200",
+        "polymarket_outcome": "↓ 2,200",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3610,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3610,
+              "marketTitle": "↓ 2,200",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "11815583264696247747155846684572298625355964728315929107646937264991562300193",
+              "noTokenId": "36221542153198240639253902483073649926809578958652603513342929351409226407147",
+              "conditionId": "86d436cedf8b5032435fefe35f81ff1238c56ff0e08b3e0edd2db9aaee8d8526",
+              "resultTokenId": "",
+              "volume": "2109076.596000000000000000",
+              "volume24h": "2082472.066000000000000000",
+              "volume7d": "2082472.066000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "870cb539fe6fe14a88184d3233df2e634a8749e04245b496ee8158bb10a73fcd",
+              "createdAt": 1767426059,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.03",
+        "polymarket_prices": [
+          "0.0345",
+          "0.9655"
+        ],
+        "polymarket_market_id": "1082808",
+        "polymarket_volume": "22374.486551"
+      }
+    ]
+  },
+  {
+    "event_title": "Which company has the best AI model end of January?",
+    "polymarket_event_title": "Which company has the best AI model end of January?",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "3408920.131999999970000000",
+      "volume7d": "24951255.981999999600000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 535523.866625,
+      "volume1wk": 1518697.853086
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Google",
+        "polymarket_outcome": "Google",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3442,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3442,
+              "marketTitle": "Google",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "85973970591700996526592046748280684400584538452986906428187593270185761232505",
+              "noTokenId": "52229037625839225018365898181371461906847395869874857121104635886869639227206",
+              "conditionId": "1e809cc916c8b83c5103641882ecb329b71c6c7ae5858563e2af7929fca17522",
+              "resultTokenId": "",
+              "volume": "1656096.658000000000000000",
+              "volume24h": "246063.996000000000000000",
+              "volume7d": "1650371.099999999900000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "5765b19cf83d691a4bbaf37eecf9f418c04764935848f167a0d3f40ef1b3e5b7",
+              "incentiveFactor": {},
+              "createdAt": 1767112543,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.931",
+        "polymarket_prices": [
+          "0.925",
+          "0.075"
+        ],
+        "polymarket_market_id": "801279",
+        "polymarket_volume": "187682.880632"
+      },
+      {
+        "opinion_outcome": "xAI",
+        "polymarket_outcome": "xAI",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3443,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3443,
+              "marketTitle": "xAI",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "23631590454917247426621038322821492844109877048774252692223275000931553445583",
+              "noTokenId": "76961540430642140093780329133127101177119282792737262018363727413144034827415",
+              "conditionId": "157609141665513944b0e9ab22b3dc45f7e35d642d1078f984da89977be2c7ab",
+              "resultTokenId": "",
+              "volume": "7763809.209000000000000000",
+              "volume24h": "805078.952000000000000000",
+              "volume7d": "7735550.596000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "84c4c728464303ad7a620ab39e2cb36809f63da48d01e3d8c6c016c436c4e184",
+              "createdAt": 1767112544,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.062",
+        "polymarket_prices": [
+          "0.061",
+          "0.939"
+        ],
+        "polymarket_market_id": "801285",
+        "polymarket_volume": "214269.979915"
+      },
+      {
+        "opinion_outcome": "OpenAI",
+        "polymarket_outcome": "OpenAI",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3444,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3444,
+              "marketTitle": "OpenAI",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "96375032337421232785300695642680376843705240361023995681943038840598895051661",
+              "noTokenId": "6457722589129078950133273116788266430883196448497391379382549352415732112910",
+              "conditionId": "04ac676e856a586571d4a5f7c3049d60bcfed17938b6a31132c41310350bd1c0",
+              "resultTokenId": "",
+              "volume": "5869462.597000000000000000",
+              "volume24h": "1318372.348000000000000000",
+              "volume7d": "5810929.555000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c43e042f7404ec42336008faece1c1fccd36abfc72cd5bf8fd61863e6fa8d938",
+              "createdAt": 1767112545,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.019",
+        "polymarket_prices": [
+          "0.011",
+          "0.989"
+        ],
+        "polymarket_market_id": "801281",
+        "polymarket_volume": "187324.83329"
+      },
+      {
+        "opinion_outcome": "Anthropic",
+        "polymarket_outcome": "Anthropic",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3445,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3445,
+              "marketTitle": "Anthropic",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "48718703990642475333860344877869752613210997422606457864183330448857368849901",
+              "noTokenId": "59742897503747832301522785312473194178018666218063661352366000169410389305086",
+              "conditionId": "353d419f43c6774ef2f3964162e9c601cb299ba2925c6b05a84810f6cb2e8c3b",
+              "resultTokenId": "",
+              "volume": "3710682.000000000000000000",
+              "volume24h": "547521.211000000000000000",
+              "volume7d": "3757021.981000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ca5d12b9976d5bc766e048d920eacd3678bef96404ecf3a35fdbc66ce53bd15a",
+              "createdAt": 1767112546,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.011",
+        "polymarket_prices": [
+          "0.005",
+          "0.995"
+        ],
+        "polymarket_market_id": "801280",
+        "polymarket_volume": "181231.829553"
+      },
+      {
+        "opinion_outcome": "DeepSeek",
+        "polymarket_outcome": "DeepSeek",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3446,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3446,
+              "marketTitle": "DeepSeek",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "1840500138111921800346417168909531130239985387506507287363830454493575203385",
+              "noTokenId": "87941946156557783693875884529005184309013168403235459374666832588379737555468",
+              "conditionId": "e166d80c8abc7fb07766a29ced1ef73d421ab3b9b0c766fd486fe2d456990ef9",
+              "resultTokenId": "",
+              "volume": "3238290.208000000000000000",
+              "volume24h": "405946.921999999960000000",
+              "volume7d": "3269513.263000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "9fc8bdfd06cacd0bd1a7237f9656e21a607d752d86f22e06bb4b99ebab3ecafe",
+              "createdAt": 1767112547,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.008",
+        "polymarket_prices": [
+          "0.0015",
+          "0.9985"
+        ],
+        "polymarket_market_id": "801286",
+        "polymarket_volume": "139428.288342"
+      },
+      {
+        "opinion_outcome": "Alibaba",
+        "polymarket_outcome": "Alibaba",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3447,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3447,
+              "marketTitle": "Alibaba",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "89657117743508986099090169199060746331866650793323532545267845339608448147930",
+              "noTokenId": "64397493699003406817662245292006195016169120700870371419749629820709578770558",
+              "conditionId": "68ae399eafa1a30ac5bdb817988f3be54d1c4cb015266b295db7d780d010516a",
+              "resultTokenId": "",
+              "volume": "2746773.115000000000000000",
+              "volume24h": "85936.703000000010000000",
+              "volume7d": "2727869.486999999700000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "84d80a77b279eb2227d45eba70674051a721ac826a70af2a3382671a8d62b631",
+              "createdAt": 1767112548,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.009",
+        "polymarket_prices": [
+          "0.0015",
+          "0.9985"
+        ],
+        "polymarket_market_id": "801282",
+        "polymarket_volume": "121138.41795"
+      }
+    ]
+  },
+  {
+    "event_title": "Oscars 2026: Best Actor Winner",
+    "polymarket_event_title": "Oscars 2026: Best Actor Winner",
+    "match_score": 1.0,
+    "opinion_stats": {
+      "volume24h": "3216371.468000000249000000",
+      "volume7d": "15365247.545000000410000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 42485.697875,
+      "volume1wk": 222254.82828900003
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Timothée Chalamet",
+        "polymarket_outcome": "Timothée Chalamet",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 2219,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2219,
+              "marketTitle": "Timothée Chalamet",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "98192237708120745839441407715017101628124467835334730222890809173221339596610",
+              "noTokenId": "11790702062535203819614738970307376169381916941324595932602081872378601164094",
+              "conditionId": "2f36e0aeefb98611214b0dce122cfba76ed96302295994c9729c21e043fa0f7e",
+              "resultTokenId": "",
+              "volume": "1909051.894000000000000000",
+              "volume24h": "3300.970000000000000000",
+              "volume7d": "127033.484000000010000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "5f90f4d316d5b2ee7a80bd32f692797b0c75a1c46518991dcdb46e974160262e",
+              "createdAt": 1764839953,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.703",
+        "polymarket_prices": [
+          "0.675",
+          "0.325"
+        ],
+        "polymarket_market_id": "614008",
+        "polymarket_volume": "165951.532262"
+      },
+      {
+        "opinion_outcome": "Leonardo DiCaprio",
+        "polymarket_outcome": "Leonardo DiCaprio",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2220,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2220,
+              "marketTitle": "Leonardo DiCaprio",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "35697497734329698665907229165952844948395469536142260347146980196068857732658",
+              "noTokenId": "8002915050770741022268949909177827833650577445648607077896503012584244874158",
+              "conditionId": "5867d89cac0156c1f0417ca58b4c073071d4d7749452504889512e8616038f05",
+              "resultTokenId": "",
+              "volume": "1617539.951000000000000000",
+              "volume24h": "26756.097999999998000000",
+              "volume7d": "263370.416000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "6dd83acbefe04c62cfb0e011ba2db57cd9d6a54d3200ae0d33a097a3c3cf2302",
+              "createdAt": 1764839954,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.177",
+        "polymarket_prices": [
+          "0.155",
+          "0.845"
+        ],
+        "polymarket_market_id": "614007",
+        "polymarket_volume": "213153.237624"
+      },
+      {
+        "opinion_outcome": "Ethan Hawke",
+        "polymarket_outcome": "Ethan Hawke",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 2221,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2221,
+              "marketTitle": "Ethan Hawke",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "99097784155649404467260447923285510061223902361812192131159114999638713414161",
+              "noTokenId": "45819901418302663274303112305410232020693775686944661663081636846398146079623",
+              "conditionId": "1bf35a831c1b06b8666da75bfad9cfb9da19ee9b5dfb104e7bb1e679c24c7720",
+              "resultTokenId": "",
+              "volume": "8540638.114000000000000000",
+              "volume24h": "339052.808999999950000000",
+              "volume7d": "3581036.818000000400000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "bd0b2ded3aa81fe07a6225c1d2fc4065608944ea85d59afbe480b59de17d8622",
+              "createdAt": 1764839955,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.054",
+        "polymarket_prices": [
+          "0.0415",
+          "0.9585"
+        ],
+        "polymarket_market_id": "614018",
+        "polymarket_volume": "122418.027653"
+      },
+      {
+        "opinion_outcome": "Wagner Moura",
+        "polymarket_outcome": "Wagner Moura",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2222,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2222,
+              "marketTitle": "Wagner Moura",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "114868289875678058122897497255267758161671203929519260363966264256379226283848",
+              "noTokenId": "70965116822108460316280656051167403786754379500462807866706683007729832381778",
+              "conditionId": "843c62bdfa07739dca74fbb2e0276a021f6deca831f70254f96cb772e07328c0",
+              "resultTokenId": "",
+              "volume": "7328213.335000000000000000",
+              "volume24h": "15396.006000000001000000",
+              "volume7d": "1860172.530000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "7d53de95ba8b700efb1c84b2a875ed53cdbb3d7a72203adc2d5e78dddef0c59b",
+              "createdAt": 1764839955,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.116",
+        "polymarket_prices": [
+          "0.0765",
+          "0.9235"
+        ],
+        "polymarket_market_id": "614013",
+        "polymarket_volume": "54299.586862"
+      },
+      {
+        "opinion_outcome": "Michael B. Jordan",
+        "polymarket_outcome": "Michael B. Jordan",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2223,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2223,
+              "marketTitle": "Michael B. Jordan",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "114650040027013483693595734598537727349902231264608222886366463291549783417715",
+              "noTokenId": "62060470932162137938094572871229520418053461358225896544903545641052158926895",
+              "conditionId": "1e8f69f03f7e2468f17faac4baad0506a5d276c1bc017231a27d033898e3b104",
+              "resultTokenId": "",
+              "volume": "13764852.361000000000000000",
+              "volume24h": "203.910000000000000000",
+              "volume7d": "3743248.035000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "da4a45428a352de49f6e042e85ddad44a991445103b120adb0ce21c3982eff7e",
+              "createdAt": 1764839955,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.021",
+        "polymarket_prices": [
+          "0.0305",
+          "0.9695"
+        ],
+        "polymarket_market_id": "614012",
+        "polymarket_volume": "48343.205199"
+      },
+      {
+        "opinion_outcome": "Daniel Day-Lewis",
+        "polymarket_outcome": "Daniel Day-Lewis",
+        "outcome_match_score": 0.9999998807907104,
+        "opinion_market_id": 2224,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2224,
+              "marketTitle": "Daniel Day-Lewis",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "7937702747981647033913460441031706832701649135803786943530295455455153005092",
+              "noTokenId": "59219127248289400202851958796197853658917542702983412136572002015878314780661",
+              "conditionId": "ba02069477c52b7d059654b45a6fb5edc66876177cb5103808f601fbf8896e70",
+              "resultTokenId": "",
+              "volume": "11276330.207000000000000000",
+              "volume24h": "2831661.675000000300000000",
+              "volume7d": "5790386.262000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "b3422e5b84cc26b0d9379715f533a5ae2346ff66cfa453bee4618a54bbef94d9",
+              "createdAt": 1764839956,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.011",
+        "polymarket_prices": [
+          "0.004",
+          "0.996"
+        ],
+        "polymarket_market_id": "614009",
+        "polymarket_volume": "45667.019933"
+      }
+    ]
+  },
+  {
+    "event_title": "What will Gold settle at in January?",
+    "polymarket_event_title": "What will Gold (GC) settle at in January?",
+    "match_score": 0.9307878017425537,
+    "opinion_stats": {
+      "volume24h": "3019788.316999999990000000",
+      "volume7d": "18761441.253000000000000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 10907.310532,
+      "volume1wk": 14812.591783
+    },
+    "markets": [
+      {
+        "opinion_outcome": "<$4,350",
+        "polymarket_outcome": "<$4,350",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3493,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3493,
+              "marketTitle": "<$4,350",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "8076707663817857107843696848049034345603328647528153159981438098187322175913",
+              "noTokenId": "49499262399986282511746706303909628315656270592575782381230471469946981397990",
+              "conditionId": "b1260ec8077d9efb3f9fc1281a464f38d4a5ef64120495ab51903dfbbab1eb0c",
+              "resultTokenId": "",
+              "volume": "392728.760000000000000000",
+              "volume24h": "124851.686000000000000000",
+              "volume7d": "386238.278000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "cafdf3ee1b458c7edec4f432ee74f0074ebd5da0dbb3cfacf22553b0adcb933e",
+              "createdAt": 1767169427,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.334",
+        "polymarket_prices": [
+          "0.355",
+          "0.645"
+        ],
+        "polymarket_market_id": "1032223",
+        "polymarket_volume": "7320.714346"
+      },
+      {
+        "opinion_outcome": "$4,350-$4,475",
+        "polymarket_outcome": "$4,350-$4,475",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3494,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3494,
+              "marketTitle": "$4,350-$4,475",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "72171039594088283154813543797034385734219701997288879380279268177598544043409",
+              "noTokenId": "68097988781237584349404750954004400834504490892618235246295702834636322323520",
+              "conditionId": "9a84f1fc041c6493c7d610627987b7f4d9ca810a48eb4b046dd2c10b25e6ea9a",
+              "resultTokenId": "",
+              "volume": "402194.572000000000000000",
+              "volume24h": "83646.909000000000000000",
+              "volume7d": "395367.097000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "e9e5ec8f88a03b25ed62320889d695b336137c4dd4a6ecf8f6af9cfa27d21c11",
+              "createdAt": 1767169428,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.253",
+        "polymarket_prices": [
+          "0.25",
+          "0.75"
+        ],
+        "polymarket_market_id": "1032224",
+        "polymarket_volume": "1990.411434"
+      },
+      {
+        "opinion_outcome": "$4,475-$4,600",
+        "polymarket_outcome": "$4,475-$4,600",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3495,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3495,
+              "marketTitle": "$4,475-$4,600",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "72947834695494677708546660856636776922674859808061411809067542797186368840422",
+              "noTokenId": "78295507117508107526446359751871066696110548930108227892469897056989004357116",
+              "conditionId": "987bdb34cdbcda877865ba123dbd2fd0e748cbff8fe26a5da63208189ab862e0",
+              "resultTokenId": "",
+              "volume": "591665.938000000000000000",
+              "volume24h": "52066.874999999990000000",
+              "volume7d": "577191.898000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "965bcda7e9421a7cfb100b8999f30ebbe0f565d461f617a37523915a4fb1c8fe",
+              "createdAt": 1767169429,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.209",
+        "polymarket_prices": [
+          "0.19",
+          "0.81"
+        ],
+        "polymarket_market_id": "1032225",
+        "polymarket_volume": "1419.423416"
+      },
+      {
+        "opinion_outcome": "$4,600-$4,725",
+        "polymarket_outcome": "$4,600-$4,725",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3496,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3496,
+              "marketTitle": "$4,600-$4,725",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "3399171993246059579057112086217266244935612803650698929069327548671119046291",
+              "noTokenId": "81957624095132653235784085018460035024160312075832611461950206415730274331488",
+              "conditionId": "8cb2b494a634f68f31c9b6b93ba3317f42e828a561db697e4c6006edd04f1b64",
+              "resultTokenId": "",
+              "volume": "586991.387000000000000000",
+              "volume24h": "72476.838000000000000000",
+              "volume7d": "578547.198000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "e41ace7b452932a633dfdcf4242d0983d8d8d8f92d1d7a4b64fa036f9dac91fc",
+              "createdAt": 1767169430,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.164",
+        "polymarket_prices": [
+          "0.13",
+          "0.87"
+        ],
+        "polymarket_market_id": "1032226",
+        "polymarket_volume": "4869.256532"
+      },
+      {
+        "opinion_outcome": "$4,725-$4,850",
+        "polymarket_outcome": "$4,725-$4,850",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3497,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3497,
+              "marketTitle": "$4,725-$4,850",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "107669046623252327871771834174063386350866163719270496082047318757272142178045",
+              "noTokenId": "112067396078671576330637188997554681493512491925647101495218451188843505607934",
+              "conditionId": "f75ad897a59598433d580180474a68a20825624a1b00aded5122b73d04a9444b",
+              "resultTokenId": "",
+              "volume": "8525986.399000000000000000",
+              "volume24h": "1840576.584000000000000000",
+              "volume7d": "8431631.820000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "6558ca3100c59e8f424bc9cd4b8f8182fe5ca7ec9d1f043fff667bc2bc788701",
+              "createdAt": 1767169431,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.064",
+        "polymarket_prices": [
+          "0.08",
+          "0.92"
+        ],
+        "polymarket_market_id": "1032227",
+        "polymarket_volume": "1100.847825"
+      },
+      {
+        "opinion_outcome": "$4,850-$4,975",
+        "polymarket_outcome": "$4,850-$4,975",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3498,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3498,
+              "marketTitle": "$4,850-$4,975",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "103490610735884805741107326547437194339440318815341032946752090012502100233575",
+              "noTokenId": "4301071532195779371705053617551970419926634321037091293003521898398219753699",
+              "conditionId": "16be340263243213a78747fdd969e036a0354427c5cf0549d25114fc37efd991",
+              "resultTokenId": "",
+              "volume": "4251271.083000000000000000",
+              "volume24h": "115097.713000000000000000",
+              "volume7d": "4188251.963000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "b33ea9033f5e67a4ddcbb95d63896f0f756f486bd185e9c3db55238372b09d61",
+              "createdAt": 1767169432,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.031",
+        "polymarket_prices": [
+          "0.035",
+          "0.965"
+        ],
+        "polymarket_market_id": "1032228",
+        "polymarket_volume": "749.77"
+      },
+      {
+        "opinion_outcome": "$4,975-$5,100",
+        "polymarket_outcome": "$4,975-$5,100",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3499,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3499,
+              "marketTitle": "$4,975-$5,100",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "2235882637449838152420499903864798232910205834395726078338926129886503367683",
+              "noTokenId": "43205358902520555386604254503588064325185018067688581562635395671091764356825",
+              "conditionId": "183c4e46875c575acd29faea1c7f016e09d35760ac36e3e7ca2560d1bd9eb1c5",
+              "resultTokenId": "",
+              "volume": "2357064.543000000000000000",
+              "volume24h": "419856.194999999950000000",
+              "volume7d": "2352021.577000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8a40b783de3be80d32207ddf258f960d154c1f5dfe2566cc788df1911cfda14a",
+              "createdAt": 1767169433,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.008",
+        "polymarket_prices": [
+          "0.0165",
+          "0.9835"
+        ],
+        "polymarket_market_id": "1032229",
+        "polymarket_volume": "1155.028821"
+      },
+      {
+        "opinion_outcome": ">$5,100",
+        "polymarket_outcome": ">$5,100",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3500,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3500,
+              "marketTitle": ">$5,100",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "110541000850125547153921848913726141476791681735618835453443283996459661456087",
+              "noTokenId": "70491420335828580504589151614223598153238676029377727651848810014831482104425",
+              "conditionId": "e6c63dac0413bae809d6ee4f97f4caffcc510440638d921324d357005ff6956a",
+              "resultTokenId": "",
+              "volume": "1855796.742000000000000000",
+              "volume24h": "311215.517000000050000000",
+              "volume7d": "1852191.422000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ccb79f7076190c0f82cfbb5625270f1a3690a75cdccfe1237fb68007511f9f13",
+              "createdAt": 1767169434,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.005",
+        "polymarket_prices": [
+          "0.0105",
+          "0.9895"
+        ],
+        "polymarket_market_id": "1032230",
+        "polymarket_volume": "857.49616"
+      }
+    ]
+  },
+  {
+    "event_title": "Football.Fun FDV above ... one day after launch?",
+    "polymarket_event_title": "Football.Fun FDV above ___ one day after launch?",
+    "match_score": 0.9406716823577881,
+    "opinion_stats": {
+      "volume24h": "2988498.394999999896000000",
+      "volume7d": "11168048.045000000100000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 1157.911737,
+      "volume1wk": 19032.383603000002
+    },
+    "markets": [
+      {
+        "opinion_outcome": "$70M",
+        "polymarket_outcome": "$70M",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3121,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3121,
+              "marketTitle": "$70M",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "66906155884001118818926660419729697452203538618440789660666701159141431929840",
+              "noTokenId": "52570243880649343772110634530534353020747361932509059486843679335646706596661",
+              "conditionId": "b7387c07e318cf581de0f3a30cdcac324ce0a0520c0aa145be1b39a9d3155206",
+              "resultTokenId": "",
+              "volume": "392085.116000000000000000",
+              "volume24h": "58607.174999999996000000",
+              "volume7d": "235485.927000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "301804bdaa7e9031dc7c79f01d5e1719f887cfd1cf1cd0d160abf50b6ff27201",
+              "createdAt": 1766595329,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.768",
+        "polymarket_prices": [
+          "0.765",
+          "0.235"
+        ],
+        "polymarket_market_id": "904027",
+        "polymarket_volume": "69584.716782"
+      },
+      {
+        "opinion_outcome": "$100M",
+        "polymarket_outcome": "$100M ",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3122,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3122,
+              "marketTitle": "$100M",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "451767541951537842725630669866176223092972950131818581586012652547563207665",
+              "noTokenId": "28938467278400577093965062295830936831759329935104195688030435468763434646746",
+              "conditionId": "ee475960790128169af756ac9ae3145ddf79302e29c928be1e41813eb54883f1",
+              "resultTokenId": "",
+              "volume": "941828.771000000000000000",
+              "volume24h": "24920.134000000000000000",
+              "volume7d": "106797.180000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "cffffa7f83f4dae2c694f0cb45cc1c313d4f3b5b5fb6878b5924aac53a415e68",
+              "createdAt": 1766595418,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.512",
+        "polymarket_prices": [
+          "0.495",
+          "0.505"
+        ],
+        "polymarket_market_id": "965256",
+        "polymarket_volume": "8291.598784"
+      },
+      {
+        "opinion_outcome": "$200M",
+        "polymarket_outcome": "$200M",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3123,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3123,
+              "marketTitle": "$200M",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "20177302284092317405239379859357761654782133873568598091557522413625430775280",
+              "noTokenId": "93489709047535211563736304565597503857212231844228205238036383897534530684582",
+              "conditionId": "4000a63628911019d567914d1660a93260f5204710d1e719075ec6a9156f06dd",
+              "resultTokenId": "",
+              "volume": "9748012.465000000000000000",
+              "volume24h": "1023709.688999999900000000",
+              "volume7d": "4641276.712000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "e2bacc66d54c9d96dcc9e4beb9ed16c8d39d8e25a06860204b468c394358229b",
+              "createdAt": 1766595418,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.058",
+        "polymarket_prices": [
+          "0.065",
+          "0.935"
+        ],
+        "polymarket_market_id": "965258",
+        "polymarket_volume": "1328.243671"
+      },
+      {
+        "opinion_outcome": "$300M",
+        "polymarket_outcome": "$300M",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3124,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3124,
+              "marketTitle": "$300M",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "101324220167621860288158218826052817327204604541396649914021460395259749497498",
+              "noTokenId": "947849193328151440239873185528037111008781708823513979244569939866901668119",
+              "conditionId": "7272391e7386db9226bd39f722ed3a5cb2d4e9e1464fb77b45dba09354f129c7",
+              "resultTokenId": "",
+              "volume": "4174051.127000000000000000",
+              "volume24h": "390114.782000000000000000",
+              "volume7d": "3249638.354000000300000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "9be5b1ffa52f447412d8aaf445148d48adaef85da635953a1fa2c6eb74132c4b",
+              "createdAt": 1766595419,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.025",
+        "polymarket_prices": [
+          "0.045",
+          "0.955"
+        ],
+        "polymarket_market_id": "965260",
+        "polymarket_volume": "29.4422"
+      },
+      {
+        "opinion_outcome": "$500M",
+        "polymarket_outcome": "$500M",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3125,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3125,
+              "marketTitle": "$500M",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "27086828851904523717664467987400422866362767179606325906917676267919762374565",
+              "noTokenId": "3392489197261849071588325357493645525012133805375223776509832062032560683004",
+              "conditionId": "330c91ebb9fb161dd16bed069574f461fe247d6780821a8ed417618b22adbe6f",
+              "resultTokenId": "",
+              "volume": "3087886.001000000000000000",
+              "volume24h": "979775.351000000000000000",
+              "volume7d": "1877512.147999999800000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "113d48ddf576220640c9ee04503aeaf7de7afb66387488b5725b596676d53286",
+              "createdAt": 1766595463,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.037",
+        "polymarket_prices": [
+          "0.022",
+          "0.978"
+        ],
+        "polymarket_market_id": "627628",
+        "polymarket_volume": "70965.134038"
+      },
+      {
+        "opinion_outcome": "$1B",
+        "polymarket_outcome": "$1B",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3126,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3126,
+              "marketTitle": "$1B",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "90400722808123083517578125193934447006174892229822966260259996404420631392114",
+              "noTokenId": "70289170427104910583369358590057643885700851402634352678792097565623764766243",
+              "conditionId": "4a5b4890fa80aecb9d1f7e93ec087b512eca9a14e2ea1b83bf68cba5713e0ac2",
+              "resultTokenId": "",
+              "volume": "2758648.184000000000000000",
+              "volume24h": "511371.264000000000000000",
+              "volume7d": "1057337.724000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ef6a1a721399d838117398ebcc93593ca314e1905ca19992400fee06954225bc",
+              "createdAt": 1766595464,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.016",
+        "polymarket_prices": [
+          "0.0255",
+          "0.9745"
+        ],
+        "polymarket_market_id": "627629",
+        "polymarket_volume": "16559.441276"
+      }
+    ]
+  },
+  {
+    "event_title": "LoL: LPL 2026 Season Winner",
+    "polymarket_event_title": "LoL: LPL 2026 Season Winner",
+    "match_score": 0.9999998807907104,
+    "opinion_stats": {
+      "volume24h": "2818113.761000000021000000",
+      "volume7d": "32513544.912999997300000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 4478.544923,
+      "volume1wk": 14131.101029
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Bilibili Gaming",
+        "polymarket_outcome": "Bilibili Gaming",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3179,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3179,
+              "marketTitle": "Bilibili Gaming",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "78988602655175427533022846941186505078943341562207698568507389799131619209717",
+              "noTokenId": "16945326781561559634595080413930960326836736336685204446708588994582023984437",
+              "conditionId": "4e2cc4584b0260928f643b260c35b4c0a561a1cfbcf7138fd6942cf8670a4e3c",
+              "resultTokenId": "",
+              "volume": "1214380.118000000000000000",
+              "volume24h": "110933.455000000000000000",
+              "volume7d": "765787.317000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "781a15fd16dbf6670b4f321bcaa55d62876ce4fc4ce067b91e3f7d4834001482",
+              "createdAt": 1766720032,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.569",
+        "polymarket_prices": [
+          "0.58",
+          "0.42"
+        ],
+        "polymarket_market_id": "693674",
+        "polymarket_volume": "13866.020314"
+      },
+      {
+        "opinion_outcome": "Anyone's Legend",
+        "polymarket_outcome": "Anyone's Legend",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3180,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3180,
+              "marketTitle": "Anyone's Legend",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "17148858061532331818858423370304686044425868244378638944516628422206364909883",
+              "noTokenId": "49338081214552160818875978484409111817348523392211877129939937446628964127385",
+              "conditionId": "c726e5f3557458b429d1d563c295f9f499b4a03606ff11344c181873c4fd5aaa",
+              "resultTokenId": "",
+              "volume": "337561.615000000000000000",
+              "volume24h": "7229.102000000001000000",
+              "volume7d": "198368.996000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "396cc88fa1d8e926916090a29f90c65cb4eb34ad2416fb062e295a952eb3d54a",
+              "createdAt": 1766720032,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.217",
+        "polymarket_prices": [
+          "0.19",
+          "0.81"
+        ],
+        "polymarket_market_id": "693673",
+        "polymarket_volume": "3804.110095"
+      },
+      {
+        "opinion_outcome": "JD Gaming",
+        "polymarket_outcome": "JD Gaming",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3181,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3181,
+              "marketTitle": "JD Gaming",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "25838636736739068612623582449915542497876038372345336098333213800599103525172",
+              "noTokenId": "27603533719190260974037625626390461732022368827959350044216186075636597177422",
+              "conditionId": "085a1395c63fdda81fdfe6263466713456b8a9ee60906b177846dc4b72132de5",
+              "resultTokenId": "",
+              "volume": "8923511.003000000000000000",
+              "volume24h": "488561.511000000000000000",
+              "volume7d": "6680604.081999999500000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8e9bbea9946a1c99a0cbc54d6f8e21c1e59aa61a056e471d073ad5bb97b458ba",
+              "createdAt": 1766720033,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.073",
+        "polymarket_prices": [
+          "0.0775",
+          "0.9225"
+        ],
+        "polymarket_market_id": "693677",
+        "polymarket_volume": "4207.906706"
+      },
+      {
+        "opinion_outcome": "Weibo Gaming",
+        "polymarket_outcome": "Weibo Gaming",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3182,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3182,
+              "marketTitle": "Weibo Gaming",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "13217798579223854591257794653210972589226680271208045678117279575144205672592",
+              "noTokenId": "12870500801439998240296378323655430442650324904596401227116384118186461627059",
+              "conditionId": "b74b911a82d6709a493ee4b84430547ceade6950a31d45ad434949aa412121a9",
+              "resultTokenId": "",
+              "volume": "5772335.505000000000000000",
+              "volume24h": "16652.380000000000000000",
+              "volume7d": "5171069.092999999000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "f8b23a61f399a6de9b6800fb4bef48846da68417dcbd239c0dd46083f4c1a0bf",
+              "createdAt": 1766720034,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.029",
+        "polymarket_prices": [
+          "0.032",
+          "0.968"
+        ],
+        "polymarket_market_id": "693687",
+        "polymarket_volume": "3182.460103"
+      },
+      {
+        "opinion_outcome": "Top Esports",
+        "polymarket_outcome": "Top Esports",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3183,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3183,
+              "marketTitle": "Top Esports",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "89227324893737371683857114231588365936061280707603181735908691081054101913196",
+              "noTokenId": "43275495312316186605534500868822589176550246567855970682129871095240634853694",
+              "conditionId": "a9a52bf5d6c0e4c2e246004198c9d9445b6455305230ce50ed04007d266c50b7",
+              "resultTokenId": "",
+              "volume": "8020977.139000000000000000",
+              "volume24h": "150968.740000000020000000",
+              "volume7d": "2970139.823000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "51a397b903a225788e6f448808339169d88bbb178f12e20879e0f160d2df5904",
+              "createdAt": 1766720035,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.057",
+        "polymarket_prices": [
+          "0.03",
+          "0.97"
+        ],
+        "polymarket_market_id": "693685",
+        "polymarket_volume": "3359.467643"
+      },
+      {
+        "opinion_outcome": "LNG Esports",
+        "polymarket_outcome": "LNG Esports",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3184,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3184,
+              "marketTitle": "LNG Esports",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "37124613347928024091157279965833609215933850729477033439628295410389614265786",
+              "noTokenId": "107524479759313199300819794157289413232771069464927523529071656616056835737515",
+              "conditionId": "c263a640c042d62348c9254b3c7ea80d6446044a2079431cc6efeeabe3b85cdb",
+              "resultTokenId": "",
+              "volume": "7325069.571000000000000000",
+              "volume24h": "15.230000000000000000",
+              "volume7d": "6651653.340999999000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ec48d0ca8f06fd1d2eca07c14ecba71030f61a3d570692e5e4474a079a4d25ef",
+              "createdAt": 1766720036,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.048",
+        "polymarket_prices": [
+          "0.04",
+          "0.96"
+        ],
+        "polymarket_market_id": "693679",
+        "polymarket_volume": "4261.920036"
+      },
+      {
+        "opinion_outcome": "EDward Gaming",
+        "polymarket_outcome": "EDward Gaming",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3185,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3185,
+              "marketTitle": "EDward Gaming",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "13225185738409741377586621728633321780995070821779334080070295344084810199848",
+              "noTokenId": "71121674413900455209736006866303446922339310502978190772559683464323573688150",
+              "conditionId": "d19230c816b1b848007cf0019e676ecab5863484ece7934f2a4a181b951a4b6c",
+              "resultTokenId": "",
+              "volume": "2356220.148000000000000000",
+              "volume24h": "1318522.484000000000000000",
+              "volume7d": "1580387.636000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "d02cc8ae47669556e80300c66857eac5a6e586d664fbe47f2725c8ba55e96bcb",
+              "createdAt": 1766720037,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.055",
+        "polymarket_prices": [
+          "0.0175",
+          "0.9825"
+        ],
+        "polymarket_market_id": "693675",
+        "polymarket_volume": "3240.46569"
+      },
+      {
+        "opinion_outcome": "Oh My God",
+        "polymarket_outcome": "Oh My God",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3186,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3186,
+              "marketTitle": "Oh My God",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "39078932755898987269478366495195246189417608348156771842896557534034356263826",
+              "noTokenId": "42987015840094579186727169183014799028877546056153700093172368208684055718866",
+              "conditionId": "9f03e82963fa621630b727ff7ddfc8394c52c712dc432214206356a456251473",
+              "resultTokenId": "",
+              "volume": "2618063.079000000000000000",
+              "volume24h": "724567.340000000000000000",
+              "volume7d": "1966915.880000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "bb0f247ccdf678f5c539788c8abf672d52a9517869f37f80e3882c685f9c1790",
+              "createdAt": 1766720038,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.009",
+        "polymarket_prices": [
+          "0.0215",
+          "0.9785"
+        ],
+        "polymarket_market_id": "693681",
+        "polymarket_volume": "3441.270346"
+      },
+      {
+        "opinion_outcome": "LGD Gaming",
+        "polymarket_outcome": "LGD Gaming",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3187,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3187,
+              "marketTitle": "LGD Gaming",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "34943610669209980120686712545157773316540364529413448003483903715607456877619",
+              "noTokenId": "12096792902814381404622588919561678914550979853872412771356493761955077547365",
+              "conditionId": "667627bbb10f0ff3c69b0b637774ff811fa7e7571d7b8b3630b6d0efd62066a5",
+              "resultTokenId": "",
+              "volume": "5575805.797000000000000000",
+              "volume24h": "563.990000000000000000",
+              "volume7d": "5200054.638000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "95f5b3926564a887a9f0d3e7857b4efc7b21712a904c33ecae6b6a3ebef9dd42",
+              "createdAt": 1766720039,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.02",
+        "polymarket_prices": [
+          "0.0175",
+          "0.9825"
+        ],
+        "polymarket_market_id": "693678",
+        "polymarket_volume": "3132.679195"
+      },
+      {
+        "opinion_outcome": "Team WE",
+        "polymarket_outcome": "Team WE",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3188,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3188,
+              "marketTitle": "Team WE",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "28269492854021290576183029763379918976646472078142264251079515438348682926898",
+              "noTokenId": "49185060685078216259849874525664577780470691615620437116963752301722845523798",
+              "conditionId": "6ae8c6f2508d8d9a8d694b60fdef5d28169088ce77526fafe5447a1090f4adfc",
+              "resultTokenId": "",
+              "volume": "1590954.713000000000000000",
+              "volume24h": "99.529000000000000000",
+              "volume7d": "1328564.106999999800000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "a7acb3378b20d6e4fd1edc134e278d9df78ed65adca7c0b5ca441b13d5221f2f",
+              "createdAt": 1766720040,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.025",
+        "polymarket_prices": [
+          "0.0115",
+          "0.9885"
+        ],
+        "polymarket_market_id": "693683",
+        "polymarket_volume": "2364.283223"
+      },
+      {
+        "opinion_outcome": "Invictus Gaming",
+        "polymarket_outcome": "Invictus Gaming",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3649,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 10200,
+          "result": null
+        },
+        "opinion_price": "0.0",
+        "polymarket_prices": [
+          "0.027",
+          "0.973"
+        ],
+        "polymarket_market_id": "693676",
+        "polymarket_volume": "3054.144666"
+      }
+    ]
+  },
+  {
+    "event_title": "Who will acquire TikTok?",
+    "polymarket_event_title": "Who will acquire TikTok?",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "2737288.910999999904000000",
+      "volume7d": "17409567.787000000100000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 2038.2860000000003,
+      "volume1wk": 175827.6820299999
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Amazon",
+        "polymarket_outcome": "Amazon",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2466,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2466,
+              "marketTitle": "Amazon",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "9929712126215759499654705526714885169164434442307133179699319167314958802942",
+              "noTokenId": "4248780853991230046175901363232506355273597013066417570858180351769573554929",
+              "conditionId": "b44b34811d0ec24fb7c8fb2e94cf1831d883ffd6be2e04babdaffe64bf010a11",
+              "resultTokenId": "",
+              "volume": "9561642.425000000000000000",
+              "volume24h": "527512.744000000000000000",
+              "volume7d": "7215866.250000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "35b8fc5b24eec907b03c4ea63e7c9e0eec84963d37f9482f13860f950520b5af",
+              "createdAt": 1765459399,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.073",
+        "polymarket_prices": [
+          "0.045",
+          "0.955"
+        ],
+        "polymarket_market_id": "599833",
+        "polymarket_volume": "41100.501007"
+      },
+      {
+        "opinion_outcome": "Microsoft",
+        "polymarket_outcome": "Microsoft",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2467,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2467,
+              "marketTitle": "Microsoft",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "56999361883953505128187732805050633320781683002957878674986981911127041825554",
+              "noTokenId": "56289588845640151318260131266074029803434391327212087334649249557396662635188",
+              "conditionId": "f4afcbfa90029cde9a201c403a223c973581b4c6ee0773431f33656016c0ed0c",
+              "resultTokenId": "",
+              "volume": "11044972.503000000000000000",
+              "volume24h": "205071.476000000000000000",
+              "volume7d": "1954609.001000000200000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "3310647e46af66033164dbeb98751d07e611fc098d6e595426a4ce0cf0ef5de2",
+              "createdAt": 1765459399,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.06",
+        "polymarket_prices": [
+          "0.053",
+          "0.947"
+        ],
+        "polymarket_market_id": "599832",
+        "polymarket_volume": "46893.803249"
+      },
+      {
+        "opinion_outcome": "Elon Musk / X (Twitter)",
+        "polymarket_outcome": "Elon Musk / X (Twitter)",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2468,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2468,
+              "marketTitle": "Elon Musk / X (Twitter)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "98449047592955535703110181362528179531513447245456266967920927815985835271341",
+              "noTokenId": "73801641313799426951640047643095080040358239758287873121073820136054683880750",
+              "conditionId": "943411a7aea703ed86024586a7954fe6ae9a06aa46c3d04143447df9b21190d3",
+              "resultTokenId": "",
+              "volume": "4670217.620000000000000000",
+              "volume24h": "161232.630000000000000000",
+              "volume7d": "2086636.103000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "ffd8720d5f78679c72ce1d4a4208effb508204fabe3991581937a801c36558e7",
+              "createdAt": 1765459399,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.021",
+        "polymarket_prices": [
+          "0.0175",
+          "0.9825"
+        ],
+        "polymarket_market_id": "599836",
+        "polymarket_volume": "52265.246369"
+      },
+      {
+        "opinion_outcome": "Meta",
+        "polymarket_outcome": "Meta",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 2469,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2469,
+              "marketTitle": "Meta",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "83422412544484516779272857305192222174457634494733737879715082063012385989853",
+              "noTokenId": "74145672800457902249853816556543940362372066837207682905894231774783193934781",
+              "conditionId": "12acac9e71d7019831d3fb5d0f78b19252c2183c2393145b7b9080612500076e",
+              "resultTokenId": "",
+              "volume": "3301944.037000000000000000",
+              "volume24h": "26203.840000000004000000",
+              "volume7d": "810125.875999999900000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "1e5fee65f47069677d70179066b03449615dce92d5ed0b53f861934701455813",
+              "createdAt": 1765459400,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.021",
+        "polymarket_prices": [
+          "0.0265",
+          "0.9735"
+        ],
+        "polymarket_market_id": "599834",
+        "polymarket_volume": "65264.404419"
+      },
+      {
+        "opinion_outcome": "AppLovin",
+        "polymarket_outcome": "AppLovin",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2470,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2470,
+              "marketTitle": "AppLovin",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "11689998972972281307974877574820366461564395335077851056678237617081961636394",
+              "noTokenId": "23692892241156136090244889911326805027720431146198956540402068923921840057299",
+              "conditionId": "2cda293b338a819971b9a553a6c8a6e574d299fa102ccc4732ad9176efdfe630",
+              "resultTokenId": "",
+              "volume": "8706487.004000000000000000",
+              "volume24h": "1014210.367999999900000000",
+              "volume7d": "3825628.298000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "04afa9b9deeb15f20ad79f98b1289170fc007175f70777f049a810c8914cfda3",
+              "createdAt": 1765459400,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.059",
+        "polymarket_prices": [
+          "0.048",
+          "0.952"
+        ],
+        "polymarket_market_id": "599831",
+        "polymarket_volume": "29819.512227"
+      },
+      {
+        "opinion_outcome": "Walmart",
+        "polymarket_outcome": "Walmart",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 2471,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 2471,
+              "marketTitle": "Walmart",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "49249452804038895743500425186044169173276234999424239716082006058442406673255",
+              "noTokenId": "85877514001190570620513610292986055641577560496376960938761498294049835838384",
+              "conditionId": "8f021a84e8c823bf0b4ac268b44266b22b8e2f677a298111b898020f00b18eae",
+              "resultTokenId": "",
+              "volume": "6252350.545000000000000000",
+              "volume24h": "796597.510000000000000000",
+              "volume7d": "1513154.773000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "337277fb5a828baef39a32e89cec34c2c034b7d2db0d91a35d01f742e6ed89c7",
+              "createdAt": 1765459400,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.012",
+        "polymarket_prices": [
+          "0.0175",
+          "0.9825"
+        ],
+        "polymarket_market_id": "599835",
+        "polymarket_volume": "35213.726727"
+      }
+    ]
+  },
+  {
+    "event_title": "Oscars 2026: Best Film Editing Winner",
+    "polymarket_event_title": "Oscars 2026: Best Film Editing Winner",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "2735962.095000000000000000",
+      "volume7d": "30382426.542000001300000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 1868.989741,
+      "volume1wk": 26285.280072999998
+    },
+    "markets": [
+      {
+        "opinion_outcome": "One Battle After Another",
+        "polymarket_outcome": "One Battle After Another",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3169,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3169,
+              "marketTitle": "One Battle After Another",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "60529362641759527115812734859521398535357069857906857220370754636316501570457",
+              "noTokenId": "15088846960589818076444646100176534748179727401443392109879173373463393946868",
+              "conditionId": "ce5d52a27685b2e9b058c659aba13322bdb3c2f9353e75b8064aeb2e1072208d",
+              "resultTokenId": "",
+              "volume": "109920.708000000000000000",
+              "volume24h": "2003.507000000000000000",
+              "volume7d": "61225.982000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "66a1c825e22bd0957d45e69b80f0b6cb12cada970540a4a409fd9a78870daf3d",
+              "createdAt": 1766717025,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.636",
+        "polymarket_prices": [
+          "0.655",
+          "0.345"
+        ],
+        "polymarket_market_id": "614763",
+        "polymarket_volume": "49639.420067"
+      },
+      {
+        "opinion_outcome": "Marty Supreme",
+        "polymarket_outcome": "Marty Supreme",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3170,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3170,
+              "marketTitle": "Marty Supreme",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "79672328990348350558874271225006724285767712717907282028348326895000256332901",
+              "noTokenId": "52389421483305412758647722944379241023950472127761670174611704313462764641884",
+              "conditionId": "ea04d8b6cddd1eb95ea9dd26503e2250618cd31dbeb37af1b560f3e46e57e1eb",
+              "resultTokenId": "",
+              "volume": "4714709.226000000000000000",
+              "volume24h": "193525.655000000000000000",
+              "volume7d": "3923531.275000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "8b73dadf8f1ea7aeda38dbb11e9d3dcbf261ff2748666940cfe031ac973dee8f",
+              "createdAt": 1766717026,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.263",
+        "polymarket_prices": [
+          "0.1905",
+          "0.8095"
+        ],
+        "polymarket_market_id": "614769",
+        "polymarket_volume": "22912.766577"
+      },
+      {
+        "opinion_outcome": "Sinners",
+        "polymarket_outcome": "Sinners",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3171,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3171,
+              "marketTitle": "Sinners",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "91547029013374205728743956837572171332949746726626652884609894558155654335655",
+              "noTokenId": "7990063303919447377831312098189189955167427235533588751652030413502849465917",
+              "conditionId": "3a8411dfa127e30f18f8d8ef037835a19beee331ea10a46f98e5eabc1ee79a0e",
+              "resultTokenId": "",
+              "volume": "7406666.842000000000000000",
+              "volume24h": "7156.130000000000000000",
+              "volume7d": "5917323.250000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "d382584bffa3bd142bcd1b9b6785122d7981c3d3f61b1143a61e7a8bc7522e2a",
+              "createdAt": 1766717027,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.119",
+        "polymarket_prices": [
+          "0.0855",
+          "0.9145"
+        ],
+        "polymarket_market_id": "614764",
+        "polymarket_volume": "22494.951138"
+      },
+      {
+        "opinion_outcome": "Avatar: Fire and Ash",
+        "polymarket_outcome": "Avatar: Fire and Ash",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3172,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3172,
+              "marketTitle": "Avatar: Fire and Ash",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "87920410958478597179904430872022635023664468959445082765259218769308849218290",
+              "noTokenId": "83405721131669655567430322845508640191482682024914093353073288656625778283075",
+              "conditionId": "5fd580cce66337925559ba8f51b7937a63b5bf3972ef8e45a3e883f957b90c93",
+              "resultTokenId": "",
+              "volume": "3628239.771000000000000000",
+              "volume24h": "2290059.891000000000000000",
+              "volume7d": "3084933.934999999600000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "df4f074e4d981a153646f26cee07b60c91ff78c65274507c7e6e9e9e5251a8b8",
+              "createdAt": 1766717028,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.019",
+        "polymarket_prices": [
+          "0.008",
+          "0.992"
+        ],
+        "polymarket_market_id": "614773",
+        "polymarket_volume": "2697.142394"
+      },
+      {
+        "opinion_outcome": "It Was Just an Accident",
+        "polymarket_outcome": "It Was Just an Accident",
+        "outcome_match_score": 0.9999999403953552,
+        "opinion_market_id": 3173,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3173,
+              "marketTitle": "It Was Just an Accident",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "108131535266504936730762092036434827182273369191275304357297184526117159918130",
+              "noTokenId": "70503173927451879643067332245027610997762908505342933764172443216004404839726",
+              "conditionId": "39d1037ce010f7cf77de9dfb6b7d61f6cfd07b0498e9e227640186ba7f3e245f",
+              "resultTokenId": "",
+              "volume": "7026109.429000000000000000",
+              "volume24h": "75544.787000000000000000",
+              "volume7d": "6062815.284000001000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "2a9b15cfffd74844aa9db200d2bcdef63594bf6327491a4f4957032f0f79eb02",
+              "createdAt": 1766717029,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.028",
+        "polymarket_prices": [
+          "0.032",
+          "0.968"
+        ],
+        "polymarket_market_id": "614777",
+        "polymarket_volume": "2173.529689"
+      },
+      {
+        "opinion_outcome": "F1: The Movie",
+        "polymarket_outcome": "F1: The Movie",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3174,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3174,
+              "marketTitle": "F1: The Movie",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "98806218536517606985079376611528023470492439727581698053717195048206087003100",
+              "noTokenId": "73415241981539668320609037271728826348499786448468502943085382734888078985522",
+              "conditionId": "bf852017ca60be6827b49285c6cc407e01856efec36c10767f3ee8cad302a176",
+              "resultTokenId": "",
+              "volume": "8035557.201000000000000000",
+              "volume24h": "5.260000000000000000",
+              "volume7d": "3893016.243000000200000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "adba199718637bce68c4f954b3c9a6363d7894d43faaa505e3062a2b05d9869d",
+              "createdAt": 1766717030,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.05",
+        "polymarket_prices": [
+          "0.032",
+          "0.968"
+        ],
+        "polymarket_market_id": "614766",
+        "polymarket_volume": "46643.380074"
+      },
+      {
+        "opinion_outcome": "Frankenstein",
+        "polymarket_outcome": "Frankenstein",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3175,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3175,
+              "marketTitle": "Frankenstein",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "98974630012970204640161050900080549261514125267743122029064255564853720625551",
+              "noTokenId": "11432606699181426039875929311917224585766200042555102904298533908513566441676",
+              "conditionId": "c58c1354d9796ed173bd80fe0766a49987d8744cea28ef6c0a3e8a3e1b5641b7",
+              "resultTokenId": "",
+              "volume": "3704610.486000000000000000",
+              "volume24h": "160228.985000000000000000",
+              "volume7d": "3203703.644000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "301e05d982bd327bce3dd93c984a45b659fe9d28b7901eb694dbec70ea06202c",
+              "createdAt": 1766717031,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.023",
+        "polymarket_prices": [
+          "0.0175",
+          "0.9825"
+        ],
+        "polymarket_market_id": "614775",
+        "polymarket_volume": "3212.693979"
+      },
+      {
+        "opinion_outcome": "Bugonia",
+        "polymarket_outcome": "Bugonia",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3176,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3176,
+              "marketTitle": "Bugonia",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "93737158333633584804741179175023465352441197690905553214413001484481489134122",
+              "noTokenId": "85988682679267204712841454396509164212113338729363926239128003607862141670649",
+              "conditionId": "7b935f30ec6fa4e13b69c78309495630a95dc27d668cf518b0e954766674e823",
+              "resultTokenId": "",
+              "volume": "5244762.746000000000000000",
+              "volume24h": "7437.880000000000000000",
+              "volume7d": "4235876.929000000500000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "f601d31a6633dce1185af1f006295b60b821edc8246e1e615c94d697194dc39e",
+              "createdAt": 1766717032,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.036",
+        "polymarket_prices": [
+          "0.007",
+          "0.993"
+        ],
+        "polymarket_market_id": "614772",
+        "polymarket_volume": "140145.052235"
+      }
+    ]
+  },
+  {
+    "event_title": "Largest Company end of January?",
+    "polymarket_event_title": "Largest Company end of January?",
+    "match_score": 1.0,
+    "opinion_stats": {
+      "volume24h": "2563789.664000000000000000",
+      "volume7d": "7321224.635999999800000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 269435.69305299997,
+      "volume1wk": 811281.761092
+    },
+    "markets": [
+      {
+        "opinion_outcome": "Nvidia",
+        "polymarket_outcome": "NVIDIA",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3436,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3436,
+              "marketTitle": "Nvidia",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "98598345105724425231996460905770028258241598282916200865021903631858879368659",
+              "noTokenId": "73032218533883501840491186035840211294006503910193843191671845582502015322254",
+              "conditionId": "7cb219625a7ad5042dd3130f8c6a9f6a5ee95ff54baac6ee27162644172d510b",
+              "resultTokenId": "",
+              "volume": "1416517.679000000000000000",
+              "volume24h": "221436.429000000000000000",
+              "volume7d": "1399206.763000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "9554f74ec174bd3e68dd887487d1916452cfcab28c521f54bae54dceec30d18b",
+              "createdAt": 1767111432,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.972",
+        "polymarket_prices": [
+          "0.969",
+          "0.031"
+        ],
+        "polymarket_market_id": "964899",
+        "polymarket_volume": "375343.805328"
+      },
+      {
+        "opinion_outcome": "Apple",
+        "polymarket_outcome": "Apple",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3437,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3437,
+              "marketTitle": "Apple",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "42896394517944593060508201678877424636144041381362479727455083369058791604068",
+              "noTokenId": "111545416522900750595326077082147056647344096826562779371251730241064719543984",
+              "conditionId": "88f27a6ea19a75eacf92d11cf6eff3f190757d9ab3a6f684e089ceb38b8f54ce",
+              "resultTokenId": "",
+              "volume": "2348773.769000000000000000",
+              "volume24h": "1405412.989000000000000000",
+              "volume7d": "2340386.384000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "2d9c9ac092340f90d48b28c5eb51b47178930dfc1456aaff304848ce2a113b0f",
+              "createdAt": 1767111433,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.028",
+        "polymarket_prices": [
+          "0.022",
+          "0.978"
+        ],
+        "polymarket_market_id": "964901",
+        "polymarket_volume": "150213.678302"
+      },
+      {
+        "opinion_outcome": "Alphabet",
+        "polymarket_outcome": "Alphabet",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 3438,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3438,
+              "marketTitle": "Alphabet",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "56912136469838622482785907750648666260114494364328056991229317083146499856544",
+              "noTokenId": "35979608201987255086537775734132081534329059019331428903572693351375169885726",
+              "conditionId": "e946ff733647b72cb2134620583c7c7465ae3aa6f877c8990c644f49b9acb9d4",
+              "resultTokenId": "",
+              "volume": "1754662.433000000000000000",
+              "volume24h": "209171.670000000000000000",
+              "volume7d": "1755111.022999999800000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c9363905b15b53fb4bb495ab7cb2a2bd2ca2655fa2f15bb4c05b0fab04ca51c9",
+              "createdAt": 1767111434,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.011",
+        "polymarket_prices": [
+          "0.0065",
+          "0.9935"
+        ],
+        "polymarket_market_id": "964902",
+        "polymarket_volume": "178450.569193"
+      },
+      {
+        "opinion_outcome": "Microsoft",
+        "polymarket_outcome": "Microsoft",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 3439,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 3439,
+              "marketTitle": "Microsoft",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "95641519694439319356945363912806402101397154646601140484919954248331033556438",
+              "noTokenId": "11311397825609479921415757177032639753602233851666924012544765856280043671895",
+              "conditionId": "a811bd0233f5ae02142b143bddd2a7196fcbc1fc37c4e156d56e6a2198bfb472",
+              "resultTokenId": "",
+              "volume": "1838644.441000000000000000",
+              "volume24h": "727768.576000000000000000",
+              "volume7d": "1826520.466000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "d99605370fdad72bd5ad92723c214c1ac9dd18ebf3ba45155d4822e0286471ed",
+              "createdAt": 1767111435,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.011",
+        "polymarket_prices": [
+          "0.0015",
+          "0.9985"
+        ],
+        "polymarket_market_id": "964900",
+        "polymarket_volume": "102954.720611"
+      }
+    ]
+  },
+  {
+    "event_title": "How many Fed rate cuts in 2026?",
+    "polymarket_event_title": "How many Fed rate cuts in 2026?",
+    "match_score": 1.0000001192092896,
+    "opinion_stats": {
+      "volume24h": "2409028.226000000000000000",
+      "volume7d": "21520835.672000000900000000"
+    },
+    "polymarket_stats": {
+      "volume24hr": 20942.390123,
+      "volume1wk": 132046.021642
+    },
+    "markets": [
+      {
+        "opinion_outcome": "0 (0 bps)",
+        "polymarket_outcome": "0 (0 bps)",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1345,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1345,
+              "marketTitle": "0 (0 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "6404829329840465181064736796864044142281420398565014085984146771179791283427",
+              "noTokenId": "65611019345671677871768057029430972234494268130766599668467768282436228863769",
+              "conditionId": "d0ae56de0b796b97ce9d150f557f32a4a5447b9590bedfb3de6da2e350b4ff54",
+              "resultTokenId": "",
+              "volume": "13747202.255000000000000000",
+              "volume24h": "4544.533000000000000000",
+              "volume7d": "888483.054000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c76822002137bb36246e8950ffdd66c1388594e0d76334f47f0e032dace3a4ba",
+              "createdAt": 1762095302,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.039",
+        "polymarket_prices": [
+          "0.0305",
+          "0.9695"
+        ],
+        "polymarket_market_id": "616902",
+        "polymarket_volume": "155459.965552"
+      },
+      {
+        "opinion_outcome": "1 (25 bps)",
+        "polymarket_outcome": "1 (25 bps)",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1346,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1346,
+              "marketTitle": "1 (25 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "87221035256724112521884616425110689618510604737525837665600757831604860081699",
+              "noTokenId": "24042584299232816762066098576822940800148368345133941716423449217737083401878",
+              "conditionId": "746e11ddbd2fc319e48032d3d3f9a21c39b57fd811fe74fcea0b1c6c63adde16",
+              "resultTokenId": "",
+              "volume": "7535423.527000000000000000",
+              "volume24h": "36343.896000000000000000",
+              "volume7d": "1518639.698000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "c2c96f028fdeccfd3a320cc0a21323afc27216138be94750b9600be9aa21b6e5",
+              "createdAt": 1762095312,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.098",
+        "polymarket_prices": [
+          "0.085",
+          "0.915"
+        ],
+        "polymarket_market_id": "616903",
+        "polymarket_volume": "143438.358383"
+      },
+      {
+        "opinion_outcome": "2 (50 bps)",
+        "polymarket_outcome": "2 (50 bps)",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1347,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1347,
+              "marketTitle": "2 (50 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "113238769132068877749282591826944509462561343056849726370650683628614966385372",
+              "noTokenId": "2366833762770503588620879353801244946539238582918572711328765578691383389746",
+              "conditionId": "4d39435887725a7c9d824db20a9b3427ba259471b036c2f0057771cca855dc0e",
+              "resultTokenId": "",
+              "volume": "2042747.151000000000000000",
+              "volume24h": "50082.336000000000000000",
+              "volume7d": "206963.652000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "419d5e138a3e01a6246156bb70493e922dbc0516eb7aaab34dff7141624d8c4f",
+              "createdAt": 1762095312,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.257",
+        "polymarket_prices": [
+          "0.23",
+          "0.77"
+        ],
+        "polymarket_market_id": "616904",
+        "polymarket_volume": "145735.276214"
+      },
+      {
+        "opinion_outcome": "3 (75 bps)",
+        "polymarket_outcome": "3 (75 bps)",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1348,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1348,
+              "marketTitle": "3 (75 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "99714401812715793578869667450897946227140497909746774220370457685604990071286",
+              "noTokenId": "3144384261513073832299389704955009308754370236840018071587493757934200560390",
+              "conditionId": "cca53374cdb2f0fec2f360373e4f67a7411ac8aed0cd60f60b5cfd1233f1c526",
+              "resultTokenId": "",
+              "volume": "670387.913000000000000000",
+              "volume24h": "146929.440000000000000000",
+              "volume7d": "181269.223000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "b880f5314e057497e4e047dfd73b8e3b4671daa0969ef090a8adfdd2bb44ec1e",
+              "createdAt": 1762095312,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.19",
+        "polymarket_prices": [
+          "0.175",
+          "0.825"
+        ],
+        "polymarket_market_id": "616905",
+        "polymarket_volume": "104729.087613"
+      },
+      {
+        "opinion_outcome": "4 (100 bps)",
+        "polymarket_outcome": "4 (100 bps)",
+        "outcome_match_score": 1.000000238418579,
+        "opinion_market_id": 1349,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1349,
+              "marketTitle": "4 (100 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "6184245186950926466692931178017784356827694199329242555435511222388237438109",
+              "noTokenId": "103611272235957115780344574285023328194712152439747172003391912689766930278154",
+              "conditionId": "090b8b83a16f7038cd10f4ce80db377ef05ec3023da384c49904850fa03df09e",
+              "resultTokenId": "",
+              "volume": "2807687.137000000000000000",
+              "volume24h": "122092.745000000000000000",
+              "volume7d": "502746.530000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "0d56e19766cf386bc0cc55df0f7ffc71c362ae6e0c1095588c1182d84900cc5b",
+              "createdAt": 1762095313,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.175",
+        "polymarket_prices": [
+          "0.175",
+          "0.825"
+        ],
+        "polymarket_market_id": "616906",
+        "polymarket_volume": "76023.87365"
+      },
+      {
+        "opinion_outcome": "5 (125 bps)",
+        "polymarket_outcome": "5 (125 bps)",
+        "outcome_match_score": 1.0,
+        "opinion_market_id": 1350,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1350,
+              "marketTitle": "5 (125 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "70475724476163126377829032010120273492646534860807243445006711389850099814274",
+              "noTokenId": "78795034840034647908341213482580024793283071165863159629594759765596341263981",
+              "conditionId": "bdd2fabe7c3e940e947a8285eaf2e7bd5370f556369b5d54c6ec3d8a4b62e6c6",
+              "resultTokenId": "",
+              "volume": "6866125.851000000000000000",
+              "volume24h": "86.850000000000000000",
+              "volume7d": "1716909.545999999900000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "93a01cf30695f9773aec1d83540e0d5eef3ec88628b6f21b5094b0165a1e21bf",
+              "createdAt": 1762095313,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.108",
+        "polymarket_prices": [
+          "0.105",
+          "0.895"
+        ],
+        "polymarket_market_id": "616907",
+        "polymarket_volume": "115325.331691"
+      },
+      {
+        "opinion_outcome": "6 (150 bps)",
+        "polymarket_outcome": "6 (150 bps)",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1351,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1351,
+              "marketTitle": "6 (150 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "47630475545920005262416477924495253323197385749902632410490043426083041384144",
+              "noTokenId": "86124495778141184053490448457820450848519797338556970361256381852079916115307",
+              "conditionId": "39b7c521efb72e93c40a2d5285943a39c9eae88da3293e262c2ca3125cd0fdb7",
+              "resultTokenId": "",
+              "volume": "22041212.654000000000000000",
+              "volume24h": "1039.999000000000000000",
+              "volume7d": "3013597.312000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "69f55af3533c8e11e7209cb8773b17273eea3a3f034c8cbf1fe9379a0373cf80",
+              "createdAt": 1762095313,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.06",
+        "polymarket_prices": [
+          "0.084",
+          "0.916"
+        ],
+        "polymarket_market_id": "616908",
+        "polymarket_volume": "118550.894585"
+      },
+      {
+        "opinion_outcome": "7 (175 bps)",
+        "polymarket_outcome": "7 (175 bps)",
+        "outcome_match_score": 1.0000001192092896,
+        "opinion_market_id": 1352,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1352,
+              "marketTitle": "7 (175 bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "70010766220059604989662129460865466302574904927654834125855820572459625873690",
+              "noTokenId": "94312394120877874266506310353940325029694893877094998946034603701922234520279",
+              "conditionId": "7a23132035331bea5a5c68158c1f7fd12e000c13ddfdbdb3b9cb79ef2d8f8055",
+              "resultTokenId": "",
+              "volume": "26507290.946000000000000000",
+              "volume24h": "1254882.739000000000000000",
+              "volume7d": "8091052.306000001000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "edfd83b804988d932154c6c8bc40a3b006da4630aa0b3bd90f855675e0ae539c",
+              "createdAt": 1762095314,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.049",
+        "polymarket_prices": [
+          "0.031",
+          "0.969"
+        ],
+        "polymarket_market_id": "616909",
+        "polymarket_volume": "74485.912655"
+      },
+      {
+        "opinion_outcome": "8+ (200+ bps)",
+        "polymarket_outcome": "8 (200 bps)",
+        "outcome_match_score": 0.9130063652992249,
+        "opinion_market_id": 1353,
+        "opinion_details": {
+          "errmsg": "",
+          "errno": 0,
+          "result": {
+            "data": {
+              "marketId": 1353,
+              "marketTitle": "8+ (200+ bps)",
+              "status": 2,
+              "statusEnum": "Activated",
+              "marketType": 0,
+              "childMarkets": null,
+              "yesLabel": "YES",
+              "noLabel": "NO",
+              "rules": "",
+              "yesTokenId": "59811075968124785627599025502257118121320441552396197432682635891395620417003",
+              "noTokenId": "101466719676050817231256324050444209217473634787009528298001058332064069999345",
+              "conditionId": "6058aef28c6a95aa657442e0e1209964fc6b0220531206f115c57d33b3360a32",
+              "resultTokenId": "",
+              "volume": "22487100.317000000000000000",
+              "volume24h": "793025.688000000000000000",
+              "volume7d": "5401174.351000000000000000",
+              "quoteToken": "0x55d398326f99059fF775485246999027B3197955",
+              "chainId": "56",
+              "questionId": "396f32053f783212ca53647908b2172690cafb547068ad8eb5edc82bbccb1849",
+              "createdAt": 1762095314,
+              "cutoffAt": 0,
+              "resolvedAt": 0
+            }
+          }
+        },
+        "opinion_price": "0.044",
+        "polymarket_prices": [
+          "0.0285",
+          "0.9715"
+        ],
+        "polymarket_market_id": "616910",
+        "polymarket_volume": "104060.321596"
+      }
+    ]
+  }
+]

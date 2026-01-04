@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter } from "lucide-react"
+import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -9,43 +9,69 @@ export function Sidebar() {
           <span className="">OmniOracle</span>
         </Link>
       </div>
-      <div className="flex-1 overflow-auto py-2">
-        <nav className="grid items-start px-4 text-sm font-medium">
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/"
-          >
-            <BarChart3 className="h-4 w-4" />
-            跟单收益榜
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/opinion-arbitrage"
-          >
-            <ArrowLeftRight className="h-4 w-4" />
-            Opinion套利
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/human-vs-ai"
-          >
-            <BrainCircuit className="h-4 w-4" />
-            Human Vs AI 详情
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/human-vs-ai-settled"
-          >
-            <History className="h-4 w-4" />
-            Human Vs AI 详情（已结算）
-          </Link>
-          <Link
-            className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
-            href="/human-vs-ai-table"
-          >
-            <Database className="h-4 w-4" />
-            Human VS AI 一览表
-          </Link>
+      <div className="flex-1 overflow-auto py-4">
+        <nav className="grid items-start px-2 text-sm font-medium">
+          
+          {/* Polymarket Section */}
+          <div className="mb-4">
+            <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500">
+              Polymarket
+            </h3>
+            <div className="space-y-1">
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/"
+              >
+                <BarChart3 className="h-4 w-4" />
+                跟单收益榜
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/human-vs-ai"
+              >
+                <BrainCircuit className="h-4 w-4" />
+                Human Vs AI 详情
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/human-vs-ai-settled"
+              >
+                <History className="h-4 w-4" />
+                Human Vs AI 详情（已结算）
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/human-vs-ai-table"
+              >
+                <Database className="h-4 w-4" />
+                Human VS AI 一览表
+              </Link>
+            </div>
+          </div>
+
+          {/* Opinion Section */}
+          <div>
+            <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500">
+              Opinion
+            </h3>
+            <div className="space-y-1">
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/opinion-arbitrage"
+              >
+                <ArrowLeftRight className="h-4 w-4" />
+                Opinion 对冲
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/opinion-closing"
+              >
+                <Clock className="h-4 w-4" />
+                尾盘数据
+              </Link>
+            </div>
+          </div>
+
         </nav>
       </div>
       
