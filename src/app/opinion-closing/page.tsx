@@ -1,28 +1,34 @@
 import React from 'react';
-import fs from 'fs';
-import path from 'path';
+import { createClient } from '@supabase/supabase-js';
 import { OpinionClosingList, ClosingMarket } from '@/components/OpinionClosingList';
+
+// --- Supabase Config ---
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || "";
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+// Revalidate every 60 seconds to ensure freshness without rebuilding
+export const revalidate = 60; 
 
 async function getClosingData(): Promise<ClosingMarket[]> {
   try {
-    // 1. Fetch from local file
-    // Path relative to dashboard root: ../data/Opinion/closing_markets.json
-    const filePath = path.resolve(process.cwd(), '../data/Opinion/closing_markets.json');
-    
-    if (!fs.existsSync(filePath)) {
-      console.warn(`File not found at: ${filePath}. Checking fallback location...`);
-      const fallbackPath = path.resolve(process.cwd(), 'src/data/Opinion/closing_markets.json');
-      if (fs.existsSync(fallbackPath)) {
-          const fileContent = fs.readFileSync(fallbackPath, 'utf-8');
-          return JSON.parse(fileContent) as ClosingMarket[];
-      }
-      return [];
+    const { data, error } = await supabase
+      .from('opinion_closing_markets')
+      .select('raw_data')
+      .limit(100); 
+
+    if (error) {
+        console.error("Supabase fetch error:", error);
+        return [];
     }
 
-    const fileContent = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(fileContent) as ClosingMarket[];
+    if (data && data.length > 0) {
+      return data.map(row => row.raw_data as ClosingMarket);
+    }
+
+    return [];
   } catch (error) {
-    console.error("Error reading closing markets data:", error);
+    console.error("Error fetching closing markets data:", error);
     return [];
   }
 }
