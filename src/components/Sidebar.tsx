@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock } from "lucide-react"
+import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock, MessageSquare } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -84,6 +84,13 @@ export function Sidebar() {
               >
                 <Wallet className="h-4 w-4" />
                 小号查询
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/speech-probability"
+              >
+                <MessageSquare className="h-4 w-4" />
+                二圣发言概率
               </Link>
             </div>
           </div>
