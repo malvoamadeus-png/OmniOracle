@@ -50,7 +50,7 @@ export function Sidebar() {
           </div>
 
           {/* Opinion Section */}
-          <div>
+          <div className="mb-4">
             <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500">
               Opinion
             </h3>
@@ -68,6 +68,22 @@ export function Sidebar() {
               >
                 <Clock className="h-4 w-4" />
                 尾盘数据
+              </Link>
+            </div>
+          </div>
+
+          {/* Tools Section */}
+          <div>
+            <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500">
+              其他工具
+            </h3>
+            <div className="space-y-1">
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100"
+                href="/bundle-finder"
+              >
+                <Wallet className="h-4 w-4" />
+                小号查询
               </Link>
             </div>
           </div>
