@@ -6,30 +6,33 @@ import { supabase } from "@/lib/supabase";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { Loader2, MessageSquare, Clock } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Label } from "@/components/ui/label";
 
 interface ProbabilityData {
   hour: number;
-  cz: number;
-  heyi: number;
-  nina: number;
+  [key: string]: number; // Allow dynamic access by handle
 }
 
-interface CurrentProb {
-  cz: { current: number; next: number };
-  heyi: { current: number; next: number };
-  nina: { current: number; next: number };
-}
+const ACCOUNTS = [
+  { handle: "@cz_binance", name: "CZ", color: "#eab308" },
+  { handle: "@heyibinance", name: "He Yi", color: "#1f2937" },
+  { handle: "@nina_rong", name: "Nina", color: "#ec4899" },
+  { handle: "@Binance_intern", name: "Binance Intern", color: "#f59e0b" },
+  { handle: "@binancezh", name: "Binance ZH", color: "#3b82f6" },
+  { handle: "@binance", name: "Binance", color: "#fcd34d" },
+];
 
 export default function BinanceSpeechProbabilityPage() {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("all");
   const [currentTimeStr, setCurrentTimeStr] = useState("");
   const [chartData, setChartData] = useState<ProbabilityData[]>([]);
-  const [currentProbs, setCurrentProbs] = useState<CurrentProb>({
-    cz: { current: 0, next: 0 },
-    heyi: { current: 0, next: 0 },
-    nina: { current: 0, next: 0 },
-  });
+  
+  // Selected accounts state
+  const [selectedAccounts, setSelectedAccounts] = useState<string[]>(
+    ACCOUNTS.map(a => a.handle) // Default select all
+  );
 
   // 更新时间显示 (北京时间)
   useEffect(() => {
@@ -64,11 +67,10 @@ export default function BinanceSpeechProbabilityPage() {
         
         const jsDay = bjTime.getDay();
         const dbDay = (jsDay + 6) % 7; // 转换逻辑
-        const currentHour = bjTime.getHours();
 
-        const handles = ["@cz_binance", "@heyibinance", "@nina_rong"];
+        const handles = ACCOUNTS.map(a => a.handle);
         
-        // 1. 获取图表数据 (根据选择的 category)
+        // 获取图表数据 (根据选择的 category)
         const { data: chartDataRes, error: chartError } = await supabase
           .from("user_activity_profiles")
           .select("handle, hour, probability")
@@ -79,66 +81,25 @@ export default function BinanceSpeechProbabilityPage() {
 
         if (chartError) throw chartError;
 
-        // 2. 获取当前/下一小时数据 (固定使用 'all' 分类)
-        const { data: currentProbRes, error: currentProbError } = await supabase
-          .from("user_activity_profiles")
-          .select("handle, hour, probability")
-          .in("handle", handles)
-          .eq("day_of_week", dbDay)
-          .eq("category", "all") // Always 'all' for current/next probability
-          .in("hour", [currentHour, (currentHour + 1) % 24]);
-
-        if (currentProbError) throw currentProbError;
-
         // 处理图表数据
-        const processedChartData: ProbabilityData[] = Array.from({ length: 24 }, (_, i) => ({
-          hour: i,
-          cz: 0,
-          heyi: 0,
-          nina: 0,
-        }));
+        const processedChartData: ProbabilityData[] = Array.from({ length: 24 }, (_, i) => {
+          const row: ProbabilityData = { hour: i };
+          handles.forEach(h => row[h] = 0);
+          return row;
+        });
 
         if (chartDataRes) {
           chartDataRes.forEach((item: any) => {
             const hourIndex = item.hour;
             if (hourIndex >= 0 && hourIndex < 24) {
-              if (item.handle === "@cz_binance") {
-                processedChartData[hourIndex].cz = item.probability;
-              } else if (item.handle === "@heyibinance") {
-                processedChartData[hourIndex].heyi = item.probability;
-              } else if (item.handle === "@nina_rong") {
-                processedChartData[hourIndex].nina = item.probability;
+              if (handles.includes(item.handle)) {
+                processedChartData[hourIndex][item.handle] = item.probability;
               }
             }
           });
         }
 
-        // 处理当前/下一小时概率
-        const probs = {
-            cz: { current: 0, next: 0 },
-            heyi: { current: 0, next: 0 },
-            nina: { current: 0, next: 0 },
-        };
-        
-        const nextHour = (currentHour + 1) % 24;
-
-        if (currentProbRes) {
-             currentProbRes.forEach((item: any) => {
-                if (item.handle === "@cz_binance") {
-                    if (item.hour === currentHour) probs.cz.current = item.probability;
-                    if (item.hour === nextHour) probs.cz.next = item.probability;
-                } else if (item.handle === "@heyibinance") {
-                    if (item.hour === currentHour) probs.heyi.current = item.probability;
-                    if (item.hour === nextHour) probs.heyi.next = item.probability;
-                } else if (item.handle === "@nina_rong") {
-                    if (item.hour === currentHour) probs.nina.current = item.probability;
-                    if (item.hour === nextHour) probs.nina.next = item.probability;
-                }
-             });
-        }
-
         setChartData(processedChartData);
-        setCurrentProbs(probs);
 
       } catch (err) {
         console.error("Failed to fetch speech probability:", err);
@@ -150,7 +111,21 @@ export default function BinanceSpeechProbabilityPage() {
     fetchData();
   }, [category]); // Re-fetch when category changes
 
-  const formatPercent = (val: number) => `${(val * 100).toFixed(1)}%`;
+  const handleSelectAll = (checked: boolean) => {
+    if (checked) {
+      setSelectedAccounts(ACCOUNTS.map(a => a.handle));
+    } else {
+      setSelectedAccounts([]);
+    }
+  };
+
+  const handleAccountToggle = (handle: string, checked: boolean) => {
+    if (checked) {
+      setSelectedAccounts(prev => [...prev, handle]);
+    } else {
+      setSelectedAccounts(prev => prev.filter(h => h !== handle));
+    }
+  };
 
   return (
     <div className="container mx-auto p-6 max-w-6xl space-y-8">
@@ -159,7 +134,7 @@ export default function BinanceSpeechProbabilityPage() {
         <div>
           <h1 className="text-3xl font-bold tracking-tight">币安系发言概率</h1>
           <p className="text-gray-500 mt-1">
-            预测 @cz_binance, @heyibinance, @nina_rong 的推文活跃度
+            预测币安系相关账号的推文活跃度
           </p>
         </div>
         <Card className="bg-slate-50 border-slate-200 shadow-sm">
@@ -175,110 +150,40 @@ export default function BinanceSpeechProbabilityPage() {
         </Card>
       </div>
 
-      {/* 实时概率卡片 (Always 'all' category) */}
-      <div className="grid gap-6 md:grid-cols-3">
-        {/* CZ Card */}
-        <Card className="border-l-4 border-l-yellow-500 shadow-md hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-center">
-                <CardTitle className="text-lg flex items-center gap-2">
-                    <span className="text-xl">🔶</span> CZ
-                </CardTitle>
-                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            {loading ? (
-               <div className="h-24 flex items-center justify-center">
-                 <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
-               </div>
-            ) : (
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Current</span>
-                        <div className="text-2xl font-bold text-slate-800">
-                            {formatPercent(currentProbs.cz.current)}
-                        </div>
-                    </div>
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Next</span>
-                        <div className="text-2xl font-bold text-slate-400">
-                            {formatPercent(currentProbs.cz.next)}
-                        </div>
-                    </div>
+      {/* 账号选择区域 */}
+      <Card>
+        <CardHeader className="pb-3">
+            <CardTitle className="text-base font-medium">Select Accounts</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <div className="flex flex-wrap gap-6">
+                <div className="flex items-center space-x-2 border-r pr-6 mr-2">
+                    <Checkbox 
+                        id="select-all" 
+                        checked={selectedAccounts.length === ACCOUNTS.length}
+                        onCheckedChange={(c) => handleSelectAll(c as boolean)}
+                    />
+                    <Label htmlFor="select-all" className="font-bold cursor-pointer">Select All</Label>
                 </div>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Heyi Card */}
-        <Card className="border-l-4 border-l-gray-800 shadow-md hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-center">
-                <CardTitle className="text-lg flex items-center gap-2">
-                    <span className="text-xl">👩🏻‍💼</span> He Yi
-                </CardTitle>
-                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
+                {ACCOUNTS.map(account => (
+                    <div key={account.handle} className="flex items-center space-x-2">
+                        <Checkbox 
+                            id={account.handle} 
+                            checked={selectedAccounts.includes(account.handle)}
+                            onCheckedChange={(c) => handleAccountToggle(account.handle, c as boolean)}
+                        />
+                        <Label 
+                            htmlFor={account.handle} 
+                            className="cursor-pointer flex items-center gap-2"
+                        >
+                            <span className="w-2 h-2 rounded-full" style={{ backgroundColor: account.color }} />
+                            {account.name} <span className="text-xs text-gray-400 font-normal">({account.handle})</span>
+                        </Label>
+                    </div>
+                ))}
             </div>
-          </CardHeader>
-          <CardContent>
-            {loading ? (
-               <div className="h-24 flex items-center justify-center">
-                 <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
-               </div>
-            ) : (
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Current</span>
-                        <div className="text-2xl font-bold text-slate-800">
-                            {formatPercent(currentProbs.heyi.current)}
-                        </div>
-                    </div>
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Next</span>
-                        <div className="text-2xl font-bold text-slate-400">
-                            {formatPercent(currentProbs.heyi.next)}
-                        </div>
-                    </div>
-                </div>
-            )}
-          </CardContent>
-        </Card>
-
-        {/* Nina Card */}
-        <Card className="border-l-4 border-l-pink-500 shadow-md hover:shadow-lg transition-shadow">
-          <CardHeader className="pb-2">
-            <div className="flex justify-between items-center">
-                <CardTitle className="text-lg flex items-center gap-2">
-                    <span className="text-xl">🌸</span> Nina
-                </CardTitle>
-                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            {loading ? (
-               <div className="h-24 flex items-center justify-center">
-                 <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
-               </div>
-            ) : (
-                <div className="grid grid-cols-2 gap-2 mt-2">
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Current</span>
-                        <div className="text-2xl font-bold text-slate-800">
-                            {formatPercent(currentProbs.nina.current)}
-                        </div>
-                    </div>
-                    <div className="space-y-1">
-                        <span className="text-xs text-gray-500">Next</span>
-                        <div className="text-2xl font-bold text-slate-400">
-                            {formatPercent(currentProbs.nina.next)}
-                        </div>
-                    </div>
-                </div>
-            )}
-          </CardContent>
-        </Card>
-      </div>
+        </CardContent>
+      </Card>
 
       {/* 图表区域 */}
       <Card>
@@ -308,7 +213,7 @@ export default function BinanceSpeechProbabilityPage() {
           </div>
         </CardHeader>
         <CardContent>
-          <div className="h-[400px] w-full">
+          <div className="h-[500px] w-full">
             {loading ? (
                 <div className="h-full w-full flex items-center justify-center bg-slate-50 rounded-lg">
                     <Loader2 className="h-10 w-10 animate-spin text-gray-300" />
@@ -348,33 +253,20 @@ export default function BinanceSpeechProbabilityPage() {
                     />
                     <Legend verticalAlign="top" height={36}/>
                     
-                    <Line
-                        type="monotone"
-                        name="CZ (@cz_binance)"
-                        dataKey="cz"
-                        stroke="#eab308" // Yellow-500
-                        strokeWidth={3}
-                        dot={{ r: 4, fill: "#eab308", strokeWidth: 0 }}
-                        activeDot={{ r: 6 }}
-                    />
-                    <Line
-                        type="monotone"
-                        name="He Yi (@heyibinance)"
-                        dataKey="heyi"
-                        stroke="#1f2937" // Gray-800
-                        strokeWidth={3}
-                        dot={{ r: 4, fill: "#1f2937", strokeWidth: 0 }}
-                        activeDot={{ r: 6 }}
-                    />
-                    <Line
-                        type="monotone"
-                        name="Nina (@nina_rong)"
-                        dataKey="nina"
-                        stroke="#ec4899" // Pink-500
-                        strokeWidth={3}
-                        dot={{ r: 4, fill: "#ec4899", strokeWidth: 0 }}
-                        activeDot={{ r: 6 }}
-                    />
+                    {ACCOUNTS.map(account => (
+                        selectedAccounts.includes(account.handle) && (
+                            <Line
+                                key={account.handle}
+                                type="monotone"
+                                name={`${account.name} (${account.handle})`}
+                                dataKey={account.handle}
+                                stroke={account.color}
+                                strokeWidth={3}
+                                dot={{ r: 4, fill: account.color, strokeWidth: 0 }}
+                                activeDot={{ r: 6 }}
+                            />
+                        )
+                    ))}
                 </LineChart>
                 </ResponsiveContainer>
             )}
