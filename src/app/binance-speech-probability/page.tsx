@@ -3,22 +3,24 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { supabase } from "@/lib/supabase";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { Loader2, MessageSquare, Clock } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 interface ProbabilityData {
   hour: number;
   cz: number;
   heyi: number;
+  nina: number;
 }
 
 interface CurrentProb {
   cz: { current: number; next: number };
   heyi: { current: number; next: number };
+  nina: { current: number; next: number };
 }
 
-export default function SpeechProbabilityPage() {
+export default function BinanceSpeechProbabilityPage() {
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("all");
   const [currentTimeStr, setCurrentTimeStr] = useState("");
@@ -26,6 +28,7 @@ export default function SpeechProbabilityPage() {
   const [currentProbs, setCurrentProbs] = useState<CurrentProb>({
     cz: { current: 0, next: 0 },
     heyi: { current: 0, next: 0 },
+    nina: { current: 0, next: 0 },
   });
 
   // 更新时间显示 (北京时间)
@@ -63,7 +66,7 @@ export default function SpeechProbabilityPage() {
         const dbDay = (jsDay + 6) % 7; // 转换逻辑
         const currentHour = bjTime.getHours();
 
-        const handles = ["@cz_binance", "@heyibinance"];
+        const handles = ["@cz_binance", "@heyibinance", "@nina_rong"];
         
         // 1. 获取图表数据 (根据选择的 category)
         const { data: chartDataRes, error: chartError } = await supabase
@@ -92,6 +95,7 @@ export default function SpeechProbabilityPage() {
           hour: i,
           cz: 0,
           heyi: 0,
+          nina: 0,
         }));
 
         if (chartDataRes) {
@@ -102,6 +106,8 @@ export default function SpeechProbabilityPage() {
                 processedChartData[hourIndex].cz = item.probability;
               } else if (item.handle === "@heyibinance") {
                 processedChartData[hourIndex].heyi = item.probability;
+              } else if (item.handle === "@nina_rong") {
+                processedChartData[hourIndex].nina = item.probability;
               }
             }
           });
@@ -111,6 +117,7 @@ export default function SpeechProbabilityPage() {
         const probs = {
             cz: { current: 0, next: 0 },
             heyi: { current: 0, next: 0 },
+            nina: { current: 0, next: 0 },
         };
         
         const nextHour = (currentHour + 1) % 24;
@@ -123,6 +130,9 @@ export default function SpeechProbabilityPage() {
                 } else if (item.handle === "@heyibinance") {
                     if (item.hour === currentHour) probs.heyi.current = item.probability;
                     if (item.hour === nextHour) probs.heyi.next = item.probability;
+                } else if (item.handle === "@nina_rong") {
+                    if (item.hour === currentHour) probs.nina.current = item.probability;
+                    if (item.hour === nextHour) probs.nina.next = item.probability;
                 }
              });
         }
@@ -147,9 +157,9 @@ export default function SpeechProbabilityPage() {
       {/* 标题与时间 */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">二圣发言概率</h1>
+          <h1 className="text-3xl font-bold tracking-tight">币安系发言概率</h1>
           <p className="text-gray-500 mt-1">
-            基于历史数据预测 @cz_binance 与 @heyibinance 的推文发布概率
+            预测 @cz_binance, @heyibinance, @nina_rong 的推文活跃度
           </p>
         </div>
         <Card className="bg-slate-50 border-slate-200 shadow-sm">
@@ -166,15 +176,15 @@ export default function SpeechProbabilityPage() {
       </div>
 
       {/* 实时概率卡片 (Always 'all' category) */}
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 md:grid-cols-3">
         {/* CZ Card */}
         <Card className="border-l-4 border-l-yellow-500 shadow-md hover:shadow-lg transition-shadow">
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
-                <CardTitle className="text-xl flex items-center gap-2">
-                    <span className="text-2xl">🔶</span> CZ (@cz_binance)
+                <CardTitle className="text-lg flex items-center gap-2">
+                    <span className="text-xl">🔶</span> CZ
                 </CardTitle>
-                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">Category: All</span>
+                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
             </div>
           </CardHeader>
           <CardContent>
@@ -183,16 +193,16 @@ export default function SpeechProbabilityPage() {
                  <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
                </div>
             ) : (
-                <div className="grid grid-cols-2 gap-4 mt-2">
+                <div className="grid grid-cols-2 gap-2 mt-2">
                     <div className="space-y-1">
-                        <span className="text-sm text-gray-500">当前小时概率</span>
-                        <div className="text-3xl font-bold text-slate-800">
+                        <span className="text-xs text-gray-500">Current</span>
+                        <div className="text-2xl font-bold text-slate-800">
                             {formatPercent(currentProbs.cz.current)}
                         </div>
                     </div>
                     <div className="space-y-1">
-                        <span className="text-sm text-gray-500">下一小时概率</span>
-                        <div className="text-3xl font-bold text-slate-400">
+                        <span className="text-xs text-gray-500">Next</span>
+                        <div className="text-2xl font-bold text-slate-400">
                             {formatPercent(currentProbs.cz.next)}
                         </div>
                     </div>
@@ -205,10 +215,10 @@ export default function SpeechProbabilityPage() {
         <Card className="border-l-4 border-l-gray-800 shadow-md hover:shadow-lg transition-shadow">
           <CardHeader className="pb-2">
             <div className="flex justify-between items-center">
-                <CardTitle className="text-xl flex items-center gap-2">
-                    <span className="text-2xl">👩🏻‍💼</span> He Yi (@heyibinance)
+                <CardTitle className="text-lg flex items-center gap-2">
+                    <span className="text-xl">👩🏻‍💼</span> He Yi
                 </CardTitle>
-                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">Category: All</span>
+                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
             </div>
           </CardHeader>
           <CardContent>
@@ -217,17 +227,51 @@ export default function SpeechProbabilityPage() {
                  <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
                </div>
             ) : (
-                <div className="grid grid-cols-2 gap-4 mt-2">
+                <div className="grid grid-cols-2 gap-2 mt-2">
                     <div className="space-y-1">
-                        <span className="text-sm text-gray-500">当前小时概率</span>
-                        <div className="text-3xl font-bold text-slate-800">
+                        <span className="text-xs text-gray-500">Current</span>
+                        <div className="text-2xl font-bold text-slate-800">
                             {formatPercent(currentProbs.heyi.current)}
                         </div>
                     </div>
                     <div className="space-y-1">
-                        <span className="text-sm text-gray-500">下一小时概率</span>
-                        <div className="text-3xl font-bold text-slate-400">
+                        <span className="text-xs text-gray-500">Next</span>
+                        <div className="text-2xl font-bold text-slate-400">
                             {formatPercent(currentProbs.heyi.next)}
+                        </div>
+                    </div>
+                </div>
+            )}
+          </CardContent>
+        </Card>
+
+        {/* Nina Card */}
+        <Card className="border-l-4 border-l-pink-500 shadow-md hover:shadow-lg transition-shadow">
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-center">
+                <CardTitle className="text-lg flex items-center gap-2">
+                    <span className="text-xl">🌸</span> Nina
+                </CardTitle>
+                <span className="text-xs bg-gray-100 text-gray-500 px-2 py-1 rounded">All</span>
+            </div>
+          </CardHeader>
+          <CardContent>
+            {loading ? (
+               <div className="h-24 flex items-center justify-center">
+                 <Loader2 className="h-8 w-8 animate-spin text-gray-300" />
+               </div>
+            ) : (
+                <div className="grid grid-cols-2 gap-2 mt-2">
+                    <div className="space-y-1">
+                        <span className="text-xs text-gray-500">Current</span>
+                        <div className="text-2xl font-bold text-slate-800">
+                            {formatPercent(currentProbs.nina.current)}
+                        </div>
+                    </div>
+                    <div className="space-y-1">
+                        <span className="text-xs text-gray-500">Next</span>
+                        <div className="text-2xl font-bold text-slate-400">
+                            {formatPercent(currentProbs.nina.next)}
                         </div>
                     </div>
                 </div>
@@ -320,6 +364,15 @@ export default function SpeechProbabilityPage() {
                         stroke="#1f2937" // Gray-800
                         strokeWidth={3}
                         dot={{ r: 4, fill: "#1f2937", strokeWidth: 0 }}
+                        activeDot={{ r: 6 }}
+                    />
+                    <Line
+                        type="monotone"
+                        name="Nina (@nina_rong)"
+                        dataKey="nina"
+                        stroke="#ec4899" // Pink-500
+                        strokeWidth={3}
+                        dot={{ r: 4, fill: "#ec4899", strokeWidth: 0 }}
                         activeDot={{ r: 6 }}
                     />
                 </LineChart>
