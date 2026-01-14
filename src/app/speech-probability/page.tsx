@@ -6,6 +6,7 @@ import { supabase } from "@/lib/supabase";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import { Loader2, MessageSquare, Clock } from "lucide-react";
+import { PredictionMarket } from "@/components/PredictionMarket";
 
 interface ProbabilityData {
   hour: number;
@@ -328,6 +329,9 @@ export default function SpeechProbabilityPage() {
           </div>
         </CardContent>
       </Card>
+
+      {/* 预测市场组件 */}
+      <PredictionMarket />
     </div>
   );
 }

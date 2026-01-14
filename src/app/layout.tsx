@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 import { Sidebar } from "@/components/Sidebar";
+import { AuthProvider } from "@/lib/AuthContext";
+import { AuthButton } from "@/components/AuthButton";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,15 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex h-screen w-full overflow-hidden">
-          <Sidebar />
-          <div className="flex flex-1 flex-col overflow-hidden">
-            <main className="flex-1 overflow-y-auto bg-gray-50/10 p-4 md:p-6">
-              {children}
-            </main>
+        <AuthProvider>
+          <div className="flex h-screen w-full overflow-hidden">
+            <Sidebar />
+            <div className="flex flex-1 flex-col overflow-hidden">
+              <div className="absolute top-4 right-4 z-50">
+                <AuthButton />
+              </div>
+              <main className="flex-1 overflow-y-auto bg-gray-50/10 p-4 md:p-6">
+                {children}
+              </main>
+            </div>
           </div>
-        </div>
-        <Analytics />
+          <Analytics />
+        </AuthProvider>
       </body>
     </html>
   );

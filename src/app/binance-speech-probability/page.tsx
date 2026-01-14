@@ -8,6 +8,7 @@ import { Loader2, MessageSquare, Clock } from "lucide-react";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { PredictionMarket } from "@/components/PredictionMarket";
 
 interface ProbabilityData {
   hour: number;
@@ -273,6 +274,9 @@ export default function BinanceSpeechProbabilityPage() {
           </div>
         </CardContent>
       </Card>
+
+      {/* 预测市场组件 */}
+      <PredictionMarket />
     </div>
   );
 }
