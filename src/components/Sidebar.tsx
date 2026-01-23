@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock, MessageSquare, Coffee } from "lucide-react"
+import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock, MessageSquare, Coffee, Dot } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -98,6 +98,13 @@ export function Sidebar() {
               >
                 <MessageSquare className="h-4 w-4" />
                 币安系发言概率
+              </Link>
+              <Link
+                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
+                href="/daily-market-cap-ceiling"
+              >
+                <Dot className="h-4 w-4" />
+                每日市值上限
               </Link>
             </div>
           </div>
