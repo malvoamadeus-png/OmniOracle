@@ -21,6 +21,8 @@ type Row = {
   short_name: string | null;
   create_date_ms: number | null;
   max_market_cap_wan: number | null;
+  is_eligible: boolean | null;
+  is_binance: boolean | null;
 };
 
 type Point = {
@@ -28,7 +30,19 @@ type Point = {
   y: number;
   address: string;
   shortName: string;
+  isBinance: boolean;
 };
+
+function DotShape(props: any) {
+  const cx = props?.cx;
+  const cy = props?.cy;
+  const payload: Point | undefined = props?.payload;
+  if (typeof cx !== "number" || typeof cy !== "number" || !payload) {
+    return <circle cx={0} cy={0} r={0} fill="transparent" />;
+  }
+  const fill = payload.isBinance ? "#facc15" : "#6366f1";
+  return <circle cx={cx} cy={cy} r={4} fill={fill} stroke="#ffffff" strokeWidth={1} />;
+}
 
 function formatBeijing(ms: number) {
   const date = new Date(ms);
@@ -72,8 +86,9 @@ export default function DailyMarketCapCeilingPage() {
         const cutoff = Date.now() - timeWindowHours * 60 * 60 * 1000;
         const { data, error } = await supabase
           .from("daily_market_cap_ceiling")
-          .select("address, short_name, create_date_ms, max_market_cap_wan")
+          .select("address, short_name, create_date_ms, max_market_cap_wan, is_eligible, is_binance")
           .gte("create_date_ms", cutoff)
+          .eq("is_eligible", true)
           .order("create_date_ms", { ascending: true });
         if (error) throw error;
         setRows((data as Row[]) || []);
@@ -91,14 +106,15 @@ export default function DailyMarketCapCeilingPage() {
   const points = useMemo<Point[]>(() => {
     return rows
       .map((r) => {
-        const x = r.create_date_ms ?? 0;
-        const y = r.max_market_cap_wan ?? 0;
-        if (!r.address || !x || !Number.isFinite(y)) return null;
+        const x = Number(r.create_date_ms);
+        const y = Number(r.max_market_cap_wan);
+        if (!r.address || !Number.isFinite(x) || !Number.isFinite(y)) return null;
         return {
           x,
           y,
           address: r.address,
           shortName: r.short_name ?? r.address.slice(0, 8),
+          isBinance: Boolean(r.is_binance),
         };
       })
       .filter((p): p is Point => Boolean(p));
@@ -207,7 +223,9 @@ export default function DailyMarketCapCeilingPage() {
                       const p = payload[0].payload as Point;
                       return (
                         <div className="rounded-lg bg-white border border-gray-200 shadow-lg p-3 text-xs space-y-1">
-                          <div className="font-semibold text-gray-900">{p.shortName}</div>
+                          <div className="font-semibold text-gray-900">
+                            {p.shortName}{p.isBinance ? "（币安系）" : ""}
+                          </div>
                           <div className="text-gray-600">最高市值：{formatWan(p.y)}</div>
                           <div className="text-gray-600">创建时间：{formatBeijing(p.x)}</div>
                           <div className="text-gray-400 font-mono break-all">{p.address}</div>
@@ -215,7 +233,7 @@ export default function DailyMarketCapCeilingPage() {
                       );
                     }}
                   />
-                  <Scatter data={filteredPoints} fill="#6366f1" />
+                  <Scatter data={filteredPoints} shape={DotShape} />
                 </ScatterChart>
               </ResponsiveContainer>
             )}
