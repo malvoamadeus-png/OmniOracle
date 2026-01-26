@@ -13,7 +13,7 @@ export function Sidebar() {
         <nav className="grid items-start px-2 text-sm font-medium">
           
           {/* Polymarket Section */}
-          <div className="mb-4">
+          <div className="mb-4 hidden">
             <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
               Polymarket
             </h3>
@@ -50,7 +50,7 @@ export function Sidebar() {
           </div>
 
           {/* Opinion Section */}
-          <div className="mb-4">
+          <div className="mb-4 hidden">
             <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
               Opinion
             </h3>
@@ -75,15 +75,15 @@ export function Sidebar() {
           {/* Tools Section */}
           <div>
             <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
-              其他工具
+              BSC Trench
             </h3>
             <div className="space-y-1">
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/bundle-finder"
+                href="/daily-market-cap-ceiling"
               >
-                <Wallet className="h-4 w-4" />
-                小号查询
+                <Dot className="h-4 w-4" />
+                BSC每日市值上限
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
@@ -101,10 +101,10 @@ export function Sidebar() {
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/daily-market-cap-ceiling"
+                href="/bundle-finder"
               >
-                <Dot className="h-4 w-4" />
-                每日市值上限
+                <Wallet className="h-4 w-4" />
+                小号查询
               </Link>
             </div>
           </div>
@@ -123,7 +123,7 @@ export function Sidebar() {
           <span className="font-medium">By 南枳</span>
         </Link>
 
-        <div className="space-y-1">
+        <div className="space-y-1 hidden">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-500 uppercase dark:text-gray-400">
             <Coffee className="h-3 w-3" />
             <span>Buy Me a Coffee</span>
