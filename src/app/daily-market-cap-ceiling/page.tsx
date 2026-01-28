@@ -66,11 +66,24 @@ function formatWan(value: number) {
 function formatBeijingHour(ms: number) {
   const date = new Date(ms);
   const formatter = new Intl.DateTimeFormat("zh-CN", {
+    month: "2-digit",
+    day: "2-digit",
     hour: "2-digit",
     hour12: false,
     timeZone: "Asia/Shanghai",
   });
-  return `${formatter.format(date)}:00`;
+  return formatter.format(date).replaceAll("-", "/");
+}
+
+function buildTicks(domain: [number, number], stepHours: number) {
+  const [min, max] = domain;
+  const stepMs = stepHours * 60 * 60 * 1000;
+  const start = Math.ceil(min / stepMs) * stepMs;
+  const ticks: number[] = [];
+  for (let t = start; t <= max; t += stepMs) {
+    ticks.push(t);
+  }
+  return ticks.length ? ticks : [min, max];
 }
 
 export default function DailyMarketCapCeilingPage() {
@@ -131,11 +144,35 @@ export default function DailyMarketCapCeilingPage() {
     return points.filter((p) => p.y <= parsedYMaxWan);
   }, [points, parsedYMaxWan]);
 
+  const launchCount = points.length;
+
+  const avgNormalWan = useMemo<number | null>(() => {
+    const arr = points.filter((p) => !p.isBinance).map((p) => p.y);
+    if (arr.length === 0) return null;
+    return arr.reduce((a, b) => a + b, 0) / arr.length;
+  }, [points]);
+
+  const avgBinanceWan = useMemo<number | null>(() => {
+    const arr = points.filter((p) => p.isBinance).map((p) => p.y);
+    if (arr.length === 0) return null;
+    return arr.reduce((a, b) => a + b, 0) / arr.length;
+  }, [points]);
+
   const domainX = useMemo<[number, number]>(() => {
     const now = Date.now();
     const min = now - timeWindowHours * 60 * 60 * 1000;
     return [min, now];
   }, [timeWindowHours]);
+
+  const xTickStepHours = useMemo(() => {
+    if (timeWindowHours <= 6) return 1;
+    if (timeWindowHours <= 12) return 2;
+    if (timeWindowHours <= 24) return 3;
+    if (timeWindowHours <= 48) return 6;
+    return 6;
+  }, [timeWindowHours]);
+
+  const xTicks = useMemo(() => buildTicks(domainX, xTickStepHours), [domainX, xTickStepHours]);
 
   const autoYMaxWan = useMemo<number>(() => {
     const arr = (parsedYMaxWan ? filteredPoints : points).map((p) => p.y);
@@ -147,7 +184,7 @@ export default function DailyMarketCapCeilingPage() {
     <div className="container mx-auto p-6 max-w-6xl space-y-6">
       <div className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">每日市值上限</h1>
-        <p className="text-gray-500">过去 24 小时新币的最高市值散点分布（单位：万美元）</p>
+        <p className="text-gray-500">过去 {timeWindowHours} 小时新币的最高市值散点分布（单位：万美元）</p>
         <div className="flex flex-col md:flex-row gap-3 md:items-center">
           <div className="flex items-center gap-2">
             <span className="text-sm text-gray-600">X轴范围</span>
@@ -161,6 +198,8 @@ export default function DailyMarketCapCeilingPage() {
                 <SelectItem value="6">最近 6 小时</SelectItem>
                 <SelectItem value="12">最近 12 小时</SelectItem>
                 <SelectItem value="24">最近 24 小时</SelectItem>
+                <SelectItem value="48">最近 48 小时</SelectItem>
+                <SelectItem value="72">最近 72 小时</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -177,9 +216,36 @@ export default function DailyMarketCapCeilingPage() {
         </div>
       </div>
 
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-sm font-medium text-gray-500">当前时间范围</div>
+            <div className="text-2xl font-bold mt-2">{timeWindowHours}H</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-sm font-medium text-gray-500">过去 {timeWindowHours} 小时发射数量</div>
+            <div className="text-2xl font-bold mt-2">{launchCount}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-sm font-medium text-gray-500">平均最高市值（常规）</div>
+            <div className="text-2xl font-bold mt-2">{avgNormalWan === null ? "无数据" : formatWan(avgNormalWan)}</div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-sm font-medium text-gray-500">平均最高市值（币安系）</div>
+            <div className="text-2xl font-bold mt-2">{avgBinanceWan === null ? "无数据" : formatWan(avgBinanceWan)}</div>
+          </CardContent>
+        </Card>
+      </div>
+
       <Card>
         <CardHeader>
-          <CardTitle>24H 最高市值散点图</CardTitle>
+          <CardTitle>{timeWindowHours}H 最高市值散点图</CardTitle>
           <CardDescription>鼠标悬停查看 shortName、最高市值和创建时间</CardDescription>
         </CardHeader>
         <CardContent>
@@ -200,6 +266,7 @@ export default function DailyMarketCapCeilingPage() {
                     dataKey="x"
                     type="number"
                     domain={domainX}
+                    ticks={xTicks}
                     tickFormatter={(v) => formatBeijingHour(v)}
                     stroke="#94a3b8"
                     fontSize={12}
