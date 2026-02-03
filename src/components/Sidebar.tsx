@@ -123,7 +123,7 @@ export function Sidebar() {
           <span className="font-medium">By 南枳</span>
         </Link>
 
-        <div className="space-y-1 hidden">
+        <div className="space-y-1">
           <div className="flex items-center gap-2 text-xs font-semibold text-gray-500 uppercase dark:text-gray-400">
             <Coffee className="h-3 w-3" />
             <span>Buy Me a Coffee</span>
