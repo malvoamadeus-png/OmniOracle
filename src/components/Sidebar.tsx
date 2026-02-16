@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { BarChart3, Database, BrainCircuit, Wallet, History, ArrowLeftRight, Twitter, Clock, MessageSquare, Coffee, Dot } from "lucide-react"
+import { Twitter, Coffee, Dot } from "lucide-react"
 
 export function Sidebar() {
   return (
@@ -13,102 +13,36 @@ export function Sidebar() {
         <nav className="grid items-start px-2 text-sm font-medium">
           
           {/* Polymarket Section */}
-          <div className="mb-4 hidden">
+          <div className="mb-4">
             <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
               Polymarket
             </h3>
             <div className="space-y-1">
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/"
+                href="/grok-preseason-active"
               >
-                <BarChart3 className="h-4 w-4" />
-                跟单收益榜
+                <Dot className="h-4 w-4" />
+                Grok预测（进行中）
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/human-vs-ai"
+                href="/grok-preseason-settled"
               >
-                <BrainCircuit className="h-4 w-4" />
-                Human Vs AI 详情
+                <Dot className="h-4 w-4" />
+                Grok预测（已结束）
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/human-vs-ai-settled"
+                href="/grok-preseason-excluded"
               >
-                <History className="h-4 w-4" />
-                Human Vs AI 详情（已结算）
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/human-vs-ai-table"
-              >
-                <Database className="h-4 w-4" />
-                Human VS AI 一览表
-              </Link>
-            </div>
-          </div>
-
-          {/* Opinion Section */}
-          <div className="mb-4 hidden">
-            <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
-              Opinion
-            </h3>
-            <div className="space-y-1">
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/opinion-arbitrage"
-              >
-                <ArrowLeftRight className="h-4 w-4" />
-                Opinion 对冲
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/opinion-closing"
-              >
-                <Clock className="h-4 w-4" />
-                尾盘数据
+                <Dot className="h-4 w-4" />
+                Grok预测（已排除）
               </Link>
             </div>
           </div>
 
           {/* Tools Section */}
-          <div>
-            <h3 className="mb-2 px-4 text-xs font-semibold uppercase text-gray-500 dark:text-gray-400">
-              BSC Trench
-            </h3>
-            <div className="space-y-1">
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/daily-market-cap-ceiling"
-              >
-                <Dot className="h-4 w-4" />
-                BSC每日市值上限
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/speech-probability"
-              >
-                <MessageSquare className="h-4 w-4" />
-                二圣发言概率
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/binance-speech-probability"
-              >
-                <MessageSquare className="h-4 w-4" />
-                币安系发言概率
-              </Link>
-              <Link
-                className="flex items-center gap-3 rounded-lg px-3 py-2 text-gray-500 transition-all hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800"
-                href="/bundle-finder"
-              >
-                <Wallet className="h-4 w-4" />
-                小号查询
-              </Link>
-            </div>
-          </div>
-
         </nav>
       </div>
       
