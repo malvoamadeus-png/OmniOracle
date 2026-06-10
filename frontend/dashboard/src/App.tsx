@@ -1,7 +1,7 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { supabase, supabaseConfig } from "./supabaseClient";
-import { useAccess } from "./useAccess";
 import { useTags, type TagValue } from "./useTags";
+import { useAuth } from "./useAuth";
 import { Link } from "react-router-dom";
 
 type MasterResult = {
@@ -85,7 +85,8 @@ const FILTERS: FilterDef[] = [
 ];
 
 type TagFilter = "all" | "none" | "顶尖" | "高手" | "特殊策略" | "待观察" | "排除";
-type SourceFilter = "all" | "none" | "NBA" | "CLIMATE" | "multi";
+type SourceFilter = "all" | "none" | "multi" | string;
+type CopytradeValueFilter = "all" | "none" | "high" | "medium" | "low" | "not_worth_copying";
 
 const TAG_FILTER_OPTIONS: Array<{ value: TagFilter; label: string }> = [
   { value: "all", label: "全部标签" },
@@ -97,12 +98,13 @@ const TAG_FILTER_OPTIONS: Array<{ value: TagFilter; label: string }> = [
   { value: "排除", label: "排除" },
 ];
 
-const SOURCE_FILTER_OPTIONS: Array<{ value: SourceFilter; label: string }> = [
-  { value: "all", label: "全部来源" },
-  { value: "none", label: "无来源" },
-  { value: "NBA", label: "NBA" },
-  { value: "CLIMATE", label: "CLIMATE" },
-  { value: "multi", label: "多来源(2+)" }
+const COPYTRADE_VALUE_FILTER_OPTIONS: Array<{ value: CopytradeValueFilter; label: string }> = [
+  { value: "all", label: "全部跟单价值" },
+  { value: "none", label: "无跟单价值" },
+  { value: "high", label: "高" },
+  { value: "medium", label: "中" },
+  { value: "low", label: "低" },
+  { value: "not_worth_copying", label: "不值得跟单" },
 ];
 
 function parseSourceTags(raw: string | null | undefined): string[] {
@@ -123,9 +125,25 @@ function parseSourceTags(raw: string | null | undefined): string[] {
 }
 
 function sourceColor(source: string): string {
-  if (source === "NBA") return "#ff7a00";
-  if (source === "CLIMATE") return "#2e9f57";
-  return "#666";
+  const fixed: Record<string, string> = {
+    NBA: "#ff7a00",
+    NHL: "#2d6cdf",
+    MLB: "#cc4b37",
+    SOCCER: "#118a55",
+    CBB: "#805ad5",
+    CLIMATE: "#2e9f57",
+    CRICKET: "#c05621",
+    LOL: "#8e44ad",
+    CS2: "#00838f",
+    "15M": "#b7791f",
+    "1H": "#d53f8c",
+    UCL: "#3949ab",
+  };
+  if (fixed[source]) return fixed[source];
+  const palette = ["#0f766e", "#2563eb", "#b45309", "#7c3aed", "#be123c", "#0284c7", "#4d7c0f", "#c2410c"];
+  let hash = 0;
+  for (let i = 0; i < source.length; i += 1) hash = (hash * 31 + source.charCodeAt(i)) >>> 0;
+  return palette[hash % palette.length];
 }
 
 function tagColor(tag: TagValue | undefined) {
@@ -156,6 +174,15 @@ function fmtPct(v: number | null | undefined) {
 function shortAddress(address: string) {
   if (!address || address.length <= 12) return address;
   return `${address.slice(0, 6)}…${address.slice(-4)}`;
+}
+
+function copytradeValueLabel(level: string | null | undefined) {
+  if (!level) return "-";
+  if (level === "high") return "高";
+  if (level === "medium") return "中";
+  if (level === "low") return "低";
+  if (level === "not_worth_copying") return "不值得跟单";
+  return level;
 }
 
 function emptyTaggedRow(address: string): AddressMetric {
@@ -436,8 +463,8 @@ function RadarChart(props: { title: string; metrics: MetricDef[]; rows: AddressM
 }
 
 export function App() {
-  const { isAdvanced } = useAccess();
-  const { tags, setTag } = useTags();
+  const { user, isAdmin, loading: loadingAuth, signInWithGoogle, signOut } = useAuth();
+  const { tags, saveError, setTag } = useTags();
   const [lastRun, setLastRun] = useState<MasterResult | null>(null);
   const [rows, setRows] = useState<AddressMetric[]>([]);
   const [filters, setFilters] = useState<ActiveFilter[]>([
@@ -454,6 +481,7 @@ export function App() {
   const [metricKeys, setMetricKeys] = useState<MetricKey[]>(["total_pnl", "roi", "profit_factor", "max_drawdown", "sharpe"]);
   const [tagFilter, setTagFilter] = useState<TagFilter>("all");
   const [sourceFilter, setSourceFilter] = useState<SourceFilter>("all");
+  const [copytradeValueFilter, setCopytradeValueFilter] = useState<CopytradeValueFilter>("all");
   const [showChartPanel, setShowChartPanel] = useState(false);
   const [visibleCount, setVisibleCount] = useState(300);
   const [leftWidth, setLeftWidth] = useState<number>(() => {
@@ -495,6 +523,21 @@ export function App() {
     for (const r of rows) out[r.address.toLowerCase()] = parseSourceTags(r.source_tags);
     return out;
   }, [rows]);
+
+  const sourceFilterOptions = useMemo(() => {
+    const seen = new Set<string>();
+    for (const values of Object.values(sourceTagsByAddress)) {
+      for (const value of values) seen.add(value);
+    }
+    return [
+      { value: "all", label: "全部来源" },
+      { value: "none", label: "无来源" },
+      { value: "multi", label: "多来源(2+)" },
+      ...Array.from(seen)
+        .sort((a, b) => a.localeCompare(b))
+        .map((value) => ({ value, label: value })),
+    ];
+  }, [sourceTagsByAddress]);
 
   const refreshAll = async () => {
     if (!supabase) return;
@@ -596,6 +639,9 @@ export function App() {
       const addressKey = r.address.toLowerCase();
       if (BLACKLISTED_ADDRESSES.has(addressKey)) return false;
       const tag = tags[addressKey];
+      const hasManualTag = Boolean(tag);
+      const hasHighEnoughPnl = typeof r.total_pnl === "number" && Number.isFinite(r.total_pnl) && r.total_pnl >= 80000;
+      if (!hasManualTag && !hasHighEnoughPnl) return false;
       if (tagFilter === "none") {
         if (tag) return false;
       } else if (tagFilter !== "all") {
@@ -608,6 +654,12 @@ export function App() {
         if (sourceTags.length < 2) return false;
       } else if (sourceFilter !== "all") {
         if (!sourceTags.includes(sourceFilter)) return false;
+      }
+      const valueLevel = r.copytrade_value_level;
+      if (copytradeValueFilter === "none") {
+        if (valueLevel) return false;
+      } else if (copytradeValueFilter !== "all") {
+        if (valueLevel !== copytradeValueFilter) return false;
       }
       return filters.every((f) => {
         const threshRaw = f.value.trim();
@@ -623,6 +675,9 @@ export function App() {
     });
     const key = sortKey;
     base.sort((a, b) => {
+      const aTagged = Boolean(tags[a.address.toLowerCase()]);
+      const bTagged = Boolean(tags[b.address.toLowerCase()]);
+      if (aTagged !== bTagged) return aTagged ? -1 : 1;
       const av = a[key];
       const bv = b[key];
       const an = typeof av === "number" ? av : null;
@@ -634,11 +689,11 @@ export function App() {
       return sortDesc ? (an > bn ? -1 : 1) : an < bn ? -1 : 1;
     });
     return base;
-  }, [displayRows, tags, tagFilter, sourceFilter, filters, sortKey, sortDesc, sourceTagsByAddress, filterDefByKey]);
+  }, [displayRows, tags, tagFilter, sourceFilter, copytradeValueFilter, filters, sortKey, sortDesc, sourceTagsByAddress, filterDefByKey]);
 
   useEffect(() => {
     setVisibleCount(300);
-  }, [filters, tagFilter, sourceFilter, sortKey, sortDesc, displayRows.length]);
+  }, [filters, tagFilter, sourceFilter, copytradeValueFilter, sortKey, sortDesc, displayRows.length]);
 
   const visibleRows = useMemo(() => {
     return filtered.slice(0, visibleCount);
@@ -676,7 +731,27 @@ export function App() {
           >
             Leader 归因页
           </Link>
-          <div style={{ fontSize: 12, color: "#666" }}>{loadingRows ? "加载数据…" : `${rows.length} 地址`}</div>
+          <div style={{ fontSize: 12, color: "#666" }}>{loadingRows ? "加载数据…" : `${filtered.length} 显示 / ${rows.length} 原始`}</div>
+          {!loadingAuth ? (
+            isAdmin ? (
+              <>
+                <div style={{ fontSize: 12, color: "#666" }}>{user?.email}</div>
+                <button
+                  onClick={() => void signOut()}
+                  style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
+                >
+                  退出标签编辑
+                </button>
+              </>
+            ) : (
+              <button
+                onClick={() => void signInWithGoogle()}
+                style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
+              >
+                Google 登录后可编辑标签
+              </button>
+            )
+          ) : null}
           <button
             onClick={() => refreshAll()}
             style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
@@ -748,6 +823,11 @@ export function App() {
               <div style={{ fontWeight: 600 }}>地址列表（可勾选）</div>
               <div style={{ fontSize: 12, color: "#666" }}>已选 {selectedRows.length} / 显示 {visibleRows.length} / 命中 {filtered.length}</div>
             </div>
+            {saveError ? (
+              <div style={{ marginTop: 8, fontSize: 12, color: "#b42318" }}>
+                标签保存失败：{saveError}
+              </div>
+            ) : null}
             <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 6 }}>
               {filters.map((f) => (
                 <div key={f.id} style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap" }}>
@@ -813,9 +893,20 @@ export function App() {
                 onChange={(e) => setSourceFilter(e.target.value as SourceFilter)}
                 style={{ padding: "4px 6px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
               >
-                {SOURCE_FILTER_OPTIONS.map((o) => (
+                {sourceFilterOptions.map((o) => (
                   <option key={o.value} value={o.value}>
                     市场来源：{o.label}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={copytradeValueFilter}
+                onChange={(e) => setCopytradeValueFilter(e.target.value as CopytradeValueFilter)}
+                style={{ padding: "4px 6px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
+              >
+                {COPYTRADE_VALUE_FILTER_OPTIONS.map((o) => (
+                  <option key={o.value} value={o.value}>
+                    跟单价值：{o.label}
                   </option>
                 ))}
               </select>
@@ -922,12 +1013,12 @@ export function App() {
                           {tags[r.address.toLowerCase()]}
                         </span>
                       ) : null}
-                      {isAdvanced ? (
+                      {isAdmin ? (
                         <select
                           value={tags[r.address.toLowerCase()] ?? ""}
-                          onChange={(e) => {
+                          onChange={async (e) => {
                             const v = e.target.value;
-                            setTag(r.address, v === "" ? null : v as TagValue, "advanced-password");
+                            await setTag(r.address, v === "" ? null : (v as TagValue), user?.email ?? undefined);
                           }}
                           style={{ marginLeft: 6, fontSize: 10, padding: "1px 4px", borderRadius: 4, border: "1px solid #ddd" }}
                         >
@@ -966,9 +1057,7 @@ export function App() {
                     <td style={{ padding: 6, textAlign: "right" }}>{fmtAdaptive(r.total_pnl, 2)}</td>
                     <td style={{ padding: 6, textAlign: "right" }}>{fmtAdaptive(r.ct_score_total_100, 1)}</td>
                     <td style={{ padding: 6 }}>
-                      {r.copytrade_value_level === "not_worth_copying"
-                        ? "不值得跟单"
-                        : r.copytrade_value_level || "-"}
+                      {copytradeValueLabel(r.copytrade_value_level)}
                       {r.copytrade_value_exclusion_reason ? (
                         <div style={{ fontSize: 10, color: "#999", marginTop: 2 }}>
                           {r.copytrade_value_exclusion_reason}
