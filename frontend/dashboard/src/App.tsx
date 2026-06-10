@@ -623,19 +623,11 @@ export function App() {
     });
     const key = sortKey;
     base.sort((a, b) => {
-      const aTag = tags[a.address.toLowerCase()];
-      const bTag = tags[b.address.toLowerCase()];
-      if (tagFilter === "all" && Boolean(aTag) !== Boolean(bTag)) {
-        return aTag ? -1 : 1;
-      }
       const av = a[key];
       const bv = b[key];
       const an = typeof av === "number" ? av : null;
       const bn = typeof bv === "number" ? bv : null;
-      if (an == null && bn == null) {
-        if (aTag && bTag && aTag !== bTag) return aTag.localeCompare(bTag, "zh-Hans-CN");
-        return a.address.localeCompare(b.address);
-      }
+      if (an == null && bn == null) return 0;
       if (an == null) return 1;
       if (bn == null) return -1;
       if (an === bn) return 0;
@@ -684,9 +676,7 @@ export function App() {
           >
             Leader 归因页
           </Link>
-          <div style={{ fontSize: 12, color: "#666" }}>
-            {loadingRows ? "加载数据…" : `${displayRows.length} 地址 / ${Object.keys(tags).length} 标签`}
-          </div>
+          <div style={{ fontSize: 12, color: "#666" }}>{loadingRows ? "加载数据…" : `${rows.length} 地址`}</div>
           <button
             onClick={() => refreshAll()}
             style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
