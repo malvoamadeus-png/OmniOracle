@@ -1,7 +1,6 @@
 ﻿import React, { useEffect, useMemo, useRef, useState } from "react";
 import { supabase, supabaseConfig } from "./supabaseClient";
 import { useTags, type TagValue } from "./useTags";
-import { useAuth } from "./useAuth";
 import { Link } from "react-router-dom";
 
 type MasterResult = {
@@ -463,7 +462,6 @@ function RadarChart(props: { title: string; metrics: MetricDef[]; rows: AddressM
 }
 
 export function App() {
-  const { user, isAdmin, loading: loadingAuth, signInWithGoogle, signOut } = useAuth();
   const { tags, saveError, setTag } = useTags();
   const [lastRun, setLastRun] = useState<MasterResult | null>(null);
   const [rows, setRows] = useState<AddressMetric[]>([]);
@@ -732,26 +730,6 @@ export function App() {
             Leader 归因页
           </Link>
           <div style={{ fontSize: 12, color: "#666" }}>{loadingRows ? "加载数据…" : `${filtered.length} 显示 / ${rows.length} 原始`}</div>
-          {!loadingAuth ? (
-            isAdmin ? (
-              <>
-                <div style={{ fontSize: 12, color: "#666" }}>{user?.email}</div>
-                <button
-                  onClick={() => void signOut()}
-                  style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
-                >
-                  退出标签编辑
-                </button>
-              </>
-            ) : (
-              <button
-                onClick={() => void signInWithGoogle()}
-                style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
-              >
-                Google 登录后可编辑标签
-              </button>
-            )
-          ) : null}
           <button
             onClick={() => refreshAll()}
             style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
@@ -1013,23 +991,21 @@ export function App() {
                           {tags[r.address.toLowerCase()]}
                         </span>
                       ) : null}
-                      {isAdmin ? (
-                        <select
-                          value={tags[r.address.toLowerCase()] ?? ""}
-                          onChange={async (e) => {
-                            const v = e.target.value;
-                            await setTag(r.address, v === "" ? null : (v as TagValue), user?.email ?? undefined);
-                          }}
-                          style={{ marginLeft: 6, fontSize: 10, padding: "1px 4px", borderRadius: 4, border: "1px solid #ddd" }}
-                        >
-                          <option value="">无标签</option>
-                          <option value="顶尖">顶尖</option>
-                          <option value="高手">高手</option>
-                          <option value="特殊策略">特殊策略</option>
-                          <option value="待观察">待观察</option>
-                          <option value="排除">排除</option>
-                        </select>
-                      ) : null}
+                      <select
+                        value={tags[r.address.toLowerCase()] ?? ""}
+                        onChange={async (e) => {
+                          const v = e.target.value;
+                          await setTag(r.address, v === "" ? null : (v as TagValue));
+                        }}
+                        style={{ marginLeft: 6, fontSize: 10, padding: "1px 4px", borderRadius: 4, border: "1px solid #ddd" }}
+                      >
+                        <option value="">无标签</option>
+                        <option value="顶尖">顶尖</option>
+                        <option value="高手">高手</option>
+                        <option value="特殊策略">特殊策略</option>
+                        <option value="待观察">待观察</option>
+                        <option value="排除">排除</option>
+                      </select>
                     </td>
                     <td style={{ padding: 6 }}>
                       {(sourceTagsByAddress[r.address] ?? []).length ? (

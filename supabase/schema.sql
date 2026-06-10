@@ -312,7 +312,7 @@ end $$;
 grant select on public.copytrade_compare_daily_summary to anon, authenticated;
 grant select on public.copytrade_compare_daily_market_leg to anon, authenticated;
 
--- address_tags: 管理员给地址打标签
+-- address_tags: 地址标签，当前为公开可编辑
 create table if not exists public.address_tags (
   address text primary key,
   tag text not null check (tag in ('顶尖', '高手', '特殊策略', '待观察', '排除')),
@@ -327,6 +327,9 @@ alter table public.address_tags
 
 alter table public.address_tags enable row level security;
 
+drop policy if exists admin_write_address_tags on public.address_tags;
+drop policy if exists public_write_address_tags on public.address_tags;
+
 do $$
 begin
   if not exists (
@@ -335,16 +338,16 @@ begin
     create policy public_read_address_tags on public.address_tags for select using (true);
   end if;
   if not exists (
-    select 1 from pg_policies where schemaname='public' and tablename='address_tags' and policyname='admin_write_address_tags'
+    select 1 from pg_policies where schemaname='public' and tablename='address_tags' and policyname='public_write_address_tags'
   ) then
-    create policy admin_write_address_tags on public.address_tags
-      for all using (auth.jwt() ->> 'email' = 'malvoamadeus@gmail.com')
-      with check (auth.jwt() ->> 'email' = 'malvoamadeus@gmail.com');
+    create policy public_write_address_tags on public.address_tags
+      for all using (true)
+      with check (true);
   end if;
 end $$;
 
 grant select on public.address_tags to anon, authenticated;
-grant insert, update, delete on public.address_tags to authenticated;
+grant insert, update, delete on public.address_tags to anon, authenticated;
 
 -- ============================================================================
 -- Migration: 添加 account_name 到 copytrade 归因表（已有数据库需手动执行）
