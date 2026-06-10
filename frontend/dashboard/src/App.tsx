@@ -83,14 +83,13 @@ const FILTERS: FilterDef[] = [
   { key: "equity_r2", label: "R²", format: "num" },
 ];
 
-type TagFilter = "all" | "none" | "顶尖" | "高手" | "特殊策略" | "待观察" | "排除";
+type TagFilter = "all" | "none" | "高手" | "特殊策略" | "待观察" | "排除";
 type SourceFilter = "all" | "none" | "multi" | string;
 type CopytradeValueFilter = "all" | "none" | "high" | "medium" | "low" | "not_worth_copying";
 
 const TAG_FILTER_OPTIONS: Array<{ value: TagFilter; label: string }> = [
   { value: "all", label: "全部标签" },
   { value: "none", label: "无标签" },
-  { value: "顶尖", label: "顶尖" },
   { value: "高手", label: "高手" },
   { value: "特殊策略", label: "特殊策略" },
   { value: "待观察", label: "待观察" },
@@ -146,7 +145,6 @@ function sourceColor(source: string): string {
 }
 
 function tagColor(tag: TagValue | undefined) {
-  if (tag === "顶尖") return "#d4a017";
   if (tag === "高手") return "#2d6cdf";
   if (tag === "特殊策略") return "#9b59b6";
   if (tag === "待观察") return "#8a6d3b";
@@ -985,7 +983,6 @@ export function App() {
                         style={{ marginLeft: 6, fontSize: 10, padding: "1px 4px", borderRadius: 4, border: "1px solid #ddd" }}
                       >
                         <option value="">无标签</option>
-                        <option value="顶尖">顶尖</option>
                         <option value="高手">高手</option>
                         <option value="特殊策略">特殊策略</option>
                         <option value="待观察">待观察</option>
