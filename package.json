@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "supabase:apply-schema": "bash supabase/run_sql.sh supabase/schema.sql",
+    "supabase:sync": "python3 supabase/sync_to_supabase.py"
   },
   "keywords": [],
   "author": "",
