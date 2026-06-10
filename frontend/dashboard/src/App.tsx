@@ -618,28 +618,16 @@ export function App() {
   ]);
 
   const displayRows = useMemo(() => {
-    const byAddress = new Map<string, AddressMetric>();
-    for (const row of rows) {
-      const key = row.address.toLowerCase();
-      byAddress.set(key, { ...row, address: key });
-    }
-    for (const address of Object.keys(tags)) {
-      const key = address.toLowerCase();
-      if (!byAddress.has(key)) {
-        byAddress.set(key, emptyTaggedRow(key));
-      }
-    }
-    return Array.from(byAddress.values());
-  }, [rows, tags]);
+    return rows.map((row) => ({ ...row, address: row.address.toLowerCase() }));
+  }, [rows]);
 
   const filtered = useMemo(() => {
     const base = displayRows.filter((r) => {
       const addressKey = r.address.toLowerCase();
       if (BLACKLISTED_ADDRESSES.has(addressKey)) return false;
       const tag = tags[addressKey];
-      const hasManualTag = Boolean(tag);
       const hasHighEnoughPnl = typeof r.total_pnl === "number" && Number.isFinite(r.total_pnl) && r.total_pnl >= 80000;
-      if (!hasManualTag && !hasHighEnoughPnl) return false;
+      if (!hasHighEnoughPnl) return false;
       if (tagFilter === "none") {
         if (tag) return false;
       } else if (tagFilter !== "all") {
@@ -673,9 +661,6 @@ export function App() {
     });
     const key = sortKey;
     base.sort((a, b) => {
-      const aTagged = Boolean(tags[a.address.toLowerCase()]);
-      const bTagged = Boolean(tags[b.address.toLowerCase()]);
-      if (aTagged !== bTagged) return aTagged ? -1 : 1;
       const av = a[key];
       const bv = b[key];
       const an = typeof av === "number" ? av : null;
