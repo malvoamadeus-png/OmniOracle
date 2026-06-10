@@ -436,7 +436,7 @@ function RadarChart(props: { title: string; metrics: MetricDef[]; rows: AddressM
 }
 
 export function App() {
-  const { role, isAdvanced, loadingAccess, signOut } = useAccess();
+  const { isAdvanced } = useAccess();
   const { tags, setTag } = useTags();
   const [lastRun, setLastRun] = useState<MasterResult | null>(null);
   const [rows, setRows] = useState<AddressMetric[]>([]);
@@ -676,14 +676,6 @@ export function App() {
           >
             Leader 归因页
           </Link>
-          {!isAdvanced ? (
-            <Link
-              to="/login?required=advanced&next=%2Fleader-attribution"
-              style={{ fontSize: 12, color: "#b06000", textDecoration: "none" }}
-            >
-              输入密码2解锁高级页
-            </Link>
-          ) : null}
           <div style={{ fontSize: 12, color: "#666" }}>{loadingRows ? "加载数据…" : `${rows.length} 地址`}</div>
           <button
             onClick={() => refreshAll()}
@@ -691,33 +683,6 @@ export function App() {
           >
             刷新
           </button>
-          {role ? (
-            <>
-              <span style={{ fontSize: 12, color: "#333" }}>
-                {isAdvanced ? <span style={{ color: "#d4a017", fontWeight: 600 }}>高级权限</span> : "基础权限"}
-                {loadingAccess ? <span style={{ marginLeft: 6, color: "#999" }}>校验中...</span> : null}
-              </span>
-              <button
-                onClick={() => {
-                  void signOut().then(() => {
-                    window.location.assign("/login");
-                  });
-                }}
-                style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
-              >
-                登出
-              </button>
-            </>
-          ) : (
-            <button
-              onClick={() => {
-                window.location.assign("/login");
-              }}
-              style={{ fontSize: 12, padding: "4px 8px", borderRadius: 6, border: "1px solid #ddd", background: "#fff" }}
-            >
-              前往登录
-            </button>
-          )}
         </div>
       </div>
 
