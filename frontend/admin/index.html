@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copytrade 管理</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; color: #333; }
+.container { display: flex; height: 100vh; }
+.sidebar { width: 260px; background: #1a1a2e; color: #eee; padding: 16px; overflow-y: auto; flex-shrink: 0; }
+.sidebar h2 { font-size: 16px; margin-bottom: 12px; color: #a0a0c0; }
+.acct-card { background: #16213e; border-radius: 8px; padding: 10px 12px; margin-bottom: 8px; cursor: pointer; border: 2px solid transparent; transition: border-color .15s; }
+.acct-card:hover { border-color: #4a6fa5; }
+.acct-card.active { border-color: #6c9bff; }
+.acct-card .name { font-weight: 600; font-size: 14px; }
+.acct-card .meta { font-size: 11px; color: #8899aa; margin-top: 4px; }
+.acct-card .cred { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 4px; }
+.cred-ok { background: #4caf50; }
+.cred-no { background: #f44336; }
+.btn-row { margin-top: 12px; display: flex; gap: 8px; }
+.btn { padding: 6px 14px; border: none; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500; }
+.btn-primary { background: #4a6fa5; color: #fff; }
+.btn-danger { background: #c0392b; color: #fff; }
+.btn-secondary { background: #555; color: #fff; }
+.btn-sm { padding: 4px 10px; font-size: 12px; }
+.btn:hover { opacity: .85; }
+.main { flex: 1; padding: 24px; overflow-y: auto; }
+.main h2 { font-size: 20px; margin-bottom: 16px; }
+.section { background: #fff; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+.section h3 { font-size: 15px; margin-bottom: 12px; color: #555; border-bottom: 1px solid #eee; padding-bottom: 8px; display: flex; justify-content: space-between; align-items: center; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; }
+.form-group { display: flex; flex-direction: column; }
+.form-group label { font-size: 12px; color: #777; margin-bottom: 3px; }
+.form-group input, .form-group select { padding: 7px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; }
+.form-group.is-inactive label { color: #b0b0b0; }
+.form-group.is-inactive input, .form-group.is-inactive select { background: #f3f4f6; border-color: #e4e7ec; color: #9aa0a6; cursor: not-allowed; }
+.form-group.is-inactive input::placeholder { color: transparent; }
+.save-bar { margin-top: 16px; display: flex; gap: 10px; align-items: center; }
+.save-bar .msg { font-size: 13px; color: #4caf50; }
+.empty { text-align: center; color: #999; margin-top: 100px; font-size: 15px; }
+.leader-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.leader-table th { text-align: left; padding: 6px 8px; background: #f8f8f8; font-weight: 500; color: #666; font-size: 12px; }
+.leader-table td { padding: 6px 8px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
+.leader-table tr:hover { background: #fafafa; }
+.leader-addr { font-family: monospace; font-size: 12px; color: #333; }
+.leader-summary { font-size: 11px; color: #888; }
+.leader-edit-panel { background: #f9f9fb; border: 1px solid #e8e8f0; border-radius: 8px; padding: 14px; margin: 6px 0; }
+.leader-edit-panel .form-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8px 14px; }
+.leader-edit-panel .form-group label { font-size: 11px; }
+.leader-edit-panel .form-group input, .leader-edit-panel .form-group select { padding: 5px 8px; font-size: 12px; }
+.add-leader-row { display: flex; gap: 8px; margin-top: 10px; }
+.add-leader-row input { flex: 1; padding: 7px 10px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; font-family: monospace; }
+.checkbox-group { display: flex; flex-wrap: wrap; gap: 8px; padding-top: 4px; }
+.checkbox-option { display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border: 1px solid #d8dce5; border-radius: 999px; background: #f8f9fc; font-size: 12px; color: #445; cursor: pointer; }
+.checkbox-option input { width: auto; margin: 0; padding: 0; }
+.checkbox-group.is-disabled { opacity: .55; pointer-events: none; }
+.checkbox-hint { font-size: 11px; color: #889; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="sidebar">
+    <h2>账号列表</h2>
+    <div id="acct-list"></div>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="newAccount()">+ 新建账号</button>
+      <button class="btn btn-secondary" onclick="editDefaults()">默认参数</button>
+    </div>
+  </div>
+  <div class="main" id="main-panel">
+    <div class="empty">选择左侧账号或新建一个</div>
+  </div>
+</div>
+
+<script>
+const API = window.COPYTRADE_ADMIN_API || '';
+let accounts = [];
+let currentName = null;
+let currentCfg = null;
+let currentEnvMeta = null;
+let currentDefaults = null;
+let editingLeader = null;
+const CRYPTO_TIMEFRAME_OPTIONS = ['5m', '15m', '1h', '4h', '1d', '1w'];
+const DEPRECATED_CONFIG_KEYS = new Set([
+  'delayed_follow_enabled',
+  'delayed_follow_agg_threshold',
+  'delayed_follow_agg_window_minutes',
+  'delayed_follow_skip_n',
+  'delayed_follow_copy_mode',
+  'delayed_follow_fixed_usd',
+  'delayed_follow_proportional_pct',
+  'delayed_follow_proportional_cap',
+  'delayed_follow_max_follows',
+  'additional_usd_amount',
+  'additional_proportional_cap',
+  'fixed_shares',
+  'fixed_shares_count',
+  'super_follow_enabled',
+  'super_follow_market_budget_usd',
+  'super_follow_price_chase_enabled',
+  'super_follow_price_chase_cap_abs',
+  'super_follow_price_chase_cap_bps',
+  'super_follow_price_chase_taper_start_price',
+  'super_follow_price_chase_disable_above_price',
+  'take_profit_pct',
+]);
+
+const DEFAULT_CFG = {
+  env_suffix: '', wallet_type: 'proxy', leader_addresses: [], leader_overrides: {},
+  copy_mode: 'fixed_usd', fixed_usd_amount: 100,
+  proportional_pct: 0.10, proportional_max_cap: 500,
+  min_trade_size_usd: 500, min_price: 0.05, max_price: 0.90,
+  exit_strategy: 'mirror_sell',
+  auto_tp_enabled: false,
+  market_limit_mode: 'global_once', max_entries_per_market: 0, pricing_mode: 'aggressive',
+  poll_interval_s: 15, maker_like_enabled: true, maker_like_window_minutes: 360,
+  aggregation_mode: 'strict_price',
+  maker_like_max_gap_minutes: 30, maker_like_score_threshold: 0.60,
+  execution_episode_window_minutes: 20,
+  execution_episode_max_gap_minutes: 5,
+  execution_episode_price_band_abs: 0.03,
+  execution_episode_price_band_bps: 500,
+  execution_episode_min_fill_count: 2,
+  crypto_only_enabled: false,
+  crypto_allowed_timeframes: [],
+};
+
+const MODE_CHAIN_KEYS = new Set([
+  'copy_mode',
+  'market_limit_mode',
+  'maker_like_enabled',
+  'aggregation_mode',
+]);
+
+const GLOBAL_LEADER_REFRESH_KEYS = new Set([
+  'aggregation_mode',
+  'crypto_only_enabled',
+  'crypto_allowed_timeframes',
+  'maker_like_window_minutes',
+  'maker_like_max_gap_minutes',
+  'maker_like_score_threshold',
+  'execution_episode_window_minutes',
+  'execution_episode_max_gap_minutes',
+  'execution_episode_price_band_abs',
+  'execution_episode_price_band_bps',
+  'execution_episode_min_fill_count',
+]);
+
+const GLOBAL_DYNAMIC_FIELDS = {
+  fixed_usd_amount: { id: 'f-fixed_usd', active: (s) => s.copy_mode === 'fixed_usd' },
+  proportional_pct: { id: 'f-proportional_pct', active: (s) => s.copy_mode === 'proportional' },
+  proportional_max_cap: { id: 'f-proportional_cap', active: (s) => s.copy_mode === 'proportional' },
+  max_entries_per_market: { id: 'f-max_entries', active: (s) => s.market_limit_mode === 'unlimited' },
+  maker_like_window_minutes: { id: 'f-maker_window', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'strict_price' },
+  maker_like_max_gap_minutes: { id: 'f-maker_gap', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'strict_price' },
+  maker_like_score_threshold: { id: 'f-score', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'strict_price' },
+  execution_episode_window_minutes: { id: 'f-episode_window', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'execution_episode' },
+  execution_episode_max_gap_minutes: { id: 'f-episode_gap', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'execution_episode' },
+  execution_episode_price_band_abs: { id: 'f-episode_band_abs', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'execution_episode' },
+  execution_episode_price_band_bps: { id: 'f-episode_band_bps', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'execution_episode' },
+  execution_episode_min_fill_count: { id: 'f-episode_min_fill_count', active: (s) => s.maker_like_enabled === true && s.aggregation_mode === 'execution_episode' },
+};
+
+function deepClone(obj) { return JSON.parse(JSON.stringify(obj)); }
+function sanitizeConfigObject(obj) {
+  if (!obj || typeof obj !== 'object') return obj;
+  for (const key of DEPRECATED_CONFIG_KEYS) delete obj[key];
+  if (obj.leader_overrides && typeof obj.leader_overrides === 'object') {
+    for (const [addr, ov] of Object.entries(obj.leader_overrides)) {
+      if (!ov || typeof ov !== 'object') continue;
+      for (const key of DEPRECATED_CONFIG_KEYS) delete ov[key];
+      delete ov.auto_tp_enabled;
+      if (Object.keys(ov).length === 0) delete obj.leader_overrides[addr];
+    }
+  }
+  return obj;
+}
+function v(val) { return val === undefined || val === null ? '' : String(val); }
+function shortAddr(a) { return a.slice(0, 8) + '...' + a.slice(-6); }
+
+function modeLabel(mode) {
+  if (mode === 'fixed_usd') return '固定金额';
+  if (mode === 'proportional') return '按比例';
+  if (mode === 'global_once') return '全局一次';
+  if (mode === 'per_address_once') return '每地址一次';
+  if (mode === 'unlimited') return '无限制';
+  return String(mode || '');
+}
+
+function aggregationModeLabel(mode) {
+  if (mode === 'execution_episode') return 'Execution Episode';
+  return '严格价位';
+}
+
+function pctLabel(val) {
+  const n = Number(val);
+  if (!Number.isFinite(n)) return '';
+  return (n * 100).toFixed(2).replace(/\.00$/, '').replace(/(\.\d)0$/, '$1') + '%';
+}
+
+function pctInputValue(val) {
+  const n = Number(val);
+  if (!Number.isFinite(n)) return '';
+  return (n * 100).toFixed(4).replace(/\.?0+$/, '');
+}
+
+function normalizeCryptoTimeframes(value) {
+  const raw = Array.isArray(value)
+    ? value
+    : (typeof value === 'string' ? value.split(',') : []);
+  const out = [];
+  const seen = new Set();
+  for (const item of raw) {
+    const tf = String(item || '').trim();
+    if (!CRYPTO_TIMEFRAME_OPTIONS.includes(tf) || seen.has(tf)) continue;
+    out.push(tf);
+    seen.add(tf);
+  }
+  return out;
+}
+
+function formatTimeframes(value) {
+  const items = normalizeCryptoTimeframes(value);
+  return items.length ? items.join('/') : '未选择';
+}
+
+function renderCryptoTimeframeCheckboxes(selected, onchangeBuilder, disabled = false) {
+  const picked = normalizeCryptoTimeframes(selected);
+  const cls = disabled ? 'checkbox-group is-disabled' : 'checkbox-group';
+  return `<div class="${cls}">` + CRYPTO_TIMEFRAME_OPTIONS.map((tf) => `
+    <label class="checkbox-option">
+      <input type="checkbox" ${picked.includes(tf) ? 'checked' : ''} ${disabled ? 'disabled' : ''} onchange="${onchangeBuilder(tf)}">
+      <span>${tf}</span>
+    </label>
+  `).join('') + `</div>`;
+}
+
+function updateCryptoTimeframeList(value, tf, checked) {
+  const next = new Set(normalizeCryptoTimeframes(value));
+  if (checked) next.add(tf);
+  else next.delete(tf);
+  return CRYPTO_TIMEFRAME_OPTIONS.filter((item) => next.has(item));
+}
+
+function cryptoFollowLabel(enabled, timeframes) {
+  return enabled ? `跟随全局 (${formatTimeframes(timeframes)})` : '跟随全局 (关闭)';
+}
+
+function leaderCryptoSummary(ov, st) {
+  const followEnabled = ov.crypto_only_enabled === undefined;
+  const followTimeframes = ov.crypto_allowed_timeframes === undefined;
+  if (followEnabled && followTimeframes) return 'Crypto 跟随全局';
+  if (!st.crypto_only_enabled) return 'Crypto关闭';
+  return `Crypto ${formatTimeframes(st.crypto_allowed_timeframes)}`;
+}
+
+function setSaveMessage(message, isError = false) {
+  const el = document.getElementById('save-msg');
+  if (!el) return;
+  el.style.color = isError ? '#c0392b' : '#4caf50';
+  el.textContent = message;
+  if (!message) return;
+  const expected = message;
+  setTimeout(() => {
+    if (el.textContent === expected) el.textContent = '';
+  }, isError ? 4000 : 2000);
+}
+
+async function ensureOk(response) {
+  const text = await response.text();
+  if (response.ok) {
+    if (!text) return null;
+    try {
+      return JSON.parse(text);
+    } catch {
+      return text;
+    }
+  }
+
+  let message = `请求失败 (${response.status})`;
+  if (text) {
+    try {
+      const payload = JSON.parse(text);
+      if (payload && typeof payload === 'object') {
+        message = payload.detail || payload.message || text;
+      } else if (typeof payload === 'string' && payload) {
+        message = payload;
+      } else {
+        message = text;
+      }
+    } catch {
+      message = text;
+    }
+  }
+  throw new Error(message);
+}
+
+function parseTomlValue(raw) {
+  const val = raw.trim();
+  if (val.startsWith('[') && val.endsWith(']')) {
+    const body = val.slice(1, -1).trim();
+    if (!body) return [];
+    const items = [];
+    let current = '';
+    let quote = '';
+    let escape = false;
+    for (const ch of body) {
+      if (quote) {
+        current += ch;
+        if (escape) {
+          escape = false;
+          continue;
+        }
+        if (ch === '\\') {
+          escape = true;
+          continue;
+        }
+        if (ch === quote) quote = '';
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        current += ch;
+        continue;
+      }
+      if (ch === ',') {
+        if (current.trim()) items.push(parseTomlValue(current.trim()));
+        current = '';
+        continue;
+      }
+      current += ch;
+    }
+    if (current.trim()) items.push(parseTomlValue(current.trim()));
+    return items;
+  }
+  if (val === 'true') return true;
+  if (val === 'false') return false;
+  if (/^-?\d+\.\d+$/.test(val)) return parseFloat(val);
+  if (/^-?\d+$/.test(val)) return parseInt(val, 10);
+  return val.replace(/^["']|["']$/g, '');
+}
+
+function toTomlValue(val) {
+  if (Array.isArray(val)) {
+    return `[${val.map((item) => {
+      if (typeof item === 'string') return `"${item.replace(/"/g, '\\"')}"`;
+      if (typeof item === 'boolean') return item ? 'true' : 'false';
+      return String(item);
+    }).join(', ')}]`;
+  }
+  if (typeof val === 'string') return `"${val.replace(/"/g, '\\"')}"`;
+  if (typeof val === 'boolean') return val ? 'true' : 'false';
+  return String(val);
+}
+
+async function getServerDefaults() {
+  if (currentDefaults && typeof currentDefaults === 'object') return currentDefaults;
+  try {
+    const resp = await fetch(API + '/api/defaults');
+    const cfg = await resp.json();
+    currentDefaults = cfg && typeof cfg === 'object' ? cfg : {};
+  } catch (e) {
+    currentDefaults = {};
+  }
+  return currentDefaults;
+}
+
+function mergeWithDefaults(cfg, defaults = null) {
+  const baseDefaults = defaults && typeof defaults === 'object'
+    ? defaults
+    : (currentDefaults && typeof currentDefaults === 'object' ? currentDefaults : {});
+  const merged = sanitizeConfigObject({ ...deepClone(DEFAULT_CFG), ...deepClone(baseDefaults), ...(cfg || {}) });
+  merged.leader_addresses = Array.isArray(merged.leader_addresses) ? merged.leader_addresses : [];
+  merged.leader_overrides = merged.leader_overrides && typeof merged.leader_overrides === 'object' ? merged.leader_overrides : {};
+  merged.crypto_allowed_timeframes = normalizeCryptoTimeframes(merged.crypto_allowed_timeframes);
+  if (!['strict_price', 'execution_episode'].includes(merged.aggregation_mode)) merged.aggregation_mode = 'strict_price';
+  delete merged.total_capital;
+  delete merged.max_position_pct;
+  for (const ov of Object.values(merged.leader_overrides)) {
+    if (ov && typeof ov === 'object') {
+      delete ov.total_capital;
+      delete ov.max_position_pct;
+      if (Object.prototype.hasOwnProperty.call(ov, 'crypto_allowed_timeframes')) {
+        ov.crypto_allowed_timeframes = normalizeCryptoTimeframes(ov.crypto_allowed_timeframes);
+      }
+      if (Object.prototype.hasOwnProperty.call(ov, 'aggregation_mode')
+          && !['strict_price', 'execution_episode'].includes(ov.aggregation_mode)) {
+        delete ov.aggregation_mode;
+      }
+    }
+  }
+  if (!['fixed_usd', 'proportional'].includes(merged.copy_mode)) merged.copy_mode = 'fixed_usd';
+  return merged;
+}
+
+function getOverride(addr) {
+  if (!currentCfg || !currentCfg.leader_overrides) return {};
+  return currentCfg.leader_overrides[addr.toLowerCase()] || {};
+}
+
+function getGlobalEffectiveState() {
+  const cfg = currentCfg || {};
+  return {
+    copy_mode: cfg.copy_mode || 'fixed_usd',
+    market_limit_mode: cfg.market_limit_mode || 'global_once',
+    maker_like_enabled: cfg.maker_like_enabled !== false,
+    aggregation_mode: cfg.aggregation_mode === 'execution_episode' ? 'execution_episode' : 'strict_price',
+    execution_episode_window_minutes: cfg.execution_episode_window_minutes ?? 20,
+    execution_episode_max_gap_minutes: cfg.execution_episode_max_gap_minutes ?? 5,
+    execution_episode_price_band_abs: cfg.execution_episode_price_band_abs ?? 0.03,
+    execution_episode_price_band_bps: cfg.execution_episode_price_band_bps ?? 500,
+    execution_episode_min_fill_count: cfg.execution_episode_min_fill_count ?? 2,
+    crypto_only_enabled: cfg.crypto_only_enabled === true,
+    crypto_allowed_timeframes: normalizeCryptoTimeframes(cfg.crypto_allowed_timeframes),
+    pricing_mode: cfg.pricing_mode || 'aggressive',
+  };
+}
+
+function getLeaderEffectiveState(addr, ovInput = null) {
+  const ov = ovInput || getOverride(addr);
+  const g = currentCfg || {};
+  const ovCopyMode = (ov.copy_mode === 'fixed_usd' || ov.copy_mode === 'proportional') ? ov.copy_mode : undefined;
+  const selectedPricingMode = ov.pricing_mode !== undefined ? ov.pricing_mode : (g.pricing_mode || 'aggressive');
+  const makerLikeEnabled = ov.maker_like_enabled !== undefined ? ov.maker_like_enabled : (g.maker_like_enabled !== false);
+  const aggregationMode = ov.aggregation_mode === 'execution_episode'
+    ? 'execution_episode'
+    : (ov.aggregation_mode === 'strict_price'
+      ? 'strict_price'
+      : (g.aggregation_mode === 'execution_episode' ? 'execution_episode' : 'strict_price'));
+  return {
+    copy_mode: ovCopyMode !== undefined ? ovCopyMode : (g.copy_mode || 'fixed_usd'),
+    market_limit_mode: ov.market_limit_mode !== undefined ? ov.market_limit_mode : (g.market_limit_mode || 'global_once'),
+    maker_like_enabled: makerLikeEnabled,
+    aggregation_mode: aggregationMode,
+    maker_like_window_minutes: ov.maker_like_window_minutes !== undefined ? ov.maker_like_window_minutes : (g.maker_like_window_minutes ?? 360),
+    maker_like_max_gap_minutes: ov.maker_like_max_gap_minutes !== undefined ? ov.maker_like_max_gap_minutes : (g.maker_like_max_gap_minutes ?? 30),
+    maker_like_score_threshold: ov.maker_like_score_threshold !== undefined ? ov.maker_like_score_threshold : (g.maker_like_score_threshold ?? 0.6),
+    execution_episode_window_minutes: ov.execution_episode_window_minutes !== undefined ? ov.execution_episode_window_minutes : (g.execution_episode_window_minutes ?? 20),
+    execution_episode_max_gap_minutes: ov.execution_episode_max_gap_minutes !== undefined ? ov.execution_episode_max_gap_minutes : (g.execution_episode_max_gap_minutes ?? 5),
+    execution_episode_price_band_abs: ov.execution_episode_price_band_abs !== undefined ? ov.execution_episode_price_band_abs : (g.execution_episode_price_band_abs ?? 0.03),
+    execution_episode_price_band_bps: ov.execution_episode_price_band_bps !== undefined ? ov.execution_episode_price_band_bps : (g.execution_episode_price_band_bps ?? 500),
+    execution_episode_min_fill_count: ov.execution_episode_min_fill_count !== undefined ? ov.execution_episode_min_fill_count : (g.execution_episode_min_fill_count ?? 2),
+    crypto_only_enabled: ov.crypto_only_enabled !== undefined ? ov.crypto_only_enabled : (g.crypto_only_enabled === true),
+    crypto_allowed_timeframes: ov.crypto_allowed_timeframes !== undefined
+      ? normalizeCryptoTimeframes(ov.crypto_allowed_timeframes)
+      : normalizeCryptoTimeframes(g.crypto_allowed_timeframes),
+    pricing_mode: selectedPricingMode,
+  };
+}
+
+function inactiveClass(active) { return active ? 'form-group' : 'form-group is-inactive'; }
+function disabledAttr(active) { return active ? '' : 'disabled'; }
+function showIfActive(val, active) { return active ? v(val) : ''; }
+function placeholderIfActive(val, active) { return active ? v(val) : ''; }
+function showPctIfActive(val, active) { return active ? pctInputValue(val) : ''; }
+function placeholderPctIfActive(val, active) { return active ? pctInputValue(val) : ''; }
+
+async function loadAccounts() {
+  const r = await fetch(API + '/api/accounts');
+  accounts = await r.json();
+  renderSidebar();
+}
+
+function renderSidebar() {
+  const el = document.getElementById('acct-list');
+  el.innerHTML = accounts.map((a) => `
+    <div class="acct-card ${a.name === currentName ? 'active' : ''}" onclick="selectAccount('${a.name}')">
+      <div class="name">${a.name}</div>
+      <div class="meta">
+        <span class="cred ${a.has_credentials ? 'cred-ok' : 'cred-no'}"></span>
+        ${a.env_suffix} · ${(a.config.wallet_type || 'proxy').toUpperCase()} · ${(a.config.leader_addresses || []).length} leaders
+      </div>
+    </div>
+  `).join('');
+}
+function leaderSummary(addr) {
+  const ov = getOverride(addr);
+  const st = getLeaderEffectiveState(addr, ov);
+  const hasOverride = Object.keys(ov).length > 0;
+  const parts = [];
+  const cryptoText = leaderCryptoSummary(ov, st);
+
+  if (!hasOverride) {
+    return cryptoText;
+  }
+
+  parts.push(cryptoText);
+
+  if (ov.copy_mode !== undefined) parts.push(modeLabel(st.copy_mode));
+
+  if (st.copy_mode === 'fixed_usd') {
+    if (ov.fixed_usd_amount !== undefined) parts.push(`固定$${ov.fixed_usd_amount}`);
+  } else if (st.copy_mode === 'proportional') {
+    if (ov.proportional_pct !== undefined) parts.push(`比例${pctLabel(ov.proportional_pct)}`);
+    if (ov.proportional_max_cap !== undefined) parts.push(`比例上限$${ov.proportional_max_cap}`);
+  }
+
+  if (ov.market_limit_mode !== undefined) parts.push(modeLabel(st.market_limit_mode));
+  if (st.market_limit_mode === 'unlimited' && ov.max_entries_per_market !== undefined) {
+    const maxEntries = Number(ov.max_entries_per_market || 0);
+    parts.push(maxEntries > 0 ? `token最大${maxEntries}次` : '不限次数');
+  }
+  if (ov.min_trade_size_usd !== undefined) parts.push(`最小$${ov.min_trade_size_usd}`);
+
+  if (ov.pricing_mode !== undefined) {
+    if (st.pricing_mode === 'passive') parts.push('被动');
+    else parts.push(st.pricing_mode === 'original' ? '原价' : '抢单');
+  }
+
+  if (st.maker_like_enabled) {
+    if (ov.aggregation_mode !== undefined || st.aggregation_mode === 'execution_episode') {
+      parts.push(aggregationModeLabel(st.aggregation_mode));
+    }
+    if (st.aggregation_mode === 'execution_episode') {
+      if (ov.execution_episode_window_minutes !== undefined) parts.push(`Episode窗${st.execution_episode_window_minutes}m`);
+      if (ov.execution_episode_max_gap_minutes !== undefined) parts.push(`Episode间隔${st.execution_episode_max_gap_minutes}m`);
+      if (ov.execution_episode_price_band_abs !== undefined) parts.push(`价带abs=${st.execution_episode_price_band_abs}`);
+      if (ov.execution_episode_price_band_bps !== undefined) parts.push(`价带${st.execution_episode_price_band_bps}bps`);
+      if (ov.execution_episode_min_fill_count !== undefined) parts.push(`最少${st.execution_episode_min_fill_count}笔`);
+    } else {
+      if (ov.maker_like_window_minutes !== undefined) parts.push(`聚合窗${st.maker_like_window_minutes}m`);
+      if (ov.maker_like_max_gap_minutes !== undefined) parts.push(`最大间隔${st.maker_like_max_gap_minutes}m`);
+      if (ov.maker_like_score_threshold !== undefined) parts.push(`评分>=${st.maker_like_score_threshold}`);
+    }
+  } else if (ov.maker_like_enabled !== undefined) {
+    parts.push('聚合关闭');
+  }
+
+  return parts.length ? parts.join(' · ') : '有覆盖（当前模式已隐藏）';
+}
+
+function renderLeaderTable() {
+  const leaders = (currentCfg && currentCfg.leader_addresses) || [];
+  let html = '<table class="leader-table"><thead><tr><th>地址</th><th>设置</th><th>操作</th></tr></thead><tbody>';
+
+  for (const addr of leaders) {
+    const isEditing = editingLeader === addr.toLowerCase();
+    html += `<tr>
+      <td class="leader-addr">${shortAddr(addr)}</td>
+      <td class="leader-summary">${leaderSummary(addr)}</td>
+      <td>
+        <button class="btn btn-sm btn-secondary" onclick="toggleEditLeader('${addr}')">${isEditing ? '收起' : '编辑'}</button>
+        <button class="btn btn-sm btn-danger" onclick="removeLeader('${addr}')">删除</button>
+      </td>
+    </tr>`;
+    if (isEditing) html += `<tr><td colspan="3">${renderLeaderEditPanel(addr)}</td></tr>`;
+  }
+
+  html += '</tbody></table>';
+  html += `<div class="add-leader-row">
+    <input id="new-leader-input" placeholder="输入新地址 0x...">
+    <button class="btn btn-sm btn-primary" onclick="addLeader()">添加</button>
+  </div>`;
+
+  const mount = document.getElementById('leader-section-body');
+  if (mount) mount.innerHTML = html;
+}
+
+function renderLeaderEditPanel(addr) {
+  const ov = getOverride(addr);
+  const g = currentCfg || {};
+  const st = getLeaderEffectiveState(addr, ov);
+  const leaderCryptoTfSource = ov.crypto_allowed_timeframes === undefined ? 'global' : 'custom';
+  const leaderCryptoTfSelected = leaderCryptoTfSource === 'custom'
+    ? normalizeCryptoTimeframes(ov.crypto_allowed_timeframes)
+    : st.crypto_allowed_timeframes;
+  const globalCryptoLabel = cryptoFollowLabel(g.crypto_only_enabled === true, g.crypto_allowed_timeframes);
+
+  const isFixed = st.copy_mode === 'fixed_usd';
+  const isProp = st.copy_mode === 'proportional';
+  const isUnlimited = st.market_limit_mode === 'unlimited';
+  const makerOn = st.maker_like_enabled === true;
+  const aggregationMode = st.aggregation_mode === 'execution_episode' ? 'execution_episode' : 'strict_price';
+  const strictAggActive = makerOn && aggregationMode === 'strict_price';
+  const episodeAggActive = makerOn && aggregationMode === 'execution_episode';
+  const makerGlobalLabel = g.maker_like_enabled !== false ? '跟随全局 (开启)' : '跟随全局 (关闭)';
+  const aggregationModeGlobalLabel = aggregationModeLabel(g.aggregation_mode || 'strict_price');
+
+  return `<div class="leader-edit-panel"><div class="form-grid">
+    <div class="form-group"><label>碎成交聚合</label>
+      <select onchange="setOvBool('${addr}','maker_like_enabled',this.value)">
+        <option value="" ${ov.maker_like_enabled===undefined ? 'selected' : ''}>${makerGlobalLabel}</option>
+        <option value="true" ${ov.maker_like_enabled===true ? 'selected' : ''}>开启</option>
+        <option value="false" ${ov.maker_like_enabled===false ? 'selected' : ''}>关闭</option>
+      </select></div>
+
+    <div class="${inactiveClass(makerOn)}"><label>聚合模式</label>
+      <select ${disabledAttr(makerOn)} onchange="setOv('${addr}','aggregation_mode',this.value)">
+        <option value="" ${ov.aggregation_mode===undefined ? 'selected' : ''}>跟随全局 (${aggregationModeGlobalLabel})</option>
+        <option value="strict_price" ${ov.aggregation_mode==='strict_price' ? 'selected' : ''}>Maker-like</option>
+        <option value="execution_episode" ${ov.aggregation_mode==='execution_episode' ? 'selected' : ''}>Execution Episode</option>
+      </select></div>
+
+    <div class="form-group"><label>只跟 Crypto</label>
+      <select onchange="setOvBool('${addr}','crypto_only_enabled',this.value)">
+        <option value="" ${ov.crypto_only_enabled===undefined ? 'selected' : ''}>${globalCryptoLabel}</option>
+        <option value="true" ${ov.crypto_only_enabled===true ? 'selected' : ''}>开启</option>
+        <option value="false" ${ov.crypto_only_enabled===false ? 'selected' : ''}>关闭</option>
+      </select></div>
+
+    <div class="form-group"><label>Crypto 分类来源</label>
+      <select onchange="setOvCryptoTimeframeSource('${addr}',this.value)">
+        <option value="global" ${leaderCryptoTfSource==='global' ? 'selected' : ''}>${globalCryptoLabel}</option>
+        <option value="custom" ${leaderCryptoTfSource==='custom' ? 'selected' : ''}>自定义</option>
+      </select></div>
+
+    <div class="form-group" style="grid-column: span 3;"><label>Crypto 分类</label>
+      ${leaderCryptoTfSource === 'custom'
+        ? renderCryptoTimeframeCheckboxes(
+            leaderCryptoTfSelected,
+            (tf) => `toggleOvCryptoTimeframe('${addr}','${tf}', this.checked)`,
+          )
+        : `<input type="text" value="${globalCryptoLabel}" disabled>`}
+      ${leaderCryptoTfSource === 'custom' ? '<div class="checkbox-hint">只跟选中的 Crypto 市场分类（5m / 15m / 1h / 4h / 1d / 1w）。</div>' : ''}
+    </div>
+
+    <div class="form-group"><label>跟单模式</label>
+      <select onchange="setOv('${addr}','copy_mode',this.value)">
+        <option value="" ${ov.copy_mode===undefined ? 'selected' : ''}>跟随全局 (${modeLabel(g.copy_mode)})</option>
+        <option value="fixed_usd" ${ov.copy_mode==='fixed_usd' ? 'selected' : ''}>固定金额</option>
+        <option value="proportional" ${ov.copy_mode==='proportional' ? 'selected' : ''}>按比例</option>
+      </select></div>
+
+    <div class="${inactiveClass(isFixed)}"><label>固定金额 (USD)</label>
+      <input type="number" step="0.1" value="${showIfActive(ov.fixed_usd_amount, isFixed)}" placeholder="${placeholderIfActive(g.fixed_usd_amount, isFixed)}"
+        ${disabledAttr(isFixed)} onchange="setOvNum('${addr}','fixed_usd_amount',this.value)"></div>
+
+    <div class="${inactiveClass(isProp)}"><label>比例跟单 (%)</label>
+      <input type="number" step="0.01" value="${showPctIfActive(ov.proportional_pct, isProp)}" placeholder="${placeholderPctIfActive(g.proportional_pct, isProp)}"
+        ${disabledAttr(isProp)} onchange="setOvPercent('${addr}','proportional_pct',this.value)"></div>
+
+    <div class="${inactiveClass(isProp)}"><label>比例上限 (USD)</label>
+      <input type="number" step="1" value="${showIfActive(ov.proportional_max_cap, isProp)}" placeholder="${placeholderIfActive(g.proportional_max_cap, isProp)}"
+        ${disabledAttr(isProp)} onchange="setOvNum('${addr}','proportional_max_cap',this.value)"></div>
+
+    <div class="form-group"><label>定价模式</label>
+      <select onchange="setOv('${addr}','pricing_mode',this.value)">
+        <option value="" ${ov.pricing_mode===undefined ? 'selected' : ''}>跟随全局 (${g.pricing_mode || 'aggressive'})</option>
+        <option value="aggressive" ${ov.pricing_mode==='aggressive' ? 'selected' : ''}>抢单模式</option>
+        <option value="original" ${ov.pricing_mode==='original' ? 'selected' : ''}>原价模式</option>
+        <option value="passive" ${ov.pricing_mode==='passive' ? 'selected' : ''}>被动模式</option>
+      </select></div>
+
+    <div class="form-group"><label>最小交易规模 (USD)</label>
+      <input type="number" step="1" value="${v(ov.min_trade_size_usd)}" placeholder="${v(g.min_trade_size_usd)}"
+        onchange="setOvNum('${addr}','min_trade_size_usd',this.value)"></div>
+
+    <div class="form-group"><label>Token 跟单限制</label>
+      <select onchange="setOv('${addr}','market_limit_mode',this.value)">
+        <option value="" ${ov.market_limit_mode===undefined ? 'selected' : ''}>跟随全局 (${modeLabel(g.market_limit_mode)})</option>
+        <option value="global_once" ${ov.market_limit_mode==='global_once' ? 'selected' : ''}>全局一次</option>
+        <option value="per_address_once" ${ov.market_limit_mode==='per_address_once' ? 'selected' : ''}>每地址一次</option>
+        <option value="unlimited" ${ov.market_limit_mode==='unlimited' ? 'selected' : ''}>无限制</option>
+      </select></div>
+
+    <div class="${inactiveClass(isUnlimited)}"><label>Token 最大进入次数 (0=无限)</label>
+      <input type="number" step="1" value="${showIfActive(ov.max_entries_per_market, isUnlimited)}" placeholder="${placeholderIfActive(g.max_entries_per_market ?? 0, isUnlimited)}"
+        ${disabledAttr(isUnlimited)} onchange="setOvNum('${addr}','max_entries_per_market',this.value)"></div>
+
+    <div class="${inactiveClass(strictAggActive)}"><label>Maker-like 窗口 (分钟)</label>
+      <input type="number" step="1" value="${showIfActive(ov.maker_like_window_minutes, strictAggActive)}" placeholder="${placeholderIfActive(st.maker_like_window_minutes, strictAggActive)}"
+        ${disabledAttr(strictAggActive)} onchange="setOvNum('${addr}','maker_like_window_minutes',this.value)"></div>
+
+    <div class="${inactiveClass(strictAggActive)}"><label>Maker-like 最大间隔 (分钟)</label>
+      <input type="number" step="1" value="${showIfActive(ov.maker_like_max_gap_minutes, strictAggActive)}" placeholder="${placeholderIfActive(st.maker_like_max_gap_minutes, strictAggActive)}"
+        ${disabledAttr(strictAggActive)} onchange="setOvNum('${addr}','maker_like_max_gap_minutes',this.value)"></div>
+
+    <div class="${inactiveClass(strictAggActive)}"><label>Maker-like 评分阈值</label>
+      <input type="number" step="0.01" value="${showIfActive(ov.maker_like_score_threshold, strictAggActive)}" placeholder="${placeholderIfActive(st.maker_like_score_threshold, strictAggActive)}"
+        ${disabledAttr(strictAggActive)} onchange="setOvNum('${addr}','maker_like_score_threshold',this.value)"></div>
+
+    <div class="${inactiveClass(episodeAggActive)}"><label>Episode 窗口 (分钟)</label>
+      <input type="number" step="1" value="${showIfActive(ov.execution_episode_window_minutes, episodeAggActive)}" placeholder="${placeholderIfActive(st.execution_episode_window_minutes, episodeAggActive)}"
+        ${disabledAttr(episodeAggActive)} onchange="setOvNum('${addr}','execution_episode_window_minutes',this.value)"></div>
+
+    <div class="${inactiveClass(episodeAggActive)}"><label>Episode 最大间隔 (分钟)</label>
+      <input type="number" step="1" value="${showIfActive(ov.execution_episode_max_gap_minutes, episodeAggActive)}" placeholder="${placeholderIfActive(st.execution_episode_max_gap_minutes, episodeAggActive)}"
+        ${disabledAttr(episodeAggActive)} onchange="setOvNum('${addr}','execution_episode_max_gap_minutes',this.value)"></div>
+
+    <div class="${inactiveClass(episodeAggActive)}"><label>Episode 价带 abs</label>
+      <input type="number" step="0.0001" value="${showIfActive(ov.execution_episode_price_band_abs, episodeAggActive)}" placeholder="${placeholderIfActive(st.execution_episode_price_band_abs, episodeAggActive)}"
+        ${disabledAttr(episodeAggActive)} onchange="setOvNum('${addr}','execution_episode_price_band_abs',this.value)"></div>
+
+    <div class="${inactiveClass(episodeAggActive)}"><label>Episode 价带 bps</label>
+      <input type="number" step="1" value="${showIfActive(ov.execution_episode_price_band_bps, episodeAggActive)}" placeholder="${placeholderIfActive(st.execution_episode_price_band_bps, episodeAggActive)}"
+        ${disabledAttr(episodeAggActive)} onchange="setOvNum('${addr}','execution_episode_price_band_bps',this.value)"></div>
+
+    <div class="${inactiveClass(episodeAggActive)}"><label>Episode 最少 fills</label>
+      <input type="number" step="1" value="${showIfActive(ov.execution_episode_min_fill_count, episodeAggActive)}" placeholder="${placeholderIfActive(st.execution_episode_min_fill_count, episodeAggActive)}"
+        ${disabledAttr(episodeAggActive)} onchange="setOvNum('${addr}','execution_episode_min_fill_count',this.value)"></div>
+  </div>
+  <div style="margin-top:8px;text-align:right">
+    <button class="btn btn-sm btn-secondary" onclick="clearOv('${addr}')">重置为全局</button>
+  </div></div>`;
+}
+function setOv(addr, key, val) {
+  if (!currentCfg.leader_overrides) currentCfg.leader_overrides = {};
+  const a = addr.toLowerCase();
+  if (!currentCfg.leader_overrides[a]) currentCfg.leader_overrides[a] = {};
+  if (val === '' || val === null) delete currentCfg.leader_overrides[a][key];
+  else currentCfg.leader_overrides[a][key] = val;
+  cleanEmptyOv(a);
+  renderLeaderTable();
+}
+
+function setOvNum(addr, key, val) {
+  const num = val === '' ? null : parseFloat(val);
+  if (num === null || Number.isNaN(num)) setOv(addr, key, null);
+  else setOv(addr, key, num);
+}
+
+function setOvPercent(addr, key, val) {
+  const num = val === '' ? null : (parseFloat(val) / 100);
+  if (num === null || Number.isNaN(num)) setOv(addr, key, null);
+  else setOv(addr, key, num);
+}
+
+function setOvBool(addr, key, val) {
+  if (val === '') setOv(addr, key, null);
+  else setOv(addr, key, val === 'true');
+}
+
+function setOvCryptoTimeframeSource(addr, source) {
+  if (source === 'global') {
+    setOv(addr, 'crypto_allowed_timeframes', null);
+    return;
+  }
+  const initial = normalizeCryptoTimeframes(
+    currentCfg && currentCfg.crypto_allowed_timeframes !== undefined
+      ? currentCfg.crypto_allowed_timeframes
+      : [],
+  );
+  setOv(addr, 'crypto_allowed_timeframes', initial);
+}
+
+function toggleOvCryptoTimeframe(addr, tf, checked) {
+  const ov = getOverride(addr);
+  const current = ov.crypto_allowed_timeframes !== undefined ? ov.crypto_allowed_timeframes : [];
+  setOv(addr, 'crypto_allowed_timeframes', updateCryptoTimeframeList(current, tf, checked));
+}
+
+function cleanEmptyOv(addr) {
+  if (!currentCfg.leader_overrides) return;
+  const ov = currentCfg.leader_overrides[addr];
+  if (ov && Object.keys(ov).length === 0) delete currentCfg.leader_overrides[addr];
+}
+
+function clearOv(addr) {
+  if (!currentCfg.leader_overrides) return;
+  delete currentCfg.leader_overrides[addr.toLowerCase()];
+  renderLeaderTable();
+}
+
+function toggleEditLeader(addr) {
+  editingLeader = editingLeader === addr.toLowerCase() ? null : addr.toLowerCase();
+  renderLeaderTable();
+}
+
+function addLeader() {
+  const input = document.getElementById('new-leader-input');
+  const addr = (input && input.value ? input.value : '').trim().toLowerCase();
+  if (!addr || !addr.startsWith('0x') || addr.length < 10) {
+    alert('请输入有效的 0x 地址');
+    return;
+  }
+  if (!currentCfg.leader_addresses) currentCfg.leader_addresses = [];
+  if (currentCfg.leader_addresses.some((a) => a.toLowerCase() === addr)) {
+    alert('地址已存在');
+    return;
+  }
+  currentCfg.leader_addresses.push(addr);
+  input.value = '';
+  renderLeaderTable();
+}
+
+function removeLeader(addr) {
+  if (!confirm('确定移除 ' + shortAddr(addr) + ' 吗?')) return;
+  currentCfg.leader_addresses = (currentCfg.leader_addresses || []).filter((a) => a.toLowerCase() !== addr.toLowerCase());
+  if (currentCfg.leader_overrides) delete currentCfg.leader_overrides[addr.toLowerCase()];
+  if (editingLeader === addr.toLowerCase()) editingLeader = null;
+  renderLeaderTable();
+}
+
+function setGlobalSelect(key, val) {
+  if (!currentCfg) return;
+  currentCfg[key] = val;
+  if (key === 'wallet_type') onWalletTypeChange();
+  refreshGlobalFieldState();
+  if (MODE_CHAIN_KEYS.has(key) || GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+}
+
+function setGlobalBool(key, val) {
+  if (!currentCfg) return;
+  currentCfg[key] = val === 'true';
+  refreshGlobalFieldState();
+  if (MODE_CHAIN_KEYS.has(key) || GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+}
+
+function toggleGlobalCryptoTimeframe(tf, checked) {
+  if (!currentCfg) return;
+  currentCfg.crypto_allowed_timeframes = updateCryptoTimeframeList(currentCfg.crypto_allowed_timeframes, tf, checked);
+  renderLeaderTable();
+}
+
+function setGlobalNum(key, val) {
+  if (!currentCfg) return;
+  if (val === '') {
+    delete currentCfg[key];
+    if (GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+    return;
+  }
+  const num = parseFloat(val);
+  if (!Number.isNaN(num)) currentCfg[key] = num;
+  if (GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+}
+
+function setGlobalPercent(key, val) {
+  if (!currentCfg) return;
+  if (val === '') {
+    delete currentCfg[key];
+    if (GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+    return;
+  }
+  const num = parseFloat(val) / 100;
+  if (!Number.isNaN(num)) currentCfg[key] = num;
+  if (GLOBAL_LEADER_REFRESH_KEYS.has(key)) renderLeaderTable();
+}
+
+function refreshGlobalFieldState() {
+  if (!currentCfg) return;
+  const state = getGlobalEffectiveState();
+
+  for (const [fieldKey, meta] of Object.entries(GLOBAL_DYNAMIC_FIELDS)) {
+    const input = document.getElementById(meta.id);
+    if (!input) continue;
+
+    const active = meta.active(state);
+    const group = input.closest('.form-group');
+    if (group) group.classList.toggle('is-inactive', !active);
+    input.disabled = !active;
+
+    if (active) {
+      input.value = (fieldKey === 'proportional_pct')
+        ? pctInputValue(currentCfg[fieldKey])
+        : v(currentCfg[fieldKey]);
+      if (input.dataset.savedPlaceholder !== undefined) input.placeholder = input.dataset.savedPlaceholder;
+    } else {
+      if (input.dataset.savedPlaceholder === undefined) input.dataset.savedPlaceholder = input.placeholder || '';
+      input.placeholder = '';
+      input.value = '';
+    }
+  }
+
+  const aggregationMode = document.getElementById('f-aggregation_mode');
+  if (aggregationMode) {
+    const active = state.maker_like_enabled === true;
+    const group = aggregationMode.closest('.form-group');
+    if (group) group.classList.toggle('is-inactive', !active);
+    aggregationMode.disabled = !active;
+    aggregationMode.value = state.aggregation_mode;
+  }
+
+  const pricingMode = document.getElementById('f-pricing_mode');
+  if (pricingMode) {
+    pricingMode.value = state.pricing_mode;
+  }
+}
+async function selectAccount(name) {
+  currentName = name;
+  editingLeader = null;
+  renderSidebar();
+
+  const defaults = await getServerDefaults();
+  const cfg = await (await fetch(API + '/api/accounts/' + name)).json();
+  const env = await (await fetch(API + '/api/env/' + (cfg.env_suffix || name.toUpperCase()))).json();
+  currentCfg = mergeWithDefaults(cfg, defaults);
+  currentEnvMeta = env;
+
+  renderAccountForm(name, currentCfg, env);
+}
+
+function renderAccountForm(name, cfg, env) {
+  const suffix = cfg.env_suffix || name.toUpperCase();
+
+  document.getElementById('main-panel').innerHTML = `
+    <h2>${name}</h2>
+    <div class="section">
+      <h3>身份</h3>
+      <div class="form-grid">
+        <div class="form-group"><label>环境变量后缀 (env_suffix)</label><input id="f-suffix" value="${v(suffix)}"></div>
+        <div class="form-group"><label>钱包类型</label>
+          <select id="f-wallet_type" onchange="setGlobalSelect('wallet_type', this.value)">
+            <option value="proxy" ${(cfg.wallet_type || 'proxy') === 'proxy' ? 'selected' : ''}>Proxy (Google/Email 登录)</option>
+            <option value="eoa" ${cfg.wallet_type === 'eoa' ? 'selected' : ''}>EOA (自托管钱包)</option>
+          </select></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3><span>跟单地址</span></h3>
+      <div id="leader-section-body"></div>
+    </div>
+
+    <div class="section">
+      <h3>全局交易参数</h3>
+      <div class="form-grid">
+        <div class="form-group"><label>跟单模式</label>
+          <select id="f-copy_mode" onchange="setGlobalSelect('copy_mode', this.value)">
+            <option value="fixed_usd" ${cfg.copy_mode === 'fixed_usd' ? 'selected' : ''}>固定金额</option>
+            <option value="proportional" ${cfg.copy_mode === 'proportional' ? 'selected' : ''}>按比例</option>
+          </select></div>
+
+        <div class="form-group" data-global-field="fixed_usd_amount"><label>固定金额 (USD)</label>
+          <input id="f-fixed_usd" type="number" step="0.1" value="${v(cfg.fixed_usd_amount)}" oninput="setGlobalNum('fixed_usd_amount', this.value)"></div>
+
+        <div class="form-group" data-global-field="proportional_pct"><label>比例跟单 (%)</label>
+          <input id="f-proportional_pct" type="number" step="0.01" value="${pctInputValue(cfg.proportional_pct)}" oninput="setGlobalPercent('proportional_pct', this.value)"></div>
+
+        <div class="form-group" data-global-field="proportional_max_cap"><label>比例上限 (USD)</label>
+          <input id="f-proportional_cap" type="number" step="1" value="${v(cfg.proportional_max_cap)}" oninput="setGlobalNum('proportional_max_cap', this.value)"></div>
+
+        <div class="form-group"><label>最小交易规模 (USD)</label>
+          <input id="f-min_trade" type="number" value="${v(cfg.min_trade_size_usd)}" oninput="setGlobalNum('min_trade_size_usd', this.value)"></div>
+
+        <div class="form-group"><label>最低价限制</label>
+          <input id="f-min_price" type="number" step="0.01" value="${v(cfg.min_price)}" oninput="setGlobalNum('min_price', this.value)"></div>
+
+        <div class="form-group"><label>最高价限制</label>
+          <input id="f-max_price" type="number" step="0.01" value="${v(cfg.max_price)}" oninput="setGlobalNum('max_price', this.value)"></div>
+
+        <div class="form-group"><label>只跟 Crypto</label>
+          <select id="f-crypto_only" onchange="setGlobalBool('crypto_only_enabled', this.value)">
+            <option value="true" ${cfg.crypto_only_enabled === true ? 'selected' : ''}>开启</option>
+            <option value="false" ${cfg.crypto_only_enabled !== true ? 'selected' : ''}>关闭</option>
+          </select></div>
+
+        <div class="form-group" style="grid-column: span 2;"><label>Crypto 分类</label>
+          ${renderCryptoTimeframeCheckboxes(
+            cfg.crypto_allowed_timeframes,
+            (tf) => `toggleGlobalCryptoTimeframe('${tf}', this.checked)`,
+          )}
+          <div class="checkbox-hint">开启后，只跟选中的 Crypto 市场分类（5m / 15m / 1h / 4h / 1d / 1w）。</div>
+        </div>
+
+        <div class="form-group"><label>离场策略</label>
+          <select id="f-exit" onchange="setGlobalSelect('exit_strategy', this.value)">
+            <option value="mirror_sell" ${cfg.exit_strategy === 'mirror_sell' ? 'selected' : ''}>镜像平仓</option>
+            <option value="hold_to_resolution" ${cfg.exit_strategy === 'hold_to_resolution' ? 'selected' : ''}>持有至结算</option>
+          </select></div>
+
+        <div class="form-group"><label>自动止盈链条</label>
+          <select id="f-auto_tp" onchange="setGlobalBool('auto_tp_enabled', this.value)">
+            <option value="true" ${cfg.auto_tp_enabled === true ? 'selected' : ''}>开启</option>
+            <option value="false" ${cfg.auto_tp_enabled !== true ? 'selected' : ''}>关闭</option>
+          </select></div>
+
+        <div class="form-group"><label>Token 跟单限制</label>
+          <select id="f-market_limit" onchange="setGlobalSelect('market_limit_mode', this.value)">
+            <option value="global_once" ${cfg.market_limit_mode === 'global_once' ? 'selected' : ''}>全局一次</option>
+            <option value="per_address_once" ${cfg.market_limit_mode === 'per_address_once' ? 'selected' : ''}>每地址一次</option>
+            <option value="unlimited" ${cfg.market_limit_mode === 'unlimited' ? 'selected' : ''}>无限制</option>
+          </select></div>
+
+        <div class="form-group" data-global-field="max_entries_per_market"><label>Token 最大进入次数 (0=无限)</label>
+          <input id="f-max_entries" type="number" step="1" value="${v(cfg.max_entries_per_market)}" oninput="setGlobalNum('max_entries_per_market', this.value)"></div>
+
+        <div class="form-group"><label>定价模式</label>
+          <select id="f-pricing_mode" onchange="setGlobalSelect('pricing_mode', this.value)">
+            <option value="aggressive" ${(cfg.pricing_mode || 'aggressive') === 'aggressive' ? 'selected' : ''}>抢单模式</option>
+            <option value="original" ${cfg.pricing_mode === 'original' ? 'selected' : ''}>原价模式</option>
+            <option value="passive" ${cfg.pricing_mode === 'passive' ? 'selected' : ''}>被动模式</option>
+          </select></div>
+
+        <div class="form-group"><label>轮询间隔 (秒)</label>
+          <input id="f-poll" type="number" step="1" value="${v(cfg.poll_interval_s)}" oninput="setGlobalNum('poll_interval_s', this.value)"></div>
+
+        <div class="form-group"><label>碎成交聚合</label>
+          <select id="f-maker" onchange="setGlobalBool('maker_like_enabled', this.value)">
+            <option value="true" ${cfg.maker_like_enabled !== false ? 'selected' : ''}>开启</option>
+            <option value="false" ${cfg.maker_like_enabled === false ? 'selected' : ''}>关闭</option>
+          </select></div>
+
+        <div class="form-group"><label>聚合模式</label>
+          <select id="f-aggregation_mode" onchange="setGlobalSelect('aggregation_mode', this.value)">
+            <option value="strict_price" ${(cfg.aggregation_mode || 'strict_price') === 'strict_price' ? 'selected' : ''}>严格价位</option>
+            <option value="execution_episode" ${cfg.aggregation_mode === 'execution_episode' ? 'selected' : ''}>Execution Episode</option>
+          </select></div>
+
+        <div class="form-group" data-global-field="maker_like_window_minutes"><label>严格价位窗口(分钟)</label>
+          <input id="f-maker_window" type="number" step="1" value="${v(cfg.maker_like_window_minutes)}" oninput="setGlobalNum('maker_like_window_minutes', this.value)"></div>
+
+        <div class="form-group" data-global-field="maker_like_max_gap_minutes"><label>严格价位最大间隔(分钟)</label>
+          <input id="f-maker_gap" type="number" step="1" value="${v(cfg.maker_like_max_gap_minutes)}" oninput="setGlobalNum('maker_like_max_gap_minutes', this.value)"></div>
+
+        <div class="form-group" data-global-field="maker_like_score_threshold"><label>严格价位评分阈值</label>
+          <input id="f-score" type="number" step="0.01" value="${v(cfg.maker_like_score_threshold)}" oninput="setGlobalNum('maker_like_score_threshold', this.value)"></div>
+
+        <div class="form-group" data-global-field="execution_episode_window_minutes"><label>Episode 窗口(分钟)</label>
+          <input id="f-episode_window" type="number" step="1" value="${v(cfg.execution_episode_window_minutes)}" oninput="setGlobalNum('execution_episode_window_minutes', this.value)"></div>
+
+        <div class="form-group" data-global-field="execution_episode_max_gap_minutes"><label>Episode 最大间隔(分钟)</label>
+          <input id="f-episode_gap" type="number" step="1" value="${v(cfg.execution_episode_max_gap_minutes)}" oninput="setGlobalNum('execution_episode_max_gap_minutes', this.value)"></div>
+
+        <div class="form-group" data-global-field="execution_episode_price_band_abs"><label>Episode 价带 abs</label>
+          <input id="f-episode_band_abs" type="number" step="0.0001" value="${v(cfg.execution_episode_price_band_abs)}" oninput="setGlobalNum('execution_episode_price_band_abs', this.value)"></div>
+
+        <div class="form-group" data-global-field="execution_episode_price_band_bps"><label>Episode 价带 bps</label>
+          <input id="f-episode_band_bps" type="number" step="1" value="${v(cfg.execution_episode_price_band_bps)}" oninput="setGlobalNum('execution_episode_price_band_bps', this.value)"></div>
+
+        <div class="form-group" data-global-field="execution_episode_min_fill_count"><label>Episode 最少 fills</label>
+          <input id="f-episode_min_fill_count" type="number" step="1" value="${v(cfg.execution_episode_min_fill_count)}" oninput="setGlobalNum('execution_episode_min_fill_count', this.value)"></div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>凭证 (.env)</h3>
+      <div class="form-grid">
+        <div class="form-group"><label>私钥 (${env.PRIVATE_KEY.set ? '已设置: ' + env.PRIVATE_KEY.masked : '未设置'})</label><input id="f-pk" placeholder="留空不修改"></div>
+        <div class="form-group" id="funder-group"><label id="funder-label">钱包地址 (${env.FUNDER_ADDRESS.set ? '已设置: ' + env.FUNDER_ADDRESS.masked : '未设置'})</label><input id="f-funder" placeholder="留空不修改"></div>
+        <div class="form-group"><label>CLOB API Key (${env.CLOB_API_KEY.set ? '已设置' : '未设置'})</label><input id="f-clobkey" placeholder="留空不修改"></div>
+        <div class="form-group"><label>CLOB Secret (${env.CLOB_SECRET.set ? '已设置' : '未设置'})</label><input id="f-clobsec" placeholder="留空不修改"></div>
+        <div class="form-group"><label>CLOB 密码短语 (${env.CLOB_PASS_PHRASE.set ? '已设置' : '未设置'})</label><input id="f-clobpass" placeholder="留空不修改"></div>
+        <div class="form-group eoa-only" style="display:none"><label>Relayer API Key (${env.RELAYER_API_KEY.set ? '已设置: ' + env.RELAYER_API_KEY.masked : '未设置'})</label><input id="f-relayer-key" placeholder="留空不修改"></div>
+      </div>
+      <div id="eoa-hint" style="display:none;margin-top:8px;font-size:12px;color:#888;">
+        EOA 模式需要：私钥 + Safe 地址 + CLOB API Key；Relayer API Key 用于 gasless redeem/merge。
+      </div>
+    </div>
+
+    <div class="save-bar">
+      <button class="btn btn-primary" onclick="saveAccount('${name}')">保存配置</button>
+      <button class="btn btn-danger" onclick="deleteAccount('${name}')">删除账号</button>
+      <span class="msg" id="save-msg"></span>
+    </div>`;
+
+  renderLeaderTable();
+  onWalletTypeChange();
+  refreshGlobalFieldState();
+}
+
+function onWalletTypeChange() {
+  const wt = document.getElementById('f-wallet_type');
+  if (!wt) return;
+  const isEoa = wt.value === 'eoa';
+
+  document.querySelectorAll('.proxy-only').forEach((el) => { el.style.display = isEoa ? 'none' : ''; });
+  document.querySelectorAll('.eoa-only').forEach((el) => { el.style.display = isEoa ? '' : 'none'; });
+
+  const hint = document.getElementById('eoa-hint');
+  if (hint) hint.style.display = isEoa ? 'block' : 'none';
+
+  const funderLabel = document.getElementById('funder-label');
+  if (funderLabel) {
+    const base = funderLabel.textContent.replace(/^[^(]*/, '');
+    funderLabel.textContent = (isEoa ? 'Proxy Wallet / Safe 地址 ' : '钱包地址 ') + base;
+  }
+}
+async function saveAccount(name) {
+  try {
+    const suffix = document.getElementById('f-suffix').value.trim() || name.toUpperCase();
+
+    currentCfg.env_suffix = suffix;
+    currentCfg.wallet_type = document.getElementById('f-wallet_type').value;
+    currentCfg.crypto_allowed_timeframes = normalizeCryptoTimeframes(currentCfg.crypto_allowed_timeframes);
+    currentCfg.leader_addresses = (currentCfg.leader_addresses || []).map((a) => a.toLowerCase());
+    currentCfg.leader_overrides = currentCfg.leader_overrides || {};
+    delete currentCfg.total_capital;
+    delete currentCfg.max_position_pct;
+
+    for (const [addr, ov] of Object.entries(currentCfg.leader_overrides)) {
+      if (ov && typeof ov === 'object') {
+        delete ov.total_capital;
+        delete ov.max_position_pct;
+        if (Object.prototype.hasOwnProperty.call(ov, 'crypto_allowed_timeframes')) {
+          ov.crypto_allowed_timeframes = normalizeCryptoTimeframes(ov.crypto_allowed_timeframes);
+        }
+      }
+      if (!ov || Object.keys(ov).length === 0) delete currentCfg.leader_overrides[addr];
+    }
+
+    const cfg = sanitizeConfigObject(deepClone(currentCfg));
+    await ensureOk(await fetch(API + '/api/accounts/' + name, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(cfg),
+    }));
+
+    const envBody = {};
+    const envMap = [
+      ['f-pk', 'PRIVATE_KEY'],
+      ['f-funder', 'FUNDER_ADDRESS'],
+      ['f-clobkey', 'CLOB_API_KEY'],
+      ['f-clobsec', 'CLOB_SECRET'],
+      ['f-clobpass', 'CLOB_PASS_PHRASE'],
+      ['f-relayer-key', 'RELAYER_API_KEY'],
+    ];
+    for (const [id, key] of envMap) {
+      const el = document.getElementById(id);
+      const val = el ? el.value.trim() : '';
+      if (val) envBody[key] = val;
+    }
+    if (Object.keys(envBody).length > 0) {
+      await ensureOk(await fetch(API + '/api/env/' + suffix, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(envBody),
+      }));
+    }
+
+    setSaveMessage('已保存');
+    await loadAccounts();
+    currentName = name;
+    renderSidebar();
+  } catch (error) {
+    setSaveMessage(error.message || '保存失败', true);
+  }
+}
+
+async function deleteAccount(name) {
+  if (!confirm('确定删除账号 ' + name + ' 吗?')) return;
+  await fetch(API + '/api/accounts/' + name, { method: 'DELETE' });
+  currentName = null;
+  currentCfg = null;
+  currentEnvMeta = null;
+  document.getElementById('main-panel').innerHTML = '<div class="empty">账号已删除</div>';
+  await loadAccounts();
+}
+
+ async function newAccount() {
+  const name = prompt('输入账号名称（英文，如 main, alt, test）');
+  if (!name || !name.match(/^[a-zA-Z0-9_-]+$/)) {
+    alert('名称只能包含字母数字下划线');
+    return;
+  }
+
+  currentName = name;
+  editingLeader = null;
+  const defaults = await getServerDefaults();
+  currentCfg = mergeWithDefaults({
+    env_suffix: name.toUpperCase(),
+    wallet_type: 'proxy',
+    leader_addresses: [],
+    leader_overrides: {},
+  }, defaults);
+  currentEnvMeta = {
+    PRIVATE_KEY: { set: false, masked: '' },
+    FUNDER_ADDRESS: { set: false, masked: '' },
+    CLOB_API_KEY: { set: false, masked: '' },
+    CLOB_SECRET: { set: false, masked: '' },
+    CLOB_PASS_PHRASE: { set: false, masked: '' },
+    RELAYER_API_KEY: { set: false, masked: '' },
+  };
+
+  renderAccountForm(name, currentCfg, currentEnvMeta);
+  renderSidebar();
+}
+
+async function editDefaults() {
+  currentName = null;
+  currentCfg = null;
+  currentEnvMeta = null;
+  renderSidebar();
+
+  const cfg = await (await fetch(API + '/api/defaults')).json();
+  currentDefaults = sanitizeConfigObject(cfg && typeof cfg === 'object' ? cfg : {});
+  document.getElementById('main-panel').innerHTML = `
+    <h2>默认参数 (_defaults.toml)</h2>
+    <div class="section">
+      <h3>所有账号继承这些值，账号 TOML 可覆盖</h3>
+      <textarea id="defaults-raw" style="width:100%;height:400px;font-family:monospace;font-size:13px;padding:10px;border:1px solid #ddd;border-radius:6px;">${toToml(currentDefaults)}</textarea>
+    </div>
+    <div class="save-bar">
+      <button class="btn btn-primary" onclick="saveDefaults()">保存默认参数</button>
+      <span class="msg" id="save-msg"></span>
+    </div>`;
+}
+
+async function saveDefaults() {
+  try {
+    const text = document.getElementById('defaults-raw').value;
+    const lines = text.split('\n');
+    const obj = {};
+
+    for (const line of lines) {
+      const m = line.match(/^\s*([a-z_]+)\s*=\s*(.+)/);
+      if (!m) continue;
+      const [, k, raw] = m;
+      obj[k] = parseTomlValue(raw);
+    }
+
+    if (Object.prototype.hasOwnProperty.call(obj, 'crypto_allowed_timeframes')) {
+      obj.crypto_allowed_timeframes = normalizeCryptoTimeframes(obj.crypto_allowed_timeframes);
+    }
+
+    const sanitized = sanitizeConfigObject(obj);
+    await ensureOk(await fetch(API + '/api/defaults', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(sanitized),
+    }));
+
+    currentDefaults = sanitized;
+    setSaveMessage('已保存');
+  } catch (error) {
+    setSaveMessage(error.message || '保存失败', true);
+  }
+}
+
+function toToml(obj) {
+  return Object.entries(obj).map(([k, val]) => {
+    return `${k} = ${toTomlValue(val)}`;
+  }).join('\n');
+}
+
+loadAccounts();
+</script>
+</body>
+</html>

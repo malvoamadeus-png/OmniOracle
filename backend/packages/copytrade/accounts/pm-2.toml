@@ -1,0 +1,103 @@
+env_suffix = "PM-2"
+wallet_type = "eoa"
+leader_addresses = [
+    "0x339a0e5aea39a7db5cea5b0003abab33c78c1eae",
+    "0xee17380b79ecdc5f13bd2930388c55b13b03b46e",
+    "0xde0463ea7f611b065e8ab06bbfbddad75e6dfa37",
+    "0x13414a77a4be48988851c73dfd824d0168e70853",
+    "0x54b56146656e7eef9da02b3a030c18e06e924b31",
+    "0x8f69269039b9a401de28a38c2f1c3001364b7df1",
+    "0x43372356634781eea88d61bbdd7824cdce958882",
+    "0xe72bb501df5306c75c89383d48a1e81073fbb0a0",
+    "0xee00ba338c59557141789b127927a55f5cc5cea1",
+    "0x1f28a0404133776151339ff618c876b81a59266e",
+    "0x44c58184f89a5c2f699dc8943009cb3d75a08d45",
+]
+copy_mode = "fixed_usd"
+fixed_usd_amount = 5
+proportional_pct = 0.1
+proportional_max_cap = 500
+min_trade_size_usd = 300
+min_price = 0.05
+max_price = 0.95
+exit_strategy = "mirror_sell"
+auto_tp_enabled = true
+market_limit_mode = "per_address_once"
+max_entries_per_market = 0
+pricing_mode = "aggressive"
+poll_interval_s = 5
+maker_like_enabled = true
+maker_like_window_minutes = 360
+aggregation_mode = "strict_price"
+maker_like_max_gap_minutes = 30
+maker_like_score_threshold = 0.6
+execution_episode_window_minutes = 20
+execution_episode_max_gap_minutes = 5
+execution_episode_price_band_abs = 0.03
+execution_episode_price_band_bps = 500
+execution_episode_min_fill_count = 2
+crypto_only_enabled = false
+crypto_allowed_timeframes = []
+settlement_days_max = 30
+signal_source = "stream_hybrid"
+signal_reconcile_interval_s = 60
+signal_fetch_workers = 4
+dry_run = false
+fee_rate = 0
+aggressive_price_chase_cap_abs = 0.01
+aggressive_price_chase_cap_bps = 300
+daily_limit_usd = 100000
+
+[leader_overrides.0xee17380b79ecdc5f13bd2930388c55b13b03b46e]
+copy_mode = "proportional"
+proportional_pct = 0.1
+proportional_max_cap = 15
+market_limit_mode = "per_address_once"
+
+[leader_overrides.0x8f69269039b9a401de28a38c2f1c3001364b7df1]
+copy_mode = "fixed_usd"
+proportional_pct = 0.02
+proportional_max_cap = 50
+min_trade_size_usd = 500
+fixed_usd_amount = 25
+market_limit_mode = "unlimited"
+max_entries_per_market = 6
+
+[leader_overrides.0xe72bb501df5306c75c89383d48a1e81073fbb0a0]
+min_trade_size_usd = 2000
+
+[leader_overrides.0xee00ba338c59557141789b127927a55f5cc5cea1]
+copy_mode = "proportional"
+proportional_pct = 0.003
+proportional_max_cap = 25
+pricing_mode = "aggressive"
+min_trade_size_usd = 2000
+market_limit_mode = "unlimited"
+max_entries_per_market = 4
+
+[leader_overrides.0x339a0e5aea39a7db5cea5b0003abab33c78c1eae]
+copy_mode = "fixed_usd"
+fixed_usd_amount = 20
+market_limit_mode = "unlimited"
+max_entries_per_market = 2
+min_trade_size_usd = 500
+
+[leader_overrides.0x13414a77a4be48988851c73dfd824d0168e70853]
+fixed_usd_amount = 5
+min_trade_size_usd = 400
+market_limit_mode = "unlimited"
+max_entries_per_market = 10
+
+[leader_overrides.0x1f28a0404133776151339ff618c876b81a59266e]
+copy_mode = "fixed_usd"
+fixed_usd_amount = 5
+market_limit_mode = "unlimited"
+max_entries_per_market = 10
+min_trade_size_usd = 500
+
+[leader_overrides.0x44c58184f89a5c2f699dc8943009cb3d75a08d45]
+maker_like_enabled = true
+fixed_usd_amount = 10
+market_limit_mode = "unlimited"
+max_entries_per_market = 15
+copy_mode = "fixed_usd"

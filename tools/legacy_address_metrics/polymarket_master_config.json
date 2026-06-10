@@ -1,0 +1,172 @@
+{
+  "db_path": "metrics_fresh.sqlite",
+  "sync_supabase": true,
+  "per_address_sleep_s": 0.15,
+  "metrics_timeout_s": 600,
+  "cache_max_age_days": 30,
+  "sources": [
+    {
+      "name": "NBA",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "nba",
+        "holders_limit": 20,
+        "max_games": 50,
+        "market_kind": "moneyline",
+        "gamma_page_limit": 50
+      }
+    },
+    {
+      "name": "CLIMATE",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "climate",
+        "tag_id": 87,
+        "holders_limit": 20,
+        "max_games": 20,
+        "market_kind": "all",
+        "validate_tag_id": 87
+      }
+    },
+    {
+      "name": "LOL",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "league-of-legends",
+        "tag_id": 65,
+        "holders_limit": 20,
+        "max_games": 20,
+        "market_kind": "all",
+        "validate_tag_id": 65
+      }
+    },
+    {
+      "name": "CS2",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "esports",
+        "tag_id": 100780,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 20,
+        "market_kind": "all",
+        "validate_tag_id": 100780
+      }
+    },
+    {
+      "name": "UCL",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "soccer",
+        "tag_id": 100977,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 100977
+      }
+    },
+    {
+      "name": "CHAMPIONS LEAGUE",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "soccer",
+        "tag_id": 1234,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 1234
+      }
+    },
+    {
+      "name": "SOCCER",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "soccer",
+        "tag_id": 100350,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 100350
+      }
+    },
+    {
+      "name": "15M",
+      "script": "market_top_holders.py",
+      "args": {
+        "slug_prefixes": "btc-updown-15m,eth-updown-15m,sol-updown-15m",
+        "slug_interval_minutes": 15,
+        "slug_format": "timestamp",
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all"
+      }
+    },
+    {
+      "name": "1H",
+      "script": "market_top_holders.py",
+      "args": {
+        "slug_prefixes": "bitcoin-up-or-down,ethereum-up-or-down,solana-up-or-down",
+        "slug_format": "hourly-et",
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all"
+      }
+    },
+    {
+      "name": "NHL",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "nhl",
+        "tag_id": 899,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 899
+      }
+    },
+    {
+      "name": "CBB",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "college-basketball",
+        "tag_id": 101178,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 101178
+      }
+    },
+    {
+      "name": "MLB",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "mlb",
+        "tag_id": 100381,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 100381
+      }
+    },
+    {
+      "name": "CRICKET",
+      "script": "market_top_holders.py",
+      "args": {
+        "sport": "cricket",
+        "tag_id": 101977,
+        "related_tags": true,
+        "holders_limit": 20,
+        "max_games": 30,
+        "market_kind": "all",
+        "validate_tag_id": 101977
+      }
+    }
+  ]
+}
+

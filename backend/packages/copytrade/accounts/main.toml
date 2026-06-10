@@ -1,0 +1,83 @@
+env_suffix = "MAIN"
+wallet_type = "proxy"
+leader_addresses = [
+    "0xfc25f141ed27bb1787338d2c4e7f51e3a15e1f7f",
+    "0x067f7f6e3d5363f1cf962499d1be2ca6de8be041",
+    "0xb10047d6a254b2ebb306d7a7d13bf59171ab6461",
+    "0xc1b399b26020a4f689108e9640fd3dc8ffc8501c",
+    "0x906fd5683ec51f215164f55b06bbee2b0f1288b4",
+    "0x5c3a1a602848565bb16165fcd460b00c3d43020b",
+]
+copy_mode = "fixed_usd"
+fixed_usd_amount = 8
+proportional_pct = 0.1
+proportional_max_cap = 500
+min_trade_size_usd = 300
+min_price = 0.05
+max_price = 0.95
+exit_strategy = "mirror_sell"
+auto_tp_enabled = true
+market_limit_mode = "per_address_once"
+max_entries_per_market = 0
+pricing_mode = "aggressive"
+poll_interval_s = 10
+maker_like_enabled = true
+maker_like_window_minutes = 360
+aggregation_mode = "strict_price"
+maker_like_max_gap_minutes = 30
+maker_like_score_threshold = 0.6
+execution_episode_window_minutes = 20
+execution_episode_max_gap_minutes = 5
+execution_episode_price_band_abs = 0.03
+execution_episode_price_band_bps = 500
+execution_episode_min_fill_count = 2
+crypto_only_enabled = false
+crypto_allowed_timeframes = []
+settlement_days_max = 30
+signal_source = "stream_hybrid"
+signal_reconcile_interval_s = 60
+signal_fetch_workers = 4
+dry_run = false
+fee_rate = 0
+
+[leader_overrides.0xfc25f141ed27bb1787338d2c4e7f51e3a15e1f7f]
+copy_mode = "fixed_usd"
+fixed_usd_amount = 20
+max_entries_per_market = 8
+market_limit_mode = "unlimited"
+min_trade_size_usd = 200
+
+[leader_overrides.0x067f7f6e3d5363f1cf962499d1be2ca6de8be041]
+copy_mode = "proportional"
+proportional_pct = 0.01
+proportional_max_cap = 20
+market_limit_mode = "unlimited"
+max_entries_per_market = 2
+
+[leader_overrides.0xb10047d6a254b2ebb306d7a7d13bf59171ab6461]
+copy_mode = "proportional"
+proportional_pct = 0.3
+proportional_max_cap = 10
+market_limit_mode = "unlimited"
+max_entries_per_market = 5
+min_trade_size_usd = 100
+
+[leader_overrides.0xc1b399b26020a4f689108e9640fd3dc8ffc8501c]
+copy_mode = "proportional"
+proportional_pct = 0.01
+proportional_max_cap = 50
+min_trade_size_usd = 200
+
+[leader_overrides.0x906fd5683ec51f215164f55b06bbee2b0f1288b4]
+copy_mode = "proportional"
+proportional_pct = 0.03
+proportional_max_cap = 30
+
+[leader_overrides.0x5c3a1a602848565bb16165fcd460b00c3d43020b]
+copy_mode = "proportional"
+proportional_pct = 0.002
+proportional_max_cap = 20
+maker_like_max_gap_minutes = 240
+maker_like_window_minutes = 720
+market_limit_mode = "unlimited"
+max_entries_per_market = 1
