@@ -315,7 +315,7 @@ grant select on public.copytrade_compare_daily_market_leg to anon, authenticated
 -- address_tags: 地址标签，当前为公开可编辑
 create table if not exists public.address_tags (
   address text primary key,
-  tag text not null check (tag in ('高手', '特殊策略', '待观察', '排除')),
+  tag text not null check (tag in ('顶尖', '高手', '特殊策略', '待观察', '排除')),
   updated_by text,
   updated_at timestamptz default now()
 );
@@ -323,7 +323,7 @@ create table if not exists public.address_tags (
 alter table public.address_tags drop constraint if exists address_tags_tag_check;
 alter table public.address_tags
   add constraint address_tags_tag_check
-  check (tag in ('高手', '特殊策略', '待观察', '排除'));
+  check (tag in ('顶尖', '高手', '特殊策略', '待观察', '排除'));
 
 alter table public.address_tags enable row level security;
 

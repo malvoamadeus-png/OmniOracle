@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { supabase } from "./supabaseClient";
 
-export type TagValue = "高手" | "特殊策略" | "待观察" | "排除";
+export type TagValue = "顶尖" | "高手" | "特殊策略" | "待观察" | "排除";
 
 export function useTags() {
   const [tags, setTags] = useState<Record<string, TagValue>>({});
